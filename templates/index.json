@@ -113,7 +113,7 @@
         "column_BVJdJk": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/svgviewer-output_1_ec852b3b-4d5a-4119-a1ad-0b5cb1d9cf6f.svg",
+            "image": "shopify:\/\/shop_images\/svgviewer-output_3.svg",
             "title": "Quality",
             "text": "<p>Exceptional quality from top<\/p><p>to bottom.<\/p>",
             "link_label": "",
@@ -123,7 +123,7 @@
         "column_AyxdCh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/svgviewer-png-output.png",
+            "image": "shopify:\/\/shop_images\/svgviewer-output_2.svg",
             "title": "Delivery",
             "text": "<p>Fast and free delivery<\/p><p>worldwide.<\/p>",
             "link_label": "",
@@ -133,7 +133,7 @@
         "column_JzmTEG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/svgviewer-png-output__1.png",
+            "image": "shopify:\/\/shop_images\/svgviewer-output_5.svg",
             "title": "Guarantee",
             "text": "<p>100% customer satisfaction<\/p><p>guaranteed.<\/p>",
             "link_label": "",
