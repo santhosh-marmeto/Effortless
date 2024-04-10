@@ -46,7 +46,7 @@
           "type": "slider",
           "settings": {
             "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_White.png",
-            "header": "Classic Shirt",
+            "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }
         }
