@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .first-section {
   display: flex;
   align-items: center;
@@ -16,3 +17,23 @@ div.first-section--heading.h1 {
   line-height: 140%;
   text-transform: uppercase;
 }
+=======
+.first-section {
+  display: flex;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.first-section.right {
+  flex-direction: row-reverse;
+}
+
+div.first-section--heading.h1 {
+  color: #000;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+>>>>>>> 2ff7f6682c68c67da8d45511f3902b1d8d58d624
