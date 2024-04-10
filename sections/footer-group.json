@@ -15,7 +15,7 @@
         "paragraph_PMRkn8": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Stay in touch<\/p>"
+            "text": "<p>Stay in touch</p>"
           }
         },
         "email_form_irrLDH": {
@@ -64,7 +64,7 @@
           "type": "text",
           "settings": {
             "heading": "COMPANY",
-            "subtext": "<p>Effortless is a quick-launch value concept that is optimized for success. <a href=\"https:\/\/effortless-theme-demo.myshopify.com\/pages\/theme-features-page\" title=\"Documentation & Support\">Learn More<\/a><\/p>"
+            "subtext": "<p>Effortless is a quick-launch value concept that is optimized for success. <a href=\"https://effortless-theme-demo.myshopify.com/pages/theme-features-page\" title=\"Documentation & Support\">Learn More</a></p>"
           }
         }
       },
@@ -76,7 +76,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe and save",
         "enable_follow_on_shop": true,
         "show_social": true,
