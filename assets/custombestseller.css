@@ -1,0 +1,49 @@
+/* Customize Splide slider container */
+.splide {
+  margin-top: 20px;
+  padding: 10px;
+
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Customize Splide slide */
+.splide__slide img {
+  width: 270px;
+  height: 390px;
+}
+
+.splide_arrows .splide_arrow {
+  background: none;
+  color: #fff !important;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 40% !important;
+  font-weight: 100;
+}
+
+.splide_arrows .splide_arrow--prev {
+  left: -60px;
+  border: 1px solid red;
+}
+
+.splide_arrows .splide_arrow--next {
+  right: -60px;
+}
+
+.splide__arrow--next {
+  top: 50% !important;
+  left: 94%;
+}
+.splide__arrow--prev {
+  top: 50% !important;
+}
+
+.topheader {
+  font-size: 28px;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}

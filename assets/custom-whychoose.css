@@ -1,0 +1,32 @@
+.Whychooseheader_parent {
+  text-align: center;
+}
+
+.whychooseheading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.whychooseheader_child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+}
+
+.svgimages {
+  padding-top: 6px;
+  width: 50%;
+  height: 40px;
+}
+.paradescription {
+  width: 77%;
+}
+@media only screen and (max-width: 749px) {
+  .whychooseheader_child {
+    flex-direction: column;
+  }
+}

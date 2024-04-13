@@ -1,0 +1,15 @@
+{
+  "name": "b03-santosh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev -s b03-santosh.myshopify.com",
+    "dev-sync": "shopify theme dev --theme-editor-sync -s b03-santosh.myshopify.com",
+    "pull": "shopify theme pull -s b03-santosh.myshopify.com",
+    "pull-json": "shopify theme pull -d -o *.json -s b03-santosh.myshopify.com",
+    "share": "shopify theme share -s b03-santosh.myshopify.com"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,106 @@
+{{ 'custombestseller.css' | asset_url | stylesheet_tag }}
+
+{{ 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css' | stylesheet_tag }}
+<script src="{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}}" defer></script>
+<div class="splide">
+  <h1 class="topheader">{{ section.settings.topheading }}</h1>
+  <div class="splide__track">
+    <ul class="splide__list">
+      {% for block in section.blocks %}
+        <li class="splide__slide">
+          <div class="slide-content">
+            <img
+              src="{{ block.settings.image_select | image_url }}"
+              alt="Slide Image"
+              height="300"
+              width="300"
+            >
+            <p class="headertop">{{ block.settings.header }}</p>
+            <p class="classic">{{ block.settings.classic }}</p>
+            <a href="{{  block.settings.button_link }}">
+              <button>{{ block.settings.button_label }}</button></a
+            >
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.splide', {
+      pagination: false,
+      perPage: 4,
+      gap: '60px',
+
+      breakpoints: {
+        425: {
+          perPage: 1,
+          gap: '20px',
+        },
+        768: {
+          perPage: 3,
+        },
+      },
+    }).mount();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Slider with Tabs",
+  "tag": "section",
+  "class": "productslider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "topheading",
+      "label": "Topheading",
+      "default": "You may also like"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider",
+      "name": "Slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_select",
+          "label": "Select Image",
+          "info": "Select an Image"
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Heading",
+          "default": "Classic Shirt"
+        },
+        {
+          "type": "text",
+          "id": "classic",
+          "label": "classicHeading",
+          "default": "RS 1,990.00"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Explore More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Links"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Best Sliders"
+    }
+  ]
+}
+{% endschema %}
