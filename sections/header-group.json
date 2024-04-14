@@ -51,10 +51,28 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "customcolor_swatch_RtWtWw": {
+      "type": "customcolor-swatch",
+      "blocks": {
+        "color_settings_EEJF37": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Darkgoldenrod",
+            "color_code": "#b8860b"
+          }
+        }
+      },
+      "block_order": [
+        "color_settings_EEJF37"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "customcolor_swatch_RtWtWw"
   ]
 }
