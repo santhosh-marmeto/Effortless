@@ -52,19 +52,67 @@
         "padding_bottom": 20
       }
     },
-    "customcolor_swatch_RtWtWw": {
-      "type": "customcolor-swatch",
+    "color_swatch_bLVndC": {
+      "type": "color-swatch",
       "blocks": {
-        "color_settings_EEJF37": {
+        "color_settings_antw4k": {
           "type": "colorSettings",
           "settings": {
-            "title": "Darkgoldenrod",
-            "color_code": "#b8860b"
+            "title": "Brown",
+            "color_code": "#a52a2a"
+          }
+        },
+        "color_settings_BKTYXe": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Chocolate",
+            "color_code": "#d2691e"
+          }
+        },
+        "color_settings_JhwWjW": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Black",
+            "color_code": "#000000"
+          }
+        },
+        "color_settings_h4Canr": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "white",
+            "color_code": "#ffffff"
+          }
+        },
+        "color_settings_DMn7Ub": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Burlywood",
+            "color_code": "#deb887"
+          }
+        },
+        "color_settings_YA7E7T": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Cornflowerblue",
+            "color_code": "#6495ed"
+          }
+        },
+        "color_settings_kY8qzY": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Grey",
+            "color_code": "#808080"
           }
         }
       },
       "block_order": [
-        "color_settings_EEJF37"
+        "color_settings_antw4k",
+        "color_settings_BKTYXe",
+        "color_settings_JhwWjW",
+        "color_settings_h4Canr",
+        "color_settings_DMn7Ub",
+        "color_settings_YA7E7T",
+        "color_settings_kY8qzY"
       ],
       "settings": {
       }
@@ -73,6 +121,6 @@
   "order": [
     "announcement-bar",
     "header",
-    "customcolor_swatch_RtWtWw"
+    "color_swatch_bLVndC"
   ]
 }

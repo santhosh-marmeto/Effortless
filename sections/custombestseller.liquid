@@ -76,7 +76,7 @@
                                   {% endif %}
 
                                   <li
-                                    data-value="{{ option_value }}"
+                                    {% comment %} data-value="{{ option_value }}" {% endcomment %}
                                     class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
                                     style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
                                   >
