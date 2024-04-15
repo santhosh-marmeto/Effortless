@@ -50,6 +50,14 @@
             "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }
+        },
+        "slider_jbtjHD": {
+          "type": "slider",
+          "settings": {
+            "image_select": "shopify:\/\/shop_images\/Frame1_1_c44a956a-84c7-4e97-a9c4-43a25ea2665a.png",
+            "header": "Classic Shirt Gold",
+            "classic": "RS 1,990.00"
+          }
         }
       },
       "block_order": [
@@ -57,7 +65,8 @@
         "slider_xW6xzq",
         "slider_MdAPXG",
         "slider_KQdhxb",
-        "slider_Tx8DKj"
+        "slider_Tx8DKj",
+        "slider_jbtjHD"
       ],
       "settings": {
         "topheading": "You may also like"
