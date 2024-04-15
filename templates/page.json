@@ -58,6 +58,14 @@
             "header": "Classic Shirt Gold",
             "classic": "RS 1,990.00"
           }
+        },
+        "slider_HX8hhH": {
+          "type": "slider",
+          "settings": {
+            "image_select": "shopify:\/\/shop_images\/Frame1_12.webp",
+            "header": "Classic Shirt Green",
+            "classic": "RS 1,990.00"
+          }
         }
       },
       "block_order": [
@@ -66,7 +74,8 @@
         "slider_MdAPXG",
         "slider_KQdhxb",
         "slider_Tx8DKj",
-        "slider_jbtjHD"
+        "slider_jbtjHD",
+        "slider_HX8hhH"
       ],
       "settings": {
         "topheading": "You may also like"
