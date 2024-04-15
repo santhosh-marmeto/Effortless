@@ -8,7 +8,7 @@
   assign featured_image = current_varient.image | default: product.featured_image
 %}
 
-<div class="splide page-width">
+<div class="splide page-width" id="splide-container">
   <h1 class="topheader">{{ section.settings.topheading }}</h1>
   <div class="splide__track">
     {% for block in section.blocks %}
@@ -106,9 +106,6 @@
                     {% endif %}
                   {% endform %}
                 </div>
-                {% endcomment %}
-
-                {% comment %} end radio button {% endcomment %}
 
                 {% if product.type != blank %}
                   <button class="productinfotags">{{ product.type }}</button>
@@ -147,7 +144,7 @@
       }
     });
 
-    new Splide('.splide', {
+    new Splide('#splide-container', {
       pagination: false,
       perPage: 4,
       gap: '60px',
