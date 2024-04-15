@@ -95,15 +95,16 @@
 
 .imagessliders .quickviewlink {
   position: absolute;
-  bottom: 28%;
+  bottom: 20%;
+
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.5s, bottom 0.5s;
+  transition: opacity 0.3s, ease-in-out 0.3s;
 }
 .imagessliders:hover .quickviewlink {
   opacity: 1;
-  bottom: 36%;
+  bottom: 40%;
 }
 .informationgroups {
   z-index: 200;

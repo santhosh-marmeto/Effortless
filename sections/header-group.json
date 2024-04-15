@@ -55,13 +55,6 @@
     "color_swatch_bLVndC": {
       "type": "color-swatch",
       "blocks": {
-        "color_settings_antw4k": {
-          "type": "colorSettings",
-          "settings": {
-            "title": "Brown",
-            "color_code": "#a52a2a"
-          }
-        },
         "color_settings_BKTYXe": {
           "type": "colorSettings",
           "settings": {
@@ -103,16 +96,39 @@
             "title": "Grey",
             "color_code": "#808080"
           }
+        },
+        "color_settings_B3xbcV": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Darkgoldenrod",
+            "color_code": "#b8860b"
+          }
+        },
+        "color_settings_PFYGzF": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "darkcyan",
+            "color_code": "#008b8b"
+          }
+        },
+        "color_settings_Ehi3yH": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Gray",
+            "color_code": "#808080"
+          }
         }
       },
       "block_order": [
-        "color_settings_antw4k",
         "color_settings_BKTYXe",
         "color_settings_JhwWjW",
         "color_settings_h4Canr",
         "color_settings_DMn7Ub",
         "color_settings_YA7E7T",
-        "color_settings_kY8qzY"
+        "color_settings_kY8qzY",
+        "color_settings_B3xbcV",
+        "color_settings_PFYGzF",
+        "color_settings_Ehi3yH"
       ],
       "settings": {
       }
