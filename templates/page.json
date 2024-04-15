@@ -50,14 +50,6 @@
             "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }
-        },
-        "slider_gAnNtX": {
-          "type": "slider",
-          "settings": {
-            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_White.png",
-            "header": "Classic Shirt in White",
-            "classic": "RS 1,990.00"
-          }
         }
       },
       "block_order": [
@@ -65,8 +57,7 @@
         "slider_xW6xzq",
         "slider_MdAPXG",
         "slider_KQdhxb",
-        "slider_Tx8DKj",
-        "slider_gAnNtX"
+        "slider_Tx8DKj"
       ],
       "settings": {
         "topheading": "You may also like"
