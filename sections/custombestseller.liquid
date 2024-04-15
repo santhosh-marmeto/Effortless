@@ -57,45 +57,25 @@
 
                 {% comment %} color radio start {% endcomment %}
 
-                <div class="product-card__form">
-                  {% form 'product', product %}
-                    <input type="hidden" name="id" value="{{ current_varient.id }}">
-                    {% if product.options_with_values %}
-                      <div class="product-card__options">
-                        {% for product_option in product.options_with_values %}
-                          {% if product_option.name == 'Color' %}
-                            <div class="product-card__option">
-                              <ul class="product-card__list">
-                                {% for option_value in product_option.values %}
-                                  {% assign isOptionOutOfStock = false %}
+              
+                  <div class="product-card__form">
+                    {% form 'product', product %}
+                      <input type="hidden" name="id" value="{{ current_varient.id }}">
+                      {% if product.options_with_values %}
+                        <div class="product-card__options">
+                          {% for product_option in product.options_with_values %}
+                            {% if product_option.name == 'Color' %}
+                              <div class="product-card__option">
+                                <ul class="product-card__list">
+                                  {% for option_value in product_option.values %}
+                                    {% assign isOptionOutOfStock = false %}
 
-                                  {% if current_varient.inventory_quantity == 0
-                                    and product_option.selected_value == option_value
-                                  %}
-                                    {% assign isOptionOutOfStock = true %}
-                                  {% endif %}
-
-                                  <li
-                                    {% comment %} data-value="{{ option_value }}" {% endcomment %}
-                                    class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
-                                    style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
-                                  >
-                                    <input
-                                      id="{{ current_varient.id | append: option_value }}"
-                                      type="radio"
-                                      name="option-{{ product_option.name | handleize }}"
-                                      value="{{ option_value }}"
-                                      {% if product_option.selected_value == option_value %}
-                                        checked
-                                      {% endif %}
-                                    >
-                                    <label
-                                      data-value="{{ option_value }}"
-                                      for="{{ current_varient.id | append: option_value }}"
-                                    ></label>
-                                    {% if isOptionOutOfStock %}
-                                      <div class="product-variant-options__cross-line"></div>
+                                    {% if current_varient.inventory_quantity == 0
+                                      and product_option.selected_value == option_value
+                                    %}
+                                      {% assign isOptionOutOfStock = true %}
                                     {% endif %}
+<<<<<<< HEAD
                                   </li>
                                 {% endfor %}
                               </ul>
@@ -106,6 +86,43 @@
                     {% endif %}
                   {% endform %}
                 </div>
+=======
+
+                                    <li
+                                      {% comment %} data-value="{{ option_value }}" {% endcomment %}
+                                      class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
+                                      style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
+                                    >
+                                      <input
+                                        id="{{ current_varient.id | append: option_value }}"
+                                        type="radio"
+                                        name="option-{{ product_option.name | handleize }}"
+                                        value="{{ option_value }}"
+                                        {% if product_option.selected_value == option_value %}
+                                          checked
+                                        {% endif %}
+                                      >
+                                      <label
+                                        data-value="{{ option_value }}"
+                                        for="{{ current_varient.id | append: option_value }}"
+                                      ></label>
+                                      {% if isOptionOutOfStock %}
+                                        <div class="product-variant-options__cross-line"></div>
+                                      {% endif %}
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    {% endform %}
+                  </div>
+               
+
+                {% comment %} end radio button {% endcomment %}
+>>>>>>> b888ca8acc5b604863de861306ba3c477a15b3ba
 
                 {% if product.type != blank %}
                   <button class="productinfotags">{{ product.type }}</button>
