@@ -346,6 +346,35 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "customherosecion_U6aq4q": {
+      "type": "customherosecion",
+      "blocks": {
+        "slide_hyw4Gh": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "pre_heading": "Women's Apparel",
+            "heading": "<p>Heading Text<\/p>",
+            "button_label": "Explore More",
+            "button_link": "",
+            "text_position_selector": "center-center",
+            "desktop_content_allignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_hyw4Gh"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_pagination": false,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "animation": "fade",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -357,6 +386,7 @@
     "featured_product_J4cpgP",
     "custombestseller_BE9gQY",
     "multirow_J4bqfj",
-    "featured_blog_CDai3n"
+    "featured_blog_CDai3n",
+    "customherosecion_U6aq4q"
   ]
 }
