@@ -40,10 +40,7 @@
           }
         }
       },
-      "block_order": [
-        "slide_QwMyin",
-        "slide_CThGNV"
-      ],
+      "block_order": ["slide_QwMyin", "slide_CThGNV"],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -135,9 +132,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_EP3WJ3"
-      ],
+      "block_order": ["heading_EP3WJ3"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -212,8 +207,7 @@
         },
         "price_8PW9UQ": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker_QEpCMR": {
           "type": "variant_picker",
@@ -224,8 +218,7 @@
         },
         "quantity_selector_Eiejhq": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons_dwtTHc": {
           "type": "buy_buttons",
@@ -277,9 +270,7 @@
           }
         }
       },
-      "block_order": [
-        "slider_KkqJCy"
-      ],
+      "block_order": ["slider_KkqJCy"],
       "settings": {
         "topheading": "You may also like"
       }
@@ -310,10 +301,7 @@
           }
         }
       },
-      "block_order": [
-        "row_ENQaRJ",
-        "row_DwUP4i"
-      ],
+      "block_order": ["row_ENQaRJ", "row_DwUP4i"],
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
@@ -347,13 +335,13 @@
         "padding_bottom": 36
       }
     },
-    "customherosecion_QieLCf": {
+    "customherosecion_U6aq4q": {
       "type": "customherosecion",
       "blocks": {
-        "slide_UdkwE7": {
+        "slide_hyw4Gh": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_17_1.webp",
+            "desktop_image": "shopify://shop_images/hero_section_2160x_1.webp",
             "pre_heading": "Women's Apparel",
             "heading": "<p>Heading Text</p>",
             "button_label": "Explore More",
@@ -363,9 +351,7 @@
           }
         }
       },
-      "block_order": [
-        "slide_UdkwE7"
-      ],
+      "block_order": ["slide_hyw4Gh"],
       "settings": {
         "autoplay": false,
         "show_pagination": false,
@@ -387,6 +373,6 @@
     "custombestseller_BE9gQY",
     "multirow_J4bqfj",
     "featured_blog_CDai3n",
-    "customherosecion_QieLCf"
+    "customherosecion_U6aq4q"
   ]
 }
