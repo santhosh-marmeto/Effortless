@@ -1,230 +1,182 @@
-{{ 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css' | stylesheet_tag }}
-<script src="{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}}" defer></script>
+{% comment %}
+  {{ 'custom-banner-slideshow.css' | asset_url | stylesheet_tag }}
+  <script src="{{ "custom-slideshow.js"  | asset_url }}" defer></script>
+  {% liquid
+    assign type = section.settings.Slide_animation
+    assign pagination = section.settings.show_pagination
+  %}
 
-{% style %}
-    .custom-slideshow--{{ section.id }}{
-        padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
-        padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
-    }
-    @media only screen and (max-width: 749px) {
-      .custom-slideshow--{{ section.id }}{
-        padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
-        padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
-    }
+  {%- capture splide_option -%}
+
+  {
+    "type": {{ type }},
+    "pagination": {{ pagination }}
   }
-{% endstyle %}
 
-<div class="custom-slideshow custom-slideshow-wrapper page-width custom-slideshow--{{ section.id }}">hi</div>
-{% schema %}
-{
-  "name": "custom-slideshow",
-  "tag": "section",
-  "class": "section",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Slider Options"
-    },
-    {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "Enable Autoplay",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_pagination",
-      "label": "Show dots",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_arrows",
-      "label": "Show Arrows",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "auto_play_duration",
-      "label": "Autoplay duration",
-      "min": 1000,
-      "max": 5000,
-      "step": 1000,
-      "unit": "ms",
-      "default": 2000
-    },
-    {
-      "type": "header",
-      "content": "Animation Options"
-    },
-    {
-      "type": "select",
-      "id": "animation",
-      "label": "Animations",
-      "default": "fade",
-      "options": [
-        {
-          "value": "fade",
-          "label": "fade"
-        },
-        {
-          "value": "loop",
-          "label": "loop"
-        },
-        {
-          "value": "slide",
-          "label": "slide"
-        }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "Section Padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Padding Top",
-      "min": 0,
-      "max": 100,
-      "step": 10,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Padding Bottom",
-      "min": 0,
-      "max": 100,
-      "step": 10,
-      "unit": "px",
-      "default": 0
-    }
-  ],
-  "blocks": [
-    {
-      "type": "slide",
-      "name": "Slide",
-      "settings": [
-        {
-          "type": "header",
-          "content": "Media Options"
-        },
-        {
-          "type": "image_picker",
-          "id": "desktop_image",
-          "label": "Desktop Image",
-          "info": "Recommended Size:  1360 x 633 px"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Mobile Image",
-          "info": "Recommended Size:  360 x 282 px"
-        },
-        {
-          "type": "header",
-          "content": "Text Customisation"
-        },
-        {
-          "type": "text",
-          "id": "pre_heading",
-          "label": "Pre Heading",
-          "default": "Women's Apparel"
-        },
-        {
-          "type": "richtext",
-          "id": "heading",
-          "label": "Heading",
-          "default": "<p>Heading Text</p>"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Button Label",
-          "default": "Explore More"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button Links"
-        },
-        {
-          "type": "header",
-          "content": "Text Positions"
-        },
-        {
-          "type": "select",
-          "id": "text_position_selector",
-          "label": "Select Text Positions",
-          "default": "center-center",
-          "options": [
-            {
-              "value": "top-left",
-              "label": "Top Left"
-            },
-            {
-              "value": "top-right",
-              "label": "Top Right"
-            },
-            {
-              "label": "Top Center",
-              "value": "top-center"
-            },
-            {
-              "label": "Center Left",
-              "value": "Center-left"
-            },
-            {
-              "label": "Center center",
-              "value": "center-center"
-            },
-            {
-              "label": "Center Right",
-              "value": "center-right"
-            },
-            {
-              "label": "Bottom Left",
-              "value": "bottom-left"
-            },
-            {
-              "label": "Bottom Right",
-              "value": "bottom-right"
-            },
-            {
-              "label": "Bottom Center",
-              "value": "bottom-center"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "desktop_content_allignment",
-          "label": "Desktop Content Allignment",
-          "default": "center",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Custom Slideshow"
-    }
-  ]
-}
-{% endschema %}
+
+
+
+
+  {%- endcapture -%}
+  <splider-component>
+    <div class="splide" data-slider-settings="{{ splide_option }}">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for block in section.blocks %}
+            <li class="splide__slide">
+              <div class="slide-content">
+                <img
+                  src="{{ block.settings.desktop_image | image_url }}"
+                  alt="Slide Image"
+                  height=""
+                  width=""
+                >
+                <p class="headertop">{{ block.settings.heading }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </splider-component>
+
+  {% schema %}
+  {
+    "name": "custom slidshow",
+    "tag": "section",
+    "class": "Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "splider options"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_play",
+        "label": "Enable auto play",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_pagination",
+        "label": "Show dots",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_arrows",
+        "label": "Show arrows",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "auto_play_duration",
+        "min": 1000,
+        "max": 5000,
+        "step": 1000,
+        "unit": "sec",
+        "label": "Autoplay duration",
+        "default": 2000
+      },
+      {
+        "type": "header",
+        "content": "Animation options"
+      },
+      {
+        "type": "select",
+        "id": "Slide_animation",
+        "label": "Slide animation",
+        "options": [
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "slide",
+            "label": "slide"
+          },
+          {
+            "value": "loop",
+            "label": "Loop"
+          }
+        ],
+        "default": "slide"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "px",
+        "label": "padding top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "px",
+        "label": "padding bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Media positions"
+          },
+          {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "desktop_image",
+            "info": "Recommended size :1360  x 633 px."
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile",
+            "label": "mobile",
+            "info": "Recommended size :360  x 282 px."
+          },
+          {
+            "type": "header",
+            "content": "Text customization"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label",
+            "default": "Explore more"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "custom slideshows"
+      }
+    ]
+  }
+  {% endschema %}
+{% endcomment %}

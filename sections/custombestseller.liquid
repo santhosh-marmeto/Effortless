@@ -1,14 +1,16 @@
 {{ 'custombestseller.css' | asset_url | stylesheet_tag }}
 
-{{ 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css' | stylesheet_tag }}
-<script src="{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}}" defer></script>
+{% comment %}
+  {{ 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css' | stylesheet_tag }}
+  <script src="{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}}" defer></script>
+{% endcomment %}
 
 {% liquid
   assign current_varient = product.selected_or_first_available_variant
   assign featured_image = current_varient.image | default: product.featured_image
 %}
 
-<div class="splide page-width" id="splide-container">
+<div class="splide page-width">
   <h1 class="topheader">{{ section.settings.topheading }}</h1>
   <div class="splide__track">
     {% for block in section.blocks %}
@@ -57,25 +59,45 @@
 
                 {% comment %} color radio start {% endcomment %}
 
-              
-                  <div class="product-card__form">
-                    {% form 'product', product %}
-                      <input type="hidden" name="id" value="{{ current_varient.id }}">
-                      {% if product.options_with_values %}
-                        <div class="product-card__options">
-                          {% for product_option in product.options_with_values %}
-                            {% if product_option.name == 'Color' %}
-                              <div class="product-card__option">
-                                <ul class="product-card__list">
-                                  {% for option_value in product_option.values %}
-                                    {% assign isOptionOutOfStock = false %}
+                <div class="product-card__form">
+                  {% form 'product', product %}
+                    <input type="hidden" name="id" value="{{ current_varient.id }}">
+                    {% if product.options_with_values %}
+                      <div class="product-card__options">
+                        {% for product_option in product.options_with_values %}
+                          {% if product_option.name == 'Color' %}
+                            <div class="product-card__option">
+                              <ul class="product-card__list">
+                                {% for option_value in product_option.values %}
+                                  {% assign isOptionOutOfStock = false %}
 
-                                    {% if current_varient.inventory_quantity == 0
-                                      and product_option.selected_value == option_value
-                                    %}
-                                      {% assign isOptionOutOfStock = true %}
+                                  {% if current_varient.inventory_quantity == 0
+                                    and product_option.selected_value == option_value
+                                  %}
+                                    {% assign isOptionOutOfStock = true %}
+                                  {% endif %}
+
+                                  <li
+                                    {% comment %} data-value="{{ option_value }}" {% endcomment %}
+                                    class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
+                                    style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
+                                  >
+                                    <input
+                                      id="{{ current_varient.id | append: option_value }}"
+                                      type="radio"
+                                      name="option-{{ product_option.name | handleize }}"
+                                      value="{{ option_value }}"
+                                      {% if product_option.selected_value == option_value %}
+                                        checked
+                                      {% endif %}
+                                    >
+                                    <label
+                                      data-value="{{ option_value }}"
+                                      for="{{ current_varient.id | append: option_value }}"
+                                    ></label>
+                                    {% if isOptionOutOfStock %}
+                                      <div class="product-variant-options__cross-line"></div>
                                     {% endif %}
-<<<<<<< HEAD
                                   </li>
                                 {% endfor %}
                               </ul>
@@ -86,43 +108,8 @@
                     {% endif %}
                   {% endform %}
                 </div>
-=======
-
-                                    <li
-                                      {% comment %} data-value="{{ option_value }}" {% endcomment %}
-                                      class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
-                                      style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
-                                    >
-                                      <input
-                                        id="{{ current_varient.id | append: option_value }}"
-                                        type="radio"
-                                        name="option-{{ product_option.name | handleize }}"
-                                        value="{{ option_value }}"
-                                        {% if product_option.selected_value == option_value %}
-                                          checked
-                                        {% endif %}
-                                      >
-                                      <label
-                                        data-value="{{ option_value }}"
-                                        for="{{ current_varient.id | append: option_value }}"
-                                      ></label>
-                                      {% if isOptionOutOfStock %}
-                                        <div class="product-variant-options__cross-line"></div>
-                                      {% endif %}
-                                    </li>
-                                  {% endfor %}
-                                </ul>
-                              </div>
-                            {% endif %}
-                          {% endfor %}
-                        </div>
-                      {% endif %}
-                    {% endform %}
-                  </div>
-               
 
                 {% comment %} end radio button {% endcomment %}
->>>>>>> b888ca8acc5b604863de861306ba3c477a15b3ba
 
                 {% if product.type != blank %}
                   <button class="productinfotags">{{ product.type }}</button>
@@ -161,7 +148,7 @@
       }
     });
 
-    new Splide('#splide-container', {
+    new Splide('.splide', {
       pagination: false,
       perPage: 4,
       gap: '60px',

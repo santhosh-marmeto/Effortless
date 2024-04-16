@@ -132,11 +132,88 @@
       ],
       "settings": {
       }
+    },
+    "custom_slideshow_44cjdP": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_tDGN4N": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_17_788729ba-ead1-436d-9e6a-46a03262da05.webp",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        },
+        "slide_yC9jqi": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_17_788729ba-ead1-436d-9e6a-46a03262da05.webp",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        },
+        "slide_aJp8mp": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_9.webp",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        },
+        "slide_64PDNa": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_15.webp",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        },
+        "slide_dGjBzF": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_4.webp",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        },
+        "slide_6e9Jri": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame1_2_dec9a3dd-7ed8-41e9-85b3-d7c16d1f9d63.png",
+            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
+            "button_label": "Explore more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tDGN4N",
+        "slide_yC9jqi",
+        "slide_aJp8mp",
+        "slide_64PDNa",
+        "slide_dGjBzF",
+        "slide_6e9Jri"
+      ],
+      "settings": {
+        "auto_play": false,
+        "show_pagination": false,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "Slide_animation": "slide",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "color_swatch_bLVndC"
+    "color_swatch_bLVndC",
+    "custom_slideshow_44cjdP"
   ]
 }
