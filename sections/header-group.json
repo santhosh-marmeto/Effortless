@@ -183,63 +183,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "week_6_AHTeDp": {
-      "type": "week-6",
-      "blocks": {
-        "slide_YbtJxy": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
-            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe<\/p>",
-            "testimonals_author_description": "<p>Clients<\/p>",
-            "color_active": "",
-            "color_normal": ""
-          }
-        },
-        "slide_JPynCq": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
-            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe<\/p>",
-            "testimonals_author_description": "<p>Clients<\/p>",
-            "color_active": "",
-            "color_normal": ""
-          }
-        },
-        "slide_XE7nPW": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
-            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe<\/p>",
-            "testimonals_author_description": "<p>Clients<\/p>",
-            "color_active": "",
-            "color_normal": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_YbtJxy",
-        "slide_JPynCq",
-        "slide_XE7nPW"
-      ],
-      "settings": {
-        "Custom_heading_week": "Testimonials",
-        "custom_desciption_week": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-        "color_week_background": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_arrows": false,
-        "auto_play_duration": 2000,
-        "per_page": 2,
-        "animation": "fade"
-      }
     }
   },
   "order": [
@@ -247,7 +190,6 @@
     "header",
     "color_swatch_bLVndC",
     "custom_slideshow_44cjdP",
-    "customherosecion_akiKeY",
-    "week_6_AHTeDp"
+    "customherosecion_akiKeY"
   ]
 }

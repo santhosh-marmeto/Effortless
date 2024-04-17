@@ -50,6 +50,13 @@
             "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }
+        },
+        "slider_8nw7Yy": {
+          "type": "slider",
+          "settings": {
+            "header": "Classic Shirt",
+            "classic": "RS 1,990.00"
+          }
         }
       },
       "block_order": [
@@ -57,16 +64,75 @@
         "slider_xW6xzq",
         "slider_MdAPXG",
         "slider_KQdhxb",
-        "slider_Tx8DKj"
+        "slider_Tx8DKj",
+        "slider_8nw7Yy"
       ],
       "disabled": true,
       "settings": {
         "topheading": "You may also like"
       }
+    },
+    "week_6_VgPjDC": {
+      "type": "week-6",
+      "blocks": {
+        "slide_tBQxbL": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
+            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_2.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
+            "testimonals_author_name": "Mr.Jhon Doe",
+            "testimonals_author_description": "Clients",
+            "color_active": "",
+            "color_normal": ""
+          }
+        },
+        "slide_dixyp7": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
+            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
+            "testimonals_author_name": "Mr.Jhon Doe",
+            "testimonals_author_description": "Clients",
+            "color_active": "",
+            "color_normal": ""
+          }
+        },
+        "slide_GVL6PE": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
+            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_2.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
+            "testimonals_author_name": "Mr.Jhon Doe",
+            "testimonals_author_description": "Clients",
+            "color_active": "",
+            "color_normal": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tBQxbL",
+        "slide_dixyp7",
+        "slide_GVL6PE"
+      ],
+      "settings": {
+        "Custom_heading_week": "Testimonials",
+        "custom_desciption_week": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "color_week_background": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "per_page": 2,
+        "animation": "fade"
+      }
     }
   },
   "order": [
     "main",
-    "dummyslide_EKFnAh"
+    "dummyslide_EKFnAh",
+    "week_6_VgPjDC"
   ]
 }
