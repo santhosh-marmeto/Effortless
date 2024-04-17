@@ -14,7 +14,7 @@
         "slider_KiV4Rp": {
           "type": "slider",
           "settings": {
-            "image_select": "shopify://shop_images/Link_-_Classic_Shirt_in_White.png",
+            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_White.png",
             "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }
@@ -22,7 +22,7 @@
         "slider_xW6xzq": {
           "type": "slider",
           "settings": {
-            "image_select": "shopify://shop_images/Link_-_Classic_Shirt_in_Mauve.png",
+            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_Mauve.png",
             "header": "Classic Shirt in Mauve",
             "classic": "RS 1,990.00"
           }
@@ -30,7 +30,7 @@
         "slider_MdAPXG": {
           "type": "slider",
           "settings": {
-            "image_select": "shopify://shop_images/Link_-_Classic_Shirt_in_French_Blue.png",
+            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_French_Blue.png",
             "header": "Classic Shirt in French Blue",
             "classic": "RS 1,990.00"
           }
@@ -38,7 +38,7 @@
         "slider_KQdhxb": {
           "type": "slider",
           "settings": {
-            "image_select": "shopify://shop_images/Link_-_Classic_Shirt_in_Slate_Green.png",
+            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_Slate_Green.png",
             "header": "Classic Shirt in Slate Green",
             "classic": "RS 1,990.00"
           }
@@ -46,7 +46,7 @@
         "slider_Tx8DKj": {
           "type": "slider",
           "settings": {
-            "image_select": "shopify://shop_images/Link_-_Classic_Shirt_in_White.png",
+            "image_select": "shopify:\/\/shop_images\/Link_-_Classic_Shirt_in_White.png",
             "header": "Classic Shirt in White",
             "classic": "RS 1,990.00"
           }

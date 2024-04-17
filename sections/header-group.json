@@ -145,10 +145,10 @@
         "slide_hpG76k": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/hero_section_2160x_1.webp",
-            "mobile_image": "shopify://shop_images/hero_section_2160x_1.webp",
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
             "pre_heading": "An Effortless shopping experience",
-            "heading_two": "<p>  Start Selling More Online</p>",
+            "heading_two": "<p>  Start Selling More Online<\/p>",
             "button_label": "Shop Now",
             "button_link": "",
             "text_position_selector": "center-center",
@@ -158,10 +158,10 @@
         "slide_Gp7EJC": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
-            "mobile_image": "shopify://shop_images/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
             "pre_heading": "An Effortless shopping experience",
-            "heading_two": "<p>  Start Selling More Online</p>",
+            "heading_two": "<p>  Start Selling More Online<\/p>",
             "button_label": "Show Now",
             "button_link": "",
             "text_position_selector": "center-center",
@@ -184,60 +184,34 @@
         "padding_bottom": 0
       }
     },
-    "week_6_3LXhQE": {
+    "week_6_AHTeDp": {
       "type": "week-6",
       "blocks": {
-        "slide_3y3RhE": {
+        "slide_YbtJxy": {
           "type": "Slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/Wrapper.png",
-            "testimonals_image": "shopify://shop_images/Rectangle_8.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
-            "testimonals_author_description": "<p>Clients</p>",
-            "color_active": "",
-            "color_normal": ""
-          }
-        },
-        "slide_gkVN8d": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Wrapper.png",
-            "testimonals_image": "shopify://shop_images/Rectangle_8_1.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
-            "testimonals_author_description": "<p>Clients</p>",
-            "color_active": "",
-            "color_normal": ""
-          }
-        },
-        "slide_kgrtjP": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Wrapper.png",
-            "testimonals_image": "shopify://shop_images/Rectangle_8_2.png",
-            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
-            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
-            "testimonals_author_description": "<p>Clients</p>",
+            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
+            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
+            "testimonals_author_name": "<p>Mr.Jhon Doe<\/p>",
+            "testimonals_author_description": "<p>Clients<\/p>",
             "color_active": "",
             "color_normal": ""
           }
         }
       },
       "block_order": [
-        "slide_3y3RhE",
-        "slide_gkVN8d",
-        "slide_kgrtjP"
+        "slide_YbtJxy"
       ],
       "settings": {
         "Custom_heading_week": "Testimonials",
-        "custom_desciption_week": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-        "color_week_background": "linear-gradient(180deg, rgba(255, 228, 49, 1), rgba(248, 255, 59, 1) 86.763%, rgba(249, 32, 32, 1) 100%)",
+        "custom_desciption_week": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "color_week_background": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "show_arrows": true,
+        "show_arrows": false,
         "auto_play_duration": 2000,
-        "per_page": 3,
+        "per_page": 2,
         "animation": "fade"
       }
     }
@@ -248,6 +222,6 @@
     "color_swatch_bLVndC",
     "custom_slideshow_44cjdP",
     "customherosecion_akiKeY",
-    "week_6_3LXhQE"
+    "week_6_AHTeDp"
   ]
 }
