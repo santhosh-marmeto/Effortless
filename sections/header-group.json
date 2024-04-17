@@ -210,11 +210,24 @@
             "color_active": "",
             "color_normal": ""
           }
+        },
+        "slide_XE7nPW": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Wrapper.png",
+            "testimonals_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<\/p>",
+            "testimonals_author_name": "<p>Mr.Jhon Doe<\/p>",
+            "testimonals_author_description": "<p>Clients<\/p>",
+            "color_active": "",
+            "color_normal": ""
+          }
         }
       },
       "block_order": [
         "slide_YbtJxy",
-        "slide_JPynCq"
+        "slide_JPynCq",
+        "slide_XE7nPW"
       ],
       "settings": {
         "Custom_heading_week": "Testimonials",
