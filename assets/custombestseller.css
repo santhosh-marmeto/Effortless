@@ -1,35 +1,40 @@
 /* Customize Splide slider container */
-.splide {
+.custombest-seller-slide .splide {
   margin-top: 20px;
 
   margin-bottom: 30px;
 }
-.slide-content {
+.custom--best-seller-slide--content .slide-content {
   margin-top: 40px;
   position: relative;
 }
 
 /* Customize Splide slide */
-.splide__slide img {
+.custombest-seller-splidelist .splide__slide img {
   width: 100%;
 }
 
-.splide_arrows .splide_arrow {
-  background: none;
+.custombest-seller-slide {
+  /* margin: 0 20px; */
+  position: relative;
+}
+
+.custombest-seller-slide .splide_arrows .splide_arrow {
+  background: green;
   color: #fff !important;
   font-size: 20px;
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 40% !important;
+  top: 20% !important;
   font-weight: 100;
 }
 
-.splide_arrows .splide_arrow--prev {
+.custombest-seller-slide .splide_arrows .splide_arrow--prev {
   left: -60px;
 }
 
-.splide_arrows .splide_arrow--next {
+.custombest-seller-slide .splide_arrows .splide_arrow--next {
   right: -60px;
 }
 .splide__arrow {
@@ -44,26 +49,32 @@
 .splide__arrow svg:hover {
   fill: white !important;
 }
+.splide__arrows {
+  height: 40px;
+  width: 140px;
+  position: absolute;
+  right: 10px;
+  top: -54px;
+}
 .splide__arrow--next {
-  top: 10% !important;
-  left: 90%;
+  top: 0%;
+  left: 24%;
 }
 .splide__arrow--prev {
-  top: 10% !important;
-  left: 86% !important;
+  top: 0%;
+  left: 0% !important;
 }
 
 .topheader {
   font-size: 28px;
   padding: 10px;
   font-family: "Times New Roman", Times, serif;
-  color: white;
 }
 
 .productimages {
   position: relative;
-  width: 200px;
-  height: 100%;
+  /* width: 200px;
+  height: 100%; */
 }
 
 .quick-view-button {
@@ -92,10 +103,17 @@
   font-weight: bold;
   font-size: 10px;
 }
+.imagessliders {
+  height: 340px;
+}
+.imagessliders img {
+  object-fit: cover;
+  height: 100%;
+}
 
 .imagessliders .quickviewlink {
-  position: absolute;
-  bottom: 21%;
+  position: relative;
+  bottom: 14%;
 
   left: 50%;
   transform: translateX(-50%);
@@ -104,7 +122,7 @@
 }
 .imagessliders:hover .quickviewlink {
   opacity: 1;
-  bottom: 40%;
+  bottom: 20%;
 }
 .informationgroups {
   z-index: 200;
@@ -142,7 +160,6 @@
 
 .slide-content .eye-icon {
   position: absolute;
-
   left: 80%;
   transform: translateX(-30%);
   opacity: 0;
@@ -202,9 +219,14 @@
   .product-card__price-amount {
     font-size: 16px;
   }
-  .splide__arrow--prev {
-    top: 10% !important;
-    left: 80% !important;
+  .splide__arrows {
+    top: -53px;
+    right: 6px;
+    width: 75px;
+  }
+  .splide__arrow--next {
+    top: 0%;
+    left: 44%;
   }
 }
 .relative-container {
