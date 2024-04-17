@@ -27,6 +27,7 @@
 {%- capture splide_option -%}
 
   {
+<<<<<<< HEAD
     "type": "{{ type }}",
     "pagination": {{ pagination }},
     "arrows": {{ arrows }},
@@ -39,6 +40,12 @@
           "perPage": 1
         }
       }
+=======
+    "type": {{ type }},
+    "pagination": {{ pagination }},
+    "arrows":{{ arrows }},
+    "perpage":{{ perpage }}
+>>>>>>> 58d6ba2ba4736d584604c86cece6a64e26c83cff
   }
   {%- endcapture -%}
 <div class="mainweek-flex">
@@ -61,7 +68,11 @@
     </div>
    
 
+<<<<<<< HEAD
     <div class="topslide--weekslide splide" data-slider-settings='{{ splide_option }}'>
+=======
+    <div class=" topslide--weekslide splide" data-slider-settings='{{ splide_option }}'>
+>>>>>>> 58d6ba2ba4736d584604c86cece6a64e26c83cff
       <div class="splide__track">
         <ul class="splide__list">
           {% for block in section.blocks %}
