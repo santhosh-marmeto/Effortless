@@ -1,8 +1,14 @@
-// defining component
+// class CustomSlider extends HTMLElement {
+//   constructor() {
+//     super();
+//     this.element = this.querySelector(".splide");
+//     this.options = JSON.parse(this.element.dataset.sliderSettings);
+//     this.mountSplider();
+//   }
 
-class slidecomponent extends HTMLElement {
-  constructor() {
-    super();
-  }
-  //connected callback , protoype
-}
+//   mountSplider() {
+//     new Splide(this.element, this.options).mount();
+//   }
+// }
+
+// customElements.define("author-component", CustomSlider);

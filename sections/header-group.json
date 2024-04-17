@@ -173,6 +173,7 @@
         "slide_hpG76k",
         "slide_Gp7EJC"
       ],
+      "disabled": true,
       "settings": {
         "autoplay": false,
         "show_pagination": true,
@@ -182,6 +183,63 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "week_6_3LXhQE": {
+      "type": "week-6",
+      "blocks": {
+        "slide_3y3RhE": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Wrapper.png",
+            "testimonals_image": "shopify://shop_images/Rectangle_8.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
+            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
+            "testimonals_author_description": "<p>Clients</p>",
+            "color_active": "",
+            "color_normal": ""
+          }
+        },
+        "slide_gkVN8d": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Wrapper.png",
+            "testimonals_image": "shopify://shop_images/Rectangle_8_1.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
+            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
+            "testimonals_author_description": "<p>Clients</p>",
+            "color_active": "",
+            "color_normal": ""
+          }
+        },
+        "slide_kgrtjP": {
+          "type": "Slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Wrapper.png",
+            "testimonals_image": "shopify://shop_images/Rectangle_8_2.png",
+            "testimonals_header": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>",
+            "testimonals_author_name": "<p>Mr.Jhon Doe</p>",
+            "testimonals_author_description": "<p>Clients</p>",
+            "color_active": "",
+            "color_normal": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_3y3RhE",
+        "slide_gkVN8d",
+        "slide_kgrtjP"
+      ],
+      "settings": {
+        "Custom_heading_week": "Testimonials",
+        "custom_desciption_week": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "color_week_background": "linear-gradient(180deg, rgba(255, 228, 49, 1), rgba(248, 255, 59, 1) 86.763%, rgba(249, 32, 32, 1) 100%)",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_arrows": true,
+        "auto_play_duration": 2000,
+        "per_page": 3,
+        "animation": "fade"
+      }
     }
   },
   "order": [
@@ -189,6 +247,7 @@
     "header",
     "color_swatch_bLVndC",
     "custom_slideshow_44cjdP",
-    "customherosecion_akiKeY"
+    "customherosecion_akiKeY",
+    "week_6_3LXhQE"
   ]
 }

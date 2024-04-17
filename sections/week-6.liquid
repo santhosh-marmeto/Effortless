@@ -1,0 +1,240 @@
+{% style %}
+  .custom-padding--{{ section.id }}{
+      padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
+  }
+  /* mobile first approach */
+  @media screen and (min-width: 749px){
+      .custom-padding--{{ section.id }}{
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{% endstyle %}
+
+{{ 'week-6slide.css' | asset_url | stylesheet_tag }}
+<script src="{{ "custom-slideshow.js"  | asset_url }}" defer></script>
+{% liquid
+  assign type = section.settings.Slide_animation
+  assign pagination = section.settings.show_pagination
+  assign arrows = section.settings.show_arrows
+  assign perpage = section.settings.per_page
+%}
+
+{%- capture splide_option -%}
+
+  {
+    "type": {{ type }},
+    "pagination": {{ pagination }}
+    "arrows":{{ arrows }}
+    "perpage":{{ perpage }}
+  }
+  {%- endcapture -%}
+<div class="mainweek-flex">
+  <div class="imageflexgrow">
+    <img
+      src="{{ section.blocks.first.settings.desktop_image | image_url }}"
+      alt="Slide Image"
+      height=""
+      width=""
+    >
+  </div>
+
+  <splider-component>
+    <h1 class="custom_heading_author">{{ section.settings.Custom_heading_week }}</h1>
+    <p class="sectiondescription">{{ section.settings.custom_desciption_week }}</p>
+
+    <div class=" topslide--weekslide splide" data-slider-settings="{{ splide_option }}">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for block in section.blocks %}
+            <li class=" weekslideuages splide__slide">
+              <div class="splide-content-blog splide-content">
+                <p>{{ block.settings.testimonals_header }}</p>
+                <div class="glowflexview">
+                  <div class="imageviewpointflex">
+                    <img
+                      src="{{ block.settings.testimonals_image | image_url }}"
+                      alt="Slide Image"
+                      height="200px"
+                      width="200px"
+                    >
+                    <div class="author_fieldheader">
+                      <h6>
+                        {{ block.settings.testimonals_author_name }}
+                        {{ block.settings.testimonals_author_description }}
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </splider-component>
+</div>
+
+{% schema %}
+{
+  "name": "Week-6 Custom Slide",
+  "tag": "section",
+  "class": "Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "Custom_heading_week",
+      "label": "Heading",
+      "default": "Testimonials"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_desciption_week",
+      "label": "Description",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+
+    {
+      "type": "color_background",
+      "id": "color_week_background",
+      "label": "Background"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show Arrows",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_play_duration",
+      "label": "Autoplay duration",
+      "min": 1000,
+      "max": 5000,
+      "step": 1000,
+      "unit": "ms",
+      "default": 2000
+    },
+    {
+      "type": "range",
+      "id": "per_page",
+      "label": "perpage",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "ms",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Animation Options"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animations",
+      "default": "fade",
+      "options": [
+        {
+          "value": "fade",
+          "label": "fade"
+        },
+        {
+          "value": "loop",
+          "label": "loop"
+        },
+        {
+          "value": "slide",
+          "label": "slide"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Media positions"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "desktop_image",
+          "info": "Recommended size :1360  x 633 px."
+        },
+        {
+          "type": "image_picker",
+          "id": "testimonals_image",
+          "label": "testimonals_image",
+          "info": "Recommended size :1360  x 633 px."
+        },
+        {
+          "type": "richtext",
+          "id": "testimonals_header",
+          "label": "headers",
+          "default": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>"
+        },
+        {
+          "type": "text",
+          "id": "testimonals_author_name",
+          "label": "authorname",
+          "default": "<p>Mr.Jhon Doe</p>"
+        },
+        {
+          "type": "text",
+          "id": "testimonals_author_description",
+          "label": "authordescription",
+          "default": "<p>Clients</p>"
+        },
+        {
+          "type": "header",
+          "content": "BackgroundActive"
+        },
+        {
+          "type": "color_background",
+          "id": "color_active",
+          "label": "Backgroundactive"
+        },
+        {
+          "type": "header",
+          "content": "BackgroundNormal"
+        },
+        {
+          "type": "color_background",
+          "id": "color_normal",
+          "label": "Backgroundnormal"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Week-6 Custom Slide"
+    }
+  ]
+}
+{% endschema %}
