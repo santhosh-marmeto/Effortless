@@ -3,6 +3,9 @@
       padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
       padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
   }
+  .active-slide{
+        background: {{ section.blocks.first.settings.color_active }};
+    }
   /* mobile first approach */
   @media screen and (min-width: 749px){
       .custom-padding--{{ section.id }}{
@@ -13,38 +16,52 @@
 {% endstyle %}
 
 {{ 'week-6slide.css' | asset_url | stylesheet_tag }}
-<script src="{{ "custom-slideshow.js"  | asset_url }}" defer></script>
+<script src="{{ "compoent-slide.js"  | asset_url }}" defer></script>
 {% liquid
   assign type = section.settings.Slide_animation
   assign pagination = section.settings.show_pagination
   assign arrows = section.settings.show_arrows
-  assign perpage = section.settings.per_page
+ 
 %}
 
 {%- capture splide_option -%}
 
   {
-    "type": {{ type }},
-    "pagination": {{ pagination }}
-    "arrows":{{ arrows }}
-    "perpage":{{ perpage }}
+    "type": "{{ type }}",
+    "pagination": {{ pagination }},
+    "arrows": {{ arrows }},
+    "per_page":1,
+    "breakpoints" : {
+        "768": {
+          "perPage": 1
+        },
+        "480": {
+          "perPage": 1
+        }
+      }
   }
   {%- endcapture -%}
 <div class="mainweek-flex">
   <div class="imageflexgrow">
+    {% for block in section.blocks %}
     <img
-      src="{{ section.blocks.first.settings.desktop_image | image_url }}"
+      src="{{ block.settings.desktop_image | image_url }}"
       alt="Slide Image"
       height=""
       width=""
+      class="desktopimgaes"
     >
+        {% endfor %}
   </div>
 
   <splider-component>
-    <h1 class="custom_heading_author">{{ section.settings.Custom_heading_week }}</h1>
-    <p class="sectiondescription">{{ section.settings.custom_desciption_week }}</p>
+    <div class="headerdescriptionweek">
+        <h1 class="custom_heading_author">{{ section.settings.Custom_heading_week }}</h1>
+        <p class="sectiondescription">{{ section.settings.custom_desciption_week }}</p>
+    </div>
+   
 
-    <div class=" topslide--weekslide splide" data-slider-settings="{{ splide_option }}">
+    <div class="topslide--weekslide splide" data-slider-settings='{{ splide_option }}'>
       <div class="splide__track">
         <ul class="splide__list">
           {% for block in section.blocks %}
@@ -62,8 +79,9 @@
                     <div class="author_fieldheader">
                       <h6>
                         {{ block.settings.testimonals_author_name }}
-                        {{ block.settings.testimonals_author_description }}
+                       
                       </h6>
+                      <h6> {{ block.settings.testimonals_author_description }}</h6>
                     </div>
                   </div>
                 </div>
@@ -75,6 +93,7 @@
     </div>
   </splider-component>
 </div>
+
 
 {% schema %}
 {
@@ -121,6 +140,36 @@
       "default": 0
     },
     {
+        "type": "header",
+        "content": "Animation options"
+      },
+      {
+        "type": "select",
+        "id": "Slide_animation",
+        "label": "Slide animation",
+        "options": [
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "slide",
+            "label": "slide"
+          },
+          {
+            "value": "loop",
+            "label": "Loop"
+          }
+        ],
+        "default": "slide"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_pagination",
+        "label": "Show dots",
+        "default": true
+      },
+    {
       "type": "checkbox",
       "id": "show_arrows",
       "label": "Show Arrows",
@@ -142,9 +191,8 @@
       "label": "perpage",
       "min": 1,
       "max": 5,
-      "step": 1,
-      "unit": "ms",
-      "default": 2
+      "step": 0.5,
+      "default": 1.5
     },
     {
       "type": "header",
