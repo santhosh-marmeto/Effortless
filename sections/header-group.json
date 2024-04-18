@@ -133,78 +133,46 @@
       "settings": {
       }
     },
-    "custom_slideshow_44cjdP": {
-      "type": "custom-slideshow",
+    "customherobanner_NMEfGg": {
+      "type": "customherobanner",
       "blocks": {
-        "slide_tDGN4N": {
-          "type": "Slide",
+        "slide_RDhrNd": {
+          "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_17_788729ba-ead1-436d-9e6a-46a03262da05.webp",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "pre_heading": "Women's Apparel",
+            "heading_two": "<p>Heading Text<\/p>",
+            "button_label": "Explore More",
+            "button_link": "",
+            "text_position_selector": "center-center",
+            "desktop_content_allignment": "center"
           }
         },
-        "slide_yC9jqi": {
-          "type": "Slide",
+        "slide_89Gqrf": {
+          "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_17_788729ba-ead1-436d-9e6a-46a03262da05.webp",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
-          }
-        },
-        "slide_aJp8mp": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_9.webp",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
-          }
-        },
-        "slide_64PDNa": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_15.webp",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
-          }
-        },
-        "slide_dGjBzF": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_4.webp",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
-          }
-        },
-        "slide_6e9Jri": {
-          "type": "Slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Frame1_2_dec9a3dd-7ed8-41e9-85b3-d7c16d1f9d63.png",
-            "heading": "<p>Elevate your wardrobe with our limited-time fashion offer!</p>",
-            "button_label": "Explore more",
-            "button_link": ""
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "pre_heading": "Women's Apparel",
+            "heading_two": "<p>Heading Text<\/p>",
+            "button_label": "Explore More",
+            "button_link": "",
+            "text_position_selector": "center-center",
+            "desktop_content_allignment": "center"
           }
         }
       },
       "block_order": [
-        "slide_tDGN4N",
-        "slide_yC9jqi",
-        "slide_aJp8mp",
-        "slide_64PDNa",
-        "slide_dGjBzF",
-        "slide_6e9Jri"
+        "slide_RDhrNd",
+        "slide_89Gqrf"
       ],
       "settings": {
-        "auto_play": false,
-        "show_pagination": false,
-        "show_arrows": false,
+        "autoplay": false,
+        "show_pagination": true,
+        "show_arrows": true,
         "auto_play_duration": 2000,
-        "Slide_animation": "slide",
+        "animation": "fade",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -214,6 +182,6 @@
     "announcement-bar",
     "header",
     "color_swatch_bLVndC",
-    "custom_slideshow_44cjdP"
+    "customherobanner_NMEfGg"
   ]
 }
