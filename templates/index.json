@@ -352,48 +352,6 @@
       "type": "customherosecion",
       "settings": {
       }
-    },
-    "customherobanner_RyCE8b": {
-      "type": "customherobanner",
-      "blocks": {
-        "slide_gMWfwL": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
-            "pre_heading": "Women's Apparel",
-            "heading_two": "<p>Heading Text<\/p>",
-            "button_label": "Explore More",
-            "button_link": "",
-            "text_position_selector": "center-center",
-            "desktop_content_allignment": "center"
-          }
-        },
-        "slide_kLqJFf": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
-            "pre_heading": "Women's Apparel",
-            "heading_two": "<p>Heading Text<\/p>",
-            "button_label": "Explore More",
-            "button_link": "",
-            "text_position_selector": "center-center",
-            "desktop_content_allignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_gMWfwL",
-        "slide_kLqJFf"
-      ],
-      "settings": {
-        "autoplay": false,
-        "show_pagination": true,
-        "show_arrows": true,
-        "auto_play_duration": 2000,
-        "animation": "fade",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
@@ -406,7 +364,6 @@
     "custombestseller_BE9gQY",
     "multirow_J4bqfj",
     "featured_blog_CDai3n",
-    "customherosecion_U6aq4q",
-    "customherobanner_RyCE8b"
+    "customherosecion_U6aq4q"
   ]
 }
