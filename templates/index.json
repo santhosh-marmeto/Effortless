@@ -481,6 +481,85 @@
         "no_of_blocks_for_desktop": 2,
         "no_of_blocks_for_mobile": 1
       }
+    },
+    "ours_story_section_dffKEt": {
+      "type": "ours-story-section",
+      "blocks": {
+        "image_picker_xBEa8K": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/images_3_768x__1.webp",
+            "first_checkbox": true,
+            "first_product": "",
+            "first_hotspot_top_position": 0,
+            "first_hotspot_left_position": 0,
+            "first_card_top_position": 0,
+            "first_card_left_position": 0,
+            "first_card_link": "",
+            "second_checkbox": false,
+            "second_product": "",
+            "second_hotspot_top_position": 0,
+            "second_hotspot_left_position": 0,
+            "second_card_top_position": 0,
+            "second_card_left_position": 0,
+            "second_card_link": ""
+          }
+        },
+        "image_picker_FyLNCy": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/our-story-group_768x__1.webp",
+            "first_checkbox": false,
+            "first_product": "",
+            "first_hotspot_top_position": 0,
+            "first_hotspot_left_position": 0,
+            "first_card_top_position": 0,
+            "first_card_left_position": 0,
+            "first_card_link": "",
+            "second_checkbox": false,
+            "second_product": "",
+            "second_hotspot_top_position": 0,
+            "second_hotspot_left_position": 0,
+            "second_card_top_position": 0,
+            "second_card_left_position": 0,
+            "second_card_link": ""
+          }
+        },
+        "image_picker_fJ6bFg": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/our-story_768x__1.webp",
+            "first_checkbox": true,
+            "first_product": "",
+            "first_hotspot_top_position": 0,
+            "first_hotspot_left_position": 0,
+            "first_card_top_position": 0,
+            "first_card_left_position": 0,
+            "first_card_link": "",
+            "second_checkbox": false,
+            "second_product": "",
+            "second_hotspot_top_position": 0,
+            "second_hotspot_left_position": 0,
+            "second_card_top_position": 0,
+            "second_card_left_position": 0,
+            "second_card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_xBEa8K",
+        "image_picker_FyLNCy",
+        "image_picker_fJ6bFg"
+      ],
+      "settings": {
+        "heading": "Our Story",
+        "text": "Effortless was designed and developed by leading ecommerce professionals who are passionate about design and user experience, creating intuitive, user-friendly layouts that are optimized for success and sure to delight our customers.",
+        "button_label": "Shop Now",
+        "button_linkEl": "",
+        "backgrond_color": "#2d2d2d",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -496,6 +575,7 @@
     "custom_reviews_4QMGN3",
     "custom_blog_7EtUbM",
     "custom_testimonials_GWUNxa",
-    "custom_collections_Ahtfnb"
+    "custom_collections_Ahtfnb",
+    "ours_story_section_dffKEt"
   ]
 }
