@@ -312,23 +312,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_blog_CDai3n": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Our Journal",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "customherosecion_U6aq4q": {
       "type": "customherosecion",
       "settings": {
@@ -409,6 +392,50 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_testimonials_GWUNxa": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "ratings_gYHe4n": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        },
+        "ratings_a9R6L3": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        },
+        "ratings_zLayg6": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        }
+      },
+      "block_order": [
+        "ratings_gYHe4n",
+        "ratings_a9R6L3",
+        "ratings_zLayg6"
+      ],
+      "settings": {
+        "heading": "Reviews",
+        "heading_size": "h1",
+        "show_customer_name": true,
+        "show_pagination": true,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -419,10 +446,10 @@
     "collection_list_AJV7tP",
     "featured_product_J4cpgP",
     "multirow_J4bqfj",
-    "featured_blog_CDai3n",
     "customherosecion_U6aq4q",
     "custombestsellers_GW9CwJ",
     "custom_reviews_4QMGN3",
-    "custom_blog_7EtUbM"
+    "custom_blog_7EtUbM",
+    "custom_testimonials_GWUNxa"
   ]
 }
