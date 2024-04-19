@@ -5,9 +5,11 @@
   <script src="{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}}" defer></script>
 {% endcomment %}
 
+{% comment %} assign featured_image = current_varient.image | default: product.featured_image {% endcomment %}
+
+
 {% liquid
   assign current_varient = product.selected_or_first_available_variant
-  assign featured_image = current_varient.image | default: product.featured_image
 %}
 
 <div class=" custombest-seller-slide page-width custom-bestseller--{{ section.id }}">
