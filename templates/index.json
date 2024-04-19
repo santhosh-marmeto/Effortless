@@ -125,51 +125,28 @@
         "topheading": "Why Choose Effortless?"
       }
     },
-    "rich_text_Gjnhpw": {
-      "type": "rich-text",
+    "custom_collections_Ahtfnb": {
+      "type": "custom-collections",
       "blocks": {
-        "heading_EP3WJ3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Collections",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_EP3WJ3"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "collection_list_AJV7tP": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_pKp4rT": {
+        "featured_collection_prEpQ8": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-trend"
           }
         },
-        "featured_collection_mHHDYM": {
+        "featured_collection_QEkn93": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-swimwear"
           }
         },
-        "featured_collection_geNdRL": {
+        "featured_collection_akiN7F": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-innerwear"
           }
         },
-        "featured_collection_xKPUaY": {
+        "featured_collection_3Kpft7": {
           "type": "featured_collection",
           "settings": {
             "collection": "men-accessories"
@@ -177,22 +154,20 @@
         }
       },
       "block_order": [
-        "featured_collection_pKp4rT",
-        "featured_collection_mHHDYM",
-        "featured_collection_geNdRL",
-        "featured_collection_xKPUaY"
+        "featured_collection_prEpQ8",
+        "featured_collection_QEkn93",
+        "featured_collection_akiN7F",
+        "featured_collection_3Kpft7"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "title": "Collections",
+        "fontSize": 30,
+        "heading_position": "left",
+        "color_background": "#ffffff",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "no_of_blocks_for_desktop": 2,
+        "no_of_blocks_for_mobile": 1
       }
     },
     "featured_product_J4cpgP": {
@@ -251,6 +226,7 @@
         "buy_buttons_dwtTHc",
         "share_3zGBRE"
       ],
+      "disabled": true,
       "settings": {
         "product": "men-slim-fit-casual-shirt",
         "color_scheme": "scheme-1",
@@ -264,6 +240,25 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custombestsellers_GW9CwJ": {
+      "type": "custombestsellers",
+      "blocks": {
+        "slider_YjFTqH": {
+          "type": "slider",
+          "settings": {
+            "collection_handle": "best-collection-seller",
+            "Quicklink_view": "Quick View",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_YjFTqH"
+      ],
+      "settings": {
+        "topheading": "You may also like"
       }
     },
     "multirow_J4bqfj": {
@@ -315,25 +310,6 @@
     "customherosecion_U6aq4q": {
       "type": "customherosecion",
       "settings": {
-      }
-    },
-    "custombestsellers_GW9CwJ": {
-      "type": "custombestsellers",
-      "blocks": {
-        "slider_YjFTqH": {
-          "type": "slider",
-          "settings": {
-            "collection_handle": "best-collection-seller",
-            "Quicklink_view": "Quick View",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slider_YjFTqH"
-      ],
-      "settings": {
-        "topheading": "You may also like"
       }
     },
     "custom_reviews_4QMGN3": {
@@ -437,51 +413,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_collections_Ahtfnb": {
-      "type": "custom-collections",
-      "blocks": {
-        "featured_collection_prEpQ8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-trend"
-          }
-        },
-        "featured_collection_QEkn93": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-swimwear"
-          }
-        },
-        "featured_collection_akiN7F": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-innerwear"
-          }
-        },
-        "featured_collection_3Kpft7": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-accessories"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_prEpQ8",
-        "featured_collection_QEkn93",
-        "featured_collection_akiN7F",
-        "featured_collection_3Kpft7"
-      ],
-      "settings": {
-        "title": "Collections",
-        "fontSize": 30,
-        "heading_position": "left",
-        "color_background": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "no_of_blocks_for_desktop": 2,
-        "no_of_blocks_for_mobile": 1
-      }
-    },
     "ours_story_section_dffKEt": {
       "type": "ours-story-section",
       "blocks": {
@@ -566,16 +497,14 @@
     "slideshow_WKaVwW",
     "featured_collection",
     "custom_whychoose_GCXXmY",
-    "rich_text_Gjnhpw",
-    "collection_list_AJV7tP",
+    "custom_collections_Ahtfnb",
     "featured_product_J4cpgP",
+    "custombestsellers_GW9CwJ",
     "multirow_J4bqfj",
     "customherosecion_U6aq4q",
-    "custombestsellers_GW9CwJ",
     "custom_reviews_4QMGN3",
     "custom_blog_7EtUbM",
     "custom_testimonials_GWUNxa",
-    "custom_collections_Ahtfnb",
     "ours_story_section_dffKEt"
   ]
 }
