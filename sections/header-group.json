@@ -133,36 +133,30 @@
       "settings": {
       }
     },
-    "custom_slideshow_44cjdP": {
-      "type": "custom-slideshow",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "customherosecion_akiKeY": {
-      "type": "customherosecion",
+    "customherobanner_DrjJFN": {
+      "type": "customherobanner",
       "blocks": {
-        "slide_hpG76k": {
+        "slide_zEVKfK": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
-            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
-            "pre_heading": "An Effortless shopping experience",
-            "heading_two": "<p>  Start Selling More Online<\/p>",
-            "button_label": "Shop Now",
+            "desktop_image": "shopify://shop_images/hero_section_2160x_1.webp",
+            "mobile_image": "shopify://shop_images/hero_section_2160x_1.webp",
+            "pre_heading": "Women's Apparel",
+            "heading_two": "<p>Heading Text</p>",
+            "button_label": "Explore More",
             "button_link": "",
             "text_position_selector": "center-center",
             "desktop_content_allignment": "center"
           }
         },
-        "slide_Gp7EJC": {
+        "slide_8zJG7w": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
-            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
-            "pre_heading": "An Effortless shopping experience",
-            "heading_two": "<p>  Start Selling More Online<\/p>",
-            "button_label": "Show Now",
+            "desktop_image": "shopify://shop_images/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "mobile_image": "shopify://shop_images/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "pre_heading": "Women's Apparel",
+            "heading_two": "<p>Heading Text</p>",
+            "button_label": "Explore More",
             "button_link": "",
             "text_position_selector": "center-center",
             "desktop_content_allignment": "center"
@@ -170,10 +164,9 @@
         }
       },
       "block_order": [
-        "slide_hpG76k",
-        "slide_Gp7EJC"
+        "slide_zEVKfK",
+        "slide_8zJG7w"
       ],
-      "disabled": true,
       "settings": {
         "autoplay": false,
         "show_pagination": true,
@@ -189,7 +182,6 @@
     "announcement-bar",
     "header",
     "color_swatch_bLVndC",
-    "custom_slideshow_44cjdP",
-    "customherosecion_akiKeY"
+    "customherobanner_DrjJFN"
   ]
 }
