@@ -8,12 +8,12 @@
 }
 
 .testimonial-newsletter h2 {
-    font-size: 48px;
+    font-size: 40px;
     color: #333;
 }
 .testimonial-newsletter-form {
     margin-bottom: 34px;
-    margin-top: -24px;
+    /* margin-top: -24px; */
 }
 
 .testimonial-newsletter-form input[type="email"] {

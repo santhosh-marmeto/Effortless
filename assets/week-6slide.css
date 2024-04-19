@@ -1,3 +1,15 @@
+.headerdescriptionweek{
+  width: 60%;
+
+  
+}
+.mainweek-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
 .imageflexgrow img {
   width: 300px;
   height: 300px;
@@ -7,58 +19,37 @@
 }
 .imageflexgrow >p{
     font-size: 10px;
-
+    
 }
 .headerdescriptionweek >p{
     font-size: 14px;
-    width: 70%;
- 
+}
 
-}
-.splide__list {
-width: 100%;
-  height: 300px;
 
-}
-.splide__list img {
-  width: 200px;
-  height: 200px;
-}
 .splide__slide{
     width: 60%;
     height: 300px;
- 
 }
-.splide-content-blog {
-  width: 50px;
-  height: 50px;
-}
-.glowflexview {
-  display: flex;
-  gap: 50px;
 
-  align-items: center;
-}
+
 .imageviewpointflex > img {
   width: 50px;
   height: 50px;
-  /* position: relative;
-  top: 15px; */
   object-fit: cover;
   border-radius: 50%;
 
 }
-.author_fieldheader {
-  margin-left: 20px;
-}
+
 
 .splide-content-blog {
   width: 300px;
   height: 250px;
-  background-color: #F6FFC2;
   padding-left: 10px;
  padding-top: 10px;
   border-radius: 10px;
+  border: 1px solid black
+
+
 }
 .splide__arrow svg{
     display: none;
@@ -72,78 +63,109 @@ width: 100%;
 
 .splide-content-blog > p {
   text-align: center;
-  width: 80%;
   font-size: 16px;
 }
 .topslide--weekslide {
-  width: 600px;
+  width:60%;
+  height: 100%;
+  margin-bottom: 50px;
 }
 
-.mainweek-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
+
 .imageviewpointflex {
   display: flex;
+ gap: 30px;
+  align-items: center;
 }
 .d-none{
     display: none;
 }
- /* .active-slide{
-    background-color: red;
 
+/* .weekslideuages{
+  border: 1px solid fuchsia;
 } */
+.splide__slide{
+width: 300px;
+height: 250px;
+margin: 10px;
 
-
- .splide_pagination_page {
-    /* background: grey; */
-    border-radius: 44px;
-    height: 5px;
-    width: 24px;
 }
- .splide__pagination__page.is-active {
-    background: grey;
-    border-radius: 44px;
-    height: 4px;
-    width: 34px;
-    margin: 10px;
-    /* margin: -10px; */
+.active-slide{
+width: 300px;
+width: 300px;
+height: 250px;
+background-color: #F6FFC2;
+overflow: hidden;
+
+}
+.splide_pagination_page {
+  /* background: grey; */
+  border-radius: 44px;
+  height: 5px;
+  width: 24px;
+}
+.splide__pagination__page.is-active {
+  background: grey;
+  border-radius: 44px;
+  height: 4px;
+  width: 34px;
+  margin: 10px;
+  /* margin: -10px; */
+}
+.splide__pagination {
+  bottom: -1.8em;
 }
 
 @media only screen and (max-width: 749px) {
-  .mainweek-flex {
-    flex-direction: column;
+  
+  .mainweek-flex{
+    overflow: hidden;
   }
   .imageflexgrow img {
     margin-top: 20px;
     width: 200px;
     height: 200px;
+    border: 6px solid green;
   }
-  .custom_heading_author {
-    text-align: center;
-    /* margin-left: 30px; */
-  }
-  .sectiondescription p {
-    text-align: center;
-    /* margin-left: 100%; */
-    font-size: 10px;
-    width: 10%;
-  }
-  .splide__list {
-    height: 300px;
-  }
-  .splide__track {
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    /* left: 171px; */
-
-}
+ .headerdescriptionweek{
+  width: 45%;
+  margin: 10px;
+ }
+ .custom_heading_author{
+  text-align: center;
+ }
+ 
 .headerdescriptionweek>p {
     font-size: 12px;
-    width: 50%;
-    /* margin-left: 25%; */
+    text-align: center;
 }
 
+.topslide--weekslide {
+  width: 60%;
+
+} 
+
+}
+@media only screen and (max-width: 450px) {
+  
+  .headerdescriptionweek{
+    width: 38%;
+    margin: 10px;
+   }
+   
+}
+@media only screen and (max-width: 378px) {
+  
+  .headerdescriptionweek{
+    width: 35%;
+    margin: 10px;
+   }
+}
+
+@media only screen and (max-width: 330px) {
+  
+  .headerdescriptionweek{
+    width: 30%;
+    margin: 10px;
+   }
 }

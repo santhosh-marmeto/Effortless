@@ -30,7 +30,7 @@
     "type": "{{ type }}",
     "pagination": {{ pagination }},
     "arrows": {{ arrows }},
-    "per_page":1,
+    "per_page":2,
     "breakpoints" : {
         "768": {
           "perPage": 1
@@ -41,7 +41,7 @@
       }
   }
   {%- endcapture -%}
-<div class="mainweek-flex">
+<div class="mainweek-flex ">
   <div class="imageflexgrow">
     {% for block in section.blocks %}
     <img
@@ -77,11 +77,11 @@
                       width="200px"
                     >
                     <div class="author_fieldheader">
-                      <h6>
+                      <p>
                         {{ block.settings.testimonals_author_name }}
                        
-                      </h6>
-                      <h6> {{ block.settings.testimonals_author_description }}</h6>
+                      </p>
+                      <p> {{ block.settings.testimonals_author_description }}</p>
                     </div>
                   </div>
                 </div>
@@ -253,7 +253,7 @@
           "default": "<p>Mr.Jhon Doe</p>"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "testimonals_author_description",
           "label": "authordescription",
           "default": "<p>Clients</p>"
