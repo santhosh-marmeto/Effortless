@@ -530,19 +530,19 @@
           "settings": {
             "Image_id": "shopify:\/\/shop_images\/our-story_768x__1.webp",
             "first_checkbox": true,
-            "first_product": "",
-            "first_hotspot_top_position": 0,
-            "first_hotspot_left_position": 0,
-            "first_card_top_position": 0,
-            "first_card_left_position": 0,
-            "first_card_link": "",
-            "second_checkbox": false,
-            "second_product": "",
-            "second_hotspot_top_position": 0,
-            "second_hotspot_left_position": 0,
-            "second_card_top_position": 0,
-            "second_card_left_position": 0,
-            "second_card_link": ""
+            "first_product": "blue-pattern-suit",
+            "first_hotspot_top_position": 30,
+            "first_hotspot_left_position": 34,
+            "first_card_top_position": 26,
+            "first_card_left_position": 39,
+            "first_card_link": "shopify:\/\/products\/blue-pattern-suit",
+            "second_checkbox": true,
+            "second_product": "shoes-classic-brown",
+            "second_hotspot_top_position": 85,
+            "second_hotspot_left_position": 52,
+            "second_card_top_position": 80,
+            "second_card_left_position": 30,
+            "second_card_link": "shopify:\/\/products\/shoes-classic-brown"
           }
         }
       },
