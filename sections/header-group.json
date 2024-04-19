@@ -2,6 +2,56 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "custom_announcement_bar_KBgmNi": {
+      "type": "custom-announcement-bar",
+      "blocks": {
+        "slide_3Jymea": {
+          "type": "slide",
+          "settings": {
+            "announcement": "An Effortless Shipping Experience",
+            "navigation_text": "Learn More",
+            "navigation_url": "",
+            "underline_color": "#06aaa1"
+          }
+        },
+        "slide_MdYba4": {
+          "type": "slide",
+          "settings": {
+            "announcement": "An Effortless Shipping Experience",
+            "navigation_text": "Learn More",
+            "navigation_url": "",
+            "underline_color": "#06aaa1"
+          }
+        },
+        "slide_MtaEnc": {
+          "type": "slide",
+          "settings": {
+            "announcement": "An Effortless Shipping Experience",
+            "navigation_text": "Learn More",
+            "navigation_url": "",
+            "underline_color": "#06aaa1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_3Jymea",
+        "slide_MdYba4",
+        "slide_MtaEnc"
+      ],
+      "settings": {
+        "backgrond_color": "#000000",
+        "auto_play": true,
+        "show_pagination": false,
+        "show_arrows": true,
+        "auto_play_duration": 4,
+        "font_size_for_mobile": 12,
+        "fontsize_for_desktop": 20,
+        "text_color": "#ffffff",
+        "font_weight": 300,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -179,6 +229,7 @@
     }
   },
   "order": [
+    "custom_announcement_bar_KBgmNi",
     "announcement-bar",
     "header",
     "color_swatch_bLVndC",
