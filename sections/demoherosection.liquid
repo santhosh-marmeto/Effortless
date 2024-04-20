@@ -1,0 +1,383 @@
+{{ 'slider-with-text.css' |  asset_url |  stylesheet_tag }} 
+
+
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% capture slideshow-with-text__slider-settings %}
+{
+  "type" : "{{ section.settings.slide_animation }}",
+  "perPage": 1,
+  "pagination": {{ section.settings.show_pagination }},
+  "perMove": 1,
+  "autoplay": {{ section.settings.autoplay }} ,    
+  "interval": {{ section.settings.autoplay_duration }},
+  "arrows" : {{  section.settings.slide_arrows }},
+  "rewind" : {{ section.settings.infinite_scroll }}
+}
+{% endcapture %}
+
+<div class="slideshow-with-text padding-{{ section.id }}">
+    <div class="page-width">
+        <splide-slider data-splide-options = '{{ slideshow-with-text__slider-settings }}'>
+            
+            <section class="splide " aria-label="Splide Basic HTML Example">
+            <div class="splide__track custom-border-radius ">
+                <ul class="splide__list ">
+                  {% if section.blocks.size > 0  %}  
+                    {% for block in section.blocks %}
+                        <li class="splide__slide ">
+                            {%- if block.settings.desktop_image -%}
+                                <div class = "slideshow-with-text__position_relative">
+                                  {%
+                                    render 'image',
+                                    desktopImage: block.settings.desktop_image,
+                                    mobileImage: block.settings.mobile_image                                
+                                  %}
+                                </div>
+                                <div class="slideshow-with-text__position_absolute {{ block.settings.alignment_position }} slideshow-with-text__content-position-{{block.id}}">
+                                    <div class="slideshow-with-text__text-wrapper slideshow-with-text__content-text-alignment-{{ block.id }}">
+                                      {% if block.settings.pre_heading  %}
+                                        <ul class="pre-heading-blur">
+                                          <li>{{ block.settings.pre_heading }}</li>
+                                        </ul> 
+                                      {% endif %}                                                                   
+
+                                      {% if block.settings.heading_text != blank %}
+                                        <h2 class="h1b slideshow-with-text__heading-link scroll-line-animation slideshow-with-text__heading-text-{{block.id}}">{{ block.settings.heading_text }}</h2>
+                                      {% endif %} 
+                                      
+                                      {% if block.settings.button_label != blank %}
+                                        <a
+                                          class="button custom-button-primary"
+                                          href="{{block.settings.button_link }}"
+                                        >
+                                          {{ block.settings.button_label }}
+                                        </a>
+                                    {% endif %}
+                                    </div>
+                                  </div>
+                            {% else %}
+                                  <li class="splide__slide">
+                                  {{ 'collection-1' | placeholder_svg_tag }}
+                                  </li>      
+                            {%- endif -%}   
+                        </li>
+                        <style>
+                          .slideshow-with-text__content-text-alignment-{{block.id}}{
+                              text-align: {{ block.settings.text_alignment }};
+                          }
+                          
+                          .slideshow-with-text__heading-text-{{block.id}}{
+                            color: {{block.settings.heading_text_color}};
+                          }                   
+                          
+                          @media only screen and (max-width: 750px) {
+                            .slideshow-with-text__content-text-alignment-{{block.id}}{
+                              text-align: {{ block.settings.text_alignment_mobile }};
+                          }
+                          
+                            .slideshow-with-text__content-position-{{block.id}}{
+                              justify-content:  {{block.settings.vertical_alignment }};
+                              align-items: {{block.settings.horizantal_alignment }};
+                            }   
+                          }
+                            
+                      </style>           
+                    {% endfor %}
+                  {% else %}
+                    {% for i in (1..3) %}
+                        <li class="splide__slide small-placeholder-image">
+                          {{ 'collection-' | append: i | placeholder_svg_tag }}
+                        </li> 
+                    {% endfor %} 
+                  {% endif %}  
+                </ul>
+            </div>
+            </section>
+        </splide-slider>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Banner Slide Show",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Slider Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "Show Pagination",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_arrows",
+      "label": "Show slide arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll",
+      "label": "Infinite Scroll",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "slide_animation",
+      "label": "Slide animation",
+      "options": [
+        {
+          "value": "loop",
+          "label": "Loop"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "autoplay_duration",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "unit": "ms",
+      "label": "Autoplay Duration",
+      "default": 5000
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "text",
+          "id": "pre_heading",
+          "label": "Pre Heading",
+          "default": "Pre Heading"
+        },
+        {
+          "type": "color",
+          "id": "pre_heading_color",
+          "label": "Pre Heading color",
+          "default": "#fff"
+        },
+        {
+          "type": "richtext",
+          "id": "heading_text",
+          "label": "Heading Text"
+        },
+        {
+          "type": "color",
+          "id": "heading_text_color",
+          "label": "Heading Text color",
+          "default": "#fff"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Explore More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "Right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment_mobile",
+          "label": "Text Alignment (Mobile)",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "Right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "alignment_position",
+          "label": "Desktop content position",
+          "options": [
+            {
+              "value": "align-start justify-start",
+              "label": "Top left"
+            },
+            {
+              "value": "align-start justify-center",
+              "label": "Top center"
+            },
+            {
+              "value": "align-start justify-end",
+              "label": "Top right"
+            },
+            {
+              "value": "align-center justify-start",
+              "label": "Middle left"
+            },
+            {
+              "value": "align-center justify-center",
+              "label": "Middle center"
+            },
+            {
+              "value": "align-center justify-end",
+              "label": "Middle right"
+            },
+            {
+              "value": "align-end justify-start",
+              "label": "Bottom left"
+            },
+            {
+              "value": "align-end justify-center",
+              "label": "Bottom center"
+            },
+            {
+              "value": "align-end justify-end",
+              "label": "Bottom end"
+            }
+          ],
+          "default": "align-center justify-center"
+        },
+        {
+          "type": "select",
+          "id": "vertical_alignment",
+          "label": "Vertical alignment (Mobile)",
+          "options": [
+            {
+              "value": "start",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "End"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "horizantal_alignment",
+          "label": "Horizantal alignment (Mobile)",
+          "options": [
+            {
+              "value": "start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Slide Show"
+    }
+  ]
+}
+{% endschema %}

@@ -48,8 +48,8 @@
         "enable_language_selector": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "color_swatch_bLVndC": {
@@ -139,13 +139,13 @@
         "slide_kPqEkh": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/hero_section_2160x_1.webp",
+            "desktop_image": "shopify://shop_images/hero_section_2160x_2.webp",
             "mobile_image": "shopify://shop_images/hero_section_2160x_1.webp",
-            "pre_heading": "An Effortless shopping experience",
+            "pre_heading": "An Effortless Shopping Experience",
             "heading_two": "<p> Start Selling More Online </p>",
             "button_label": "Shop Now",
             "button_link": "",
-            "text_position_selector": "center-center",
+            "text_position_selector": "Center-left",
             "desktop_content_allignment": "center"
           }
         },
@@ -158,7 +158,7 @@
             "heading_two": "<p> Start Selling More Online </p>",
             "button_label": "Shop Now",
             "button_link": "",
-            "text_position_selector": "center-center",
+            "text_position_selector": "Center-left",
             "desktop_content_allignment": "center"
           }
         }
