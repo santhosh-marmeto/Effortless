@@ -47,7 +47,6 @@
   padding-left: 10px;
  padding-top: 10px;
   border-radius: 10px;
-  border: 1px solid black
 
 
 }
@@ -88,6 +87,9 @@
 width: 300px;
 height: 250px;
 margin: 10px;
+border: 1px solid black;
+border-radius: 5px;
+
 
 }
 .active-slide{
@@ -96,6 +98,8 @@ width: 300px;
 height: 250px;
 background-color: #F6FFC2;
 overflow: hidden;
+border: 1px solid black
+
 
 }
 .splide_pagination_page {
