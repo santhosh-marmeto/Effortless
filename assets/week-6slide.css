@@ -119,7 +119,19 @@ border: 1px solid black
 .splide__pagination {
   bottom: -1.8em;
 }
-
+.Login_button_view{
+  text-align: center;
+}
+.login-button-user{
+  background-color: #5C6E4A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+}
 @media only screen and (max-width: 749px) {
   
   .mainweek-flex{

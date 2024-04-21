@@ -41,6 +41,8 @@
       }
   }
   {%- endcapture -%}
+  {% if customer%}
+
 <div class="mainweek-flex ">
   <div class="imageflexgrow">
     {% for block in section.blocks %}
@@ -53,6 +55,7 @@
     >
         {% endfor %}
   </div>
+  
 
   <splider-component>
     <div class="headerdescriptionweek">
@@ -93,7 +96,12 @@
     </div>
   </splider-component>
 </div>
-
+{% else  %}
+<div class="Login_button_view">
+  <h1>Please Log In to view!</h1>
+  <a href="/account/login" class="login-button-user">Login</a>
+</div>
+{% endif %}
 
 {% schema %}
 {
@@ -111,7 +119,7 @@
       "type": "richtext",
       "id": "custom_desciption_week",
       "label": "Description",
-      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
 
     {
@@ -244,19 +252,19 @@
           "type": "richtext",
           "id": "testimonals_header",
           "label": "headers",
-          "default": "<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>"
+          "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
         },
         {
           "type": "text",
           "id": "testimonals_author_name",
           "label": "authorname",
-          "default": "<p>Mr.Jhon Doe</p>"
+          "default": "Mr.Jhon Doe"
         },
         {
           "type": "richtext",
           "id": "testimonals_author_description",
           "label": "authordescription",
-          "default": "<p>Clients</p>"
+          "default": "Clients"
         },
         {
           "type": "header",
