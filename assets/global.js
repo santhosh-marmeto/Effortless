@@ -1273,3 +1273,18 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+//splide custom components for the slider
+class CustomSlider extends HTMLElement {
+  constructor() {
+    super();
+    this.element = this.querySelector(".splide");
+    this.options = JSON.parse(this.element.dataset.splideSettings);
+    this.mountSplider();
+  }
+  mountSplider() {
+    let splide =  new Splide(this.element, this.options);
+      splide.mount();
+  }
+}
+customElements.define("splider-component", CustomSlider);
