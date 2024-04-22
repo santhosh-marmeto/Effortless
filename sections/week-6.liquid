@@ -59,8 +59,12 @@
 
   <splider-component>
     <div class="headerdescriptionweek">
+      {% if section.settings.Custom_heading_week != blank %}
         <h1 class="custom_heading_author">{{ section.settings.Custom_heading_week }}</h1>
-        <p class="sectiondescription">{{ section.settings.custom_desciption_week }}</p>
+        {% endif %}
+      {% if section.settings.custom_desciption_week != blank %}     
+          <p class="sectiondescription">{{ section.settings.custom_desciption_week }}</p>
+        {% endif %}
     </div>
    
 
@@ -70,7 +74,9 @@
           {% for block in section.blocks %}
             <li class=" weekslideuages splide__slide">
               <div class="splide-content-blog splide-content">
-                <p>{{ block.settings.testimonals_header }}</p>
+               {% if block.settings.testimonals_header != blank %} 
+                  <p>{{ block.settings.testimonals_header }}</p>
+                {% endif %}
                 <div class="glowflexview">
                   <div class="imageviewpointflex">
                     <img
@@ -80,11 +86,12 @@
                       width="200px"
                     >
                     <div class="author_fieldheader">
-                      <p>
-                        {{ block.settings.testimonals_author_name }}
-                       
-                      </p>
-                      <p> {{ block.settings.testimonals_author_description }}</p>
+                   {% if  block.settings.testimonals_author_name != blank %}
+                    <p>{{ block.settings.testimonals_author_name }}</p>
+                   {% endif %}
+                      {% if  block.settings.testimonals_author_description != blank %}
+                      <p>{{ block.settings.testimonals_author_description }}</p>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -119,7 +126,7 @@
       "type": "richtext",
       "id": "custom_desciption_week",
       "label": "Description",
-      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
     },
 
     {
@@ -252,19 +259,19 @@
           "type": "richtext",
           "id": "testimonals_header",
           "label": "headers",
-          "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+          "default": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>"
         },
         {
           "type": "text",
           "id": "testimonals_author_name",
           "label": "authorname",
-          "default": "Mr.Jhon Doe"
+          "default": "<p>Mr.Jhon Doe</p>"
         },
         {
           "type": "richtext",
           "id": "testimonals_author_description",
           "label": "authordescription",
-          "default": "Clients"
+          "default": "<p>Clients</p>"
         },
         {
           "type": "header",

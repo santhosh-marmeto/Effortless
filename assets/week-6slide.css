@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+
 }
 .imageflexgrow img {
   width: 300px;
@@ -80,9 +81,7 @@
     display: none;
 }
 
-/* .weekslideuages{
-  border: 1px solid fuchsia;
-} */
+
 .splide__slide{
 width: 300px;
 height: 250px;
@@ -103,7 +102,6 @@ border: 1px solid black
 
 }
 .splide_pagination_page {
-  /* background: grey; */
   border-radius: 44px;
   height: 5px;
   width: 24px;
@@ -114,7 +112,7 @@ border: 1px solid black
   height: 4px;
   width: 34px;
   margin: 10px;
-  /* margin: -10px; */
+  
 }
 .splide__pagination {
   bottom: -1.8em;
