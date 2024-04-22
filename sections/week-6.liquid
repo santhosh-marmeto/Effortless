@@ -31,6 +31,7 @@
     "pagination": {{ pagination }},
     "arrows": {{ arrows }},
     "per_page":2,
+    "gap": "20px",
     "breakpoints" : {
         "768": {
           "perPage": 1
@@ -56,7 +57,7 @@
         {% endfor %}
   </div>
   
-
+<div class="splidecomponentsfull">
   <splider-component>
     <div class="headerdescriptionweek">
       {% if section.settings.Custom_heading_week != blank %}
@@ -75,7 +76,7 @@
             <li class=" weekslideuages splide__slide">
               <div class="splide-content-blog splide-content">
                {% if block.settings.testimonals_header != blank %} 
-                  <p>{{ block.settings.testimonals_header }}</p>
+                  <p>"{{ block.settings.testimonals_header | strip_html }}"</p>
                 {% endif %}
                 <div class="glowflexview">
                   <div class="imageviewpointflex">
@@ -87,10 +88,10 @@
                     >
                     <div class="author_fieldheader">
                    {% if  block.settings.testimonals_author_name != blank %}
-                    <p>{{ block.settings.testimonals_author_name }}</p>
+                    <p>{{ block.settings.testimonals_author_name | strip_html }}</p>
                    {% endif %}
                       {% if  block.settings.testimonals_author_description != blank %}
-                      <p>{{ block.settings.testimonals_author_description }}</p>
+                      <p>{{ block.settings.testimonals_author_description | strip_html }}</p>
                       {% endif %}
                     </div>
                   </div>
@@ -102,6 +103,7 @@
       </div>
     </div>
   </splider-component>
+</div>
 </div>
 {% else  %}
 <div class="Login_button_view">
@@ -256,10 +258,10 @@
           "info": "Recommended size :1360  x 633 px."
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "testimonals_header",
           "label": "headers",
-          "default": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>"
+          "default": " Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
         },
         {
           "type": "text",

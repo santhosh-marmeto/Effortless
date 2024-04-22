@@ -1,21 +1,23 @@
-.headerdescriptionweek{
-  width: 60%;
 
-  
-}
 .mainweek-flex {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  gap: 40px;
 
 }
+.mainweek-flex .splide {
+  width: 100%;
+} 
+.imageflexgrow {
+  width: 400px;
+  height: 400px;
+}
 .imageflexgrow img {
-  width: 300px;
-  height: 300px;
   border-radius: 10px;
-  margin: 20px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .imageflexgrow >p{
@@ -24,14 +26,13 @@
 }
 .headerdescriptionweek >p{
     font-size: 14px;
+
 }
 
 
-.splide__slide{
-    width: 60%;
-    height: 300px;
+.author_fieldheader p{
+  margin: -4px 0px;
 }
-
 
 .imageviewpointflex > img {
   width: 50px;
@@ -64,6 +65,8 @@
 .splide-content-blog > p {
   text-align: center;
   font-size: 16px;
+  padding-right: 18px ;
+
 }
 .topslide--weekslide {
   width:60%;
@@ -84,20 +87,20 @@
 
 .splide__slide{
 width: 300px;
-height: 250px;
-margin: 10px;
+height: 200px;
 border: 1px solid black;
 border-radius: 5px;
+margin-right: 20px;
 
 
 }
 .active-slide{
 width: 300px;
-width: 300px;
-height: 250px;
+height: 200px;
 background-color: #F6FFC2;
 overflow: hidden;
-border: 1px solid black
+border: 1px solid black;
+
 
 
 }
@@ -130,55 +133,18 @@ border: 1px solid black
   font-size: 14px;
   text-decoration: none;
 }
+
+.splidecomponentsfull {
+  width: 40%;
+}
+.glowflexview {
+  width: 224PX;
+  margin-left: 20px;
+}
+
 @media only screen and (max-width: 749px) {
-  
-  .mainweek-flex{
-    overflow: hidden;
+  .splidecomponentsfull {
+    width: 90%;
   }
-  .imageflexgrow img {
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
-  }
- .headerdescriptionweek{
-  width: 45%;
-  margin: 10px;
- }
- .custom_heading_author{
-  text-align: center;
- }
- 
-.headerdescriptionweek>p {
-    font-size: 12px;
-    text-align: center;
 }
 
-.topslide--weekslide {
-  width: 60%;
-
-} 
-
-}
-@media only screen and (max-width: 450px) {
-  
-  .headerdescriptionweek{
-    width: 38%;
-    margin: 10px;
-   }
-   
-}
-@media only screen and (max-width: 378px) {
-  
-  .headerdescriptionweek{
-    width: 35%;
-    margin: 10px;
-   }
-}
-
-@media only screen and (max-width: 330px) {
-  
-  .headerdescriptionweek{
-    width: 30%;
-    margin: 10px;
-   }
-}
