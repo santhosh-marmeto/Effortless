@@ -96,7 +96,7 @@
         class="disabled"
       {% endif %}
     >
-    <label for="{{ input_id }}">
+    <label class="color-swatch--{{ value | handleize}}" for="{{ input_id }}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
