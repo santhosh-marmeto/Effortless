@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="stylesheet" href="{{ "splide.min.css" | asset_url }}">
+    {{ "splide.min.css" | asset_url | stylesheet_tag}}
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -30,6 +30,7 @@
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ "splide.min.js" | asset_url}}" defer></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
@@ -293,7 +294,9 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% section 'color-swatch' %}
+    {% comment %} {% section 'color-swatch' %} {% endcomment %}
+
+    {% section 'swaches' %}
 
     {% sections 'header-group' %}
 
@@ -349,10 +352,9 @@
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
-    <script src="{{ "splide.min.js" | asset_url}}" defer></script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}"></script>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer></script>
     {%- endif -%}
   </body>
 </html>

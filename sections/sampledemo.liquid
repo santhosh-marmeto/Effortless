@@ -1,0 +1,98 @@
+<div class="custom--best-seller-slide--content slide-content">
+    {% if product.tags != blank %}
+      <p class="productviewtags">{{ product.tags }}</p>
+
+    {% else %}
+      <p class="productviewtags">{{ product.tags }}</p>
+    {% endif %}
+
+    {% if product.tags contains 'Sale' %}
+      <p class="productviewtags1">{{ product.tags }}</p>
+    {% endif %}
+
+    <div class="imagessliders">
+      <a href="{{ product.url }}">
+        {% assign alternate_image = product.images[1] %}
+
+        <img
+          class="productimages"
+          src="{{ product.featured_image.src | img_url: '300x300' }}"
+          {% if alternate_image %}
+            data-alternate-src="{{ alternate_image.src | img_url: '300x300' }}"
+          {% endif %}
+          alt="{{ product.title }}"
+          height="300"
+          width="200"
+        >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19.875 9.625c-.125-.25-4.5-5.875-9.875-5.875S.25 9.375.125 9.625a.797.797 0 0 0 0 .75c.125.25 4.5 5.875 9.875 5.875s9.75-5.625 9.875-5.875a.797.797 0 0 0 0-.75ZM10 15c-4 0-7.5-3.75-8.625-5C2.5 8.75 6 5 10 5s7.5 3.75 8.625 5C17.5 11.25 14 15 10 15Z"></path>
+          <path d="M10 6.875A3.095 3.095 0 0 0 6.875 10 3.095 3.095 0 0 0 10 13.125 3.095 3.095 0 0 0 13.125 10 3.095 3.095 0 0 0 10 6.875Zm0 5C9 11.875 8.125 11 8.125 10S9 8.125 10 8.125 11.875 9 11.875 10 11 11.875 10 11.875Z"></path>
+        </svg>
+      </a>
+      <button class="quickviewlink">Quick Link</button>
+    </div>
+
+    <div class="informationgroups">
+      <p class="headertop">{{ product.title }}</p>
+      <p class="pricingproduct">${{ product.price }}</p>
+
+      {% comment %} color radio start {% endcomment %}
+
+      <div class="product-card__form">
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ current_varient.id }}">
+          {% if product.options_with_values %}
+            <div class="product-card__options">
+              {% for product_option in product.options_with_values %}
+                {% if product_option.name == 'Color' %}
+                  <div class="product-card__option">
+                    <ul class="product-card__list">
+                      {% for option_value in product_option.values %}
+                        {% assign isOptionOutOfStock = false %}
+
+                        {% if current_varient.inventory_quantity == 0
+                          and product_option.selected_value == option_value
+                        %}
+                          {% assign isOptionOutOfStock = true %}
+                        {% endif %}
+
+                        <li
+                          {% comment %} data-value="{{ option_value }}" {% endcomment %}
+                          class="product-card__color-dot item-swatch{% if isOptionOutOfStock %} out-of-stock{% endif %}"
+                          style="{% if product_option.selected_value == option_value %}border: 1px solid red;{% endif %}"
+                        >
+                          <input
+                            id="{{ current_varient.id | append: option_value }}"
+                            type="radio"
+                            name="option-{{ product_option.name | handleize }}"
+                            value="{{ option_value }}"
+                            {% if product_option.selected_value == option_value %}
+                              checked
+                            {% endif %} 
+                          >
+                          <label
+                            data-value="{{ option_value }}"
+                            for="{{ current_varient.id | append: option_value }}"
+                          ></label>
+                          {% if isOptionOutOfStock %}
+                            <div class="product-variant-options__cross-line"></div>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endform %}
+</div>
+
+      {% comment %} end radio button {% endcomment %}
+
+      {% if product.type != blank %}
+        <button class="productinfotags">{{ product.type }}</button>
+      {% endif %}
+    </div>
+  </div>  

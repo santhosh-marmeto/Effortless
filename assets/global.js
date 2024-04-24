@@ -1275,16 +1275,20 @@ class ProductRecommendations extends HTMLElement {
 customElements.define('product-recommendations', ProductRecommendations);
 
 //splide custom components for the slider
-class CustomSlider extends HTMLElement {
+class SplideSlider extends HTMLElement {
   constructor() {
     super();
-    this.element = this.querySelector(".splide");
-    this.options = JSON.parse(this.element.dataset.splideSettings);
+    this.splideEl = this.querySelector(".splide");
+    this.options = JSON.parse(this.getAttribute("data-splide-options"));
+
+    console.log(this.options);
     this.mountSplider();
   }
+
   mountSplider() {
-    let splide =  new Splide(this.element, this.options);
-      splide.mount();
+    let splides =  new Splide(this.splideEl, this.options);
+    splides.mount();
   }
 }
-customElements.define("splider-component", CustomSlider);
+
+customElements.define("splide-sliders", SplideSlider);
