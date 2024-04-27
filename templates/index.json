@@ -169,6 +169,12 @@
             "collection": "men-innerwear"
           }
         },
+        "featured_collection_GrB9H9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
         "featured_collection_xKPUaY": {
           "type": "featured_collection",
           "settings": {
@@ -180,6 +186,7 @@
         "featured_collection_pKp4rT",
         "featured_collection_mHHDYM",
         "featured_collection_geNdRL",
+        "featured_collection_GrB9H9",
         "featured_collection_xKPUaY"
       ],
       "settings": {
@@ -266,25 +273,6 @@
         "padding_bottom": 36
       }
     },
-    "custombestseller_BE9gQY": {
-      "type": "custombestseller",
-      "blocks": {
-        "slider_KkqJCy": {
-          "type": "slider",
-          "settings": {
-            "collection_handle": "best-collection-seller",
-            "Quicklink_view": "Quick View",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slider_KkqJCy"
-      ],
-      "settings": {
-        "topheading": "You may also like"
-      }
-    },
     "multirow_J4bqfj": {
       "type": "multirow",
       "blocks": {
@@ -348,33 +336,55 @@
         "padding_bottom": 36
       }
     },
-    "customherosecion_QieLCf": {
-      "type": "customherosecion",
+    "week_7_NBKcjw": {
+      "type": "week-7",
       "blocks": {
-        "slide_UdkwE7": {
-          "type": "slide",
+        "dots_7HMCJQ": {
+          "type": "Dots",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Frame1_17_1.webp",
-            "pre_heading": "Women's Apparel",
-            "heading_two": "<p>Heading Text<\/p>",
-            "button_label": "Explore More",
-            "button_link": "",
-            "text_position_selector": "center-center",
-            "desktop_content_allignment": "center"
+            "primary_left_position": 20,
+            "primary_top_position": 20,
+            "dot_product": "brown-bag"
+          }
+        },
+        "dots_9MFfjK": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 65,
+            "primary_top_position": 20,
+            "dot_product": "bag-collection"
+          }
+        },
+        "dots_axVApB": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 47,
+            "primary_top_position": 74,
+            "dot_product": "classic-jacket"
           }
         }
       },
       "block_order": [
-        "slide_UdkwE7"
+        "dots_7HMCJQ",
+        "dots_9MFfjK",
+        "dots_axVApB"
       ],
       "settings": {
-        "autoplay": false,
+        "desktop_image": "shopify:\/\/shop_images\/image_3_392ff7f2-80cb-495b-ba35-6a30817ecd39.png",
+        "product_list": [
+          "bag-collection",
+          "brown-bag",
+          "classic-jacket"
+        ],
+        "auto_play": false,
         "show_pagination": false,
         "show_arrows": false,
         "auto_play_duration": 2000,
-        "animation": "fade",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "perpage": 1,
+        "gap": 5,
+        "Slide_animation": "slide",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
@@ -385,9 +395,8 @@
     "rich_text_Gjnhpw",
     "collection_list_AJV7tP",
     "featured_product_J4cpgP",
-    "custombestseller_BE9gQY",
     "multirow_J4bqfj",
     "featured_blog_CDai3n",
-    "customherosecion_QieLCf"
+    "week_7_NBKcjw"
   ]
 }
