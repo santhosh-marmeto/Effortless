@@ -1,5 +1,42 @@
 {
   "sections": {
+    "custom_usp_kyjNkz": {
+      "type": "custom-usp",
+      "blocks": {
+        "column_rcdyki": {
+          "type": "column",
+          "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_3_d4019d5f-fcde-4827-81f8-1709fe259d1b.svg",
+            "title": "Title",
+            "description": "Text about Photo"
+          }
+        },
+        "column_BJJjE4": {
+          "type": "column",
+          "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_2_5e46b860-415c-45a4-8be3-0d3b265a77d1.svg",
+            "title": "Title",
+            "description": "Text about Photo"
+          }
+        },
+        "column_dfFKKU": {
+          "type": "column",
+          "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_5_fd18b097-6586-4498-ba9c-b2b1a24354c6.svg",
+            "title": "Title",
+            "description": "Text about Photo"
+          }
+        }
+      },
+      "block_order": [
+        "column_rcdyki",
+        "column_BJJjE4",
+        "column_dfFKKU"
+      ],
+      "settings": {
+        "heading": "Why Choose Effortless?"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -394,46 +431,10 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "custom_usp_kyjNkz": {
-      "type": "custom-usp",
-      "blocks": {
-        "column_rcdyki": {
-          "type": "column",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_3_d4019d5f-fcde-4827-81f8-1709fe259d1b.svg",
-            "title": "Title",
-            "description": "Text about Photo"
-          }
-        },
-        "column_BJJjE4": {
-          "type": "column",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_2_5e46b860-415c-45a4-8be3-0d3b265a77d1.svg",
-            "title": "Title",
-            "description": "Text about Photo"
-          }
-        },
-        "column_dfFKKU": {
-          "type": "column",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_5_fd18b097-6586-4498-ba9c-b2b1a24354c6.svg",
-            "title": "Title",
-            "description": "Text about Photo"
-          }
-        }
-      },
-      "block_order": [
-        "column_rcdyki",
-        "column_BJJjE4",
-        "column_dfFKKU"
-      ],
-      "settings": {
-        "heading": "Why Choose Effortless?"
-      }
     }
   },
   "order": [
+    "custom_usp_kyjNkz",
     "featured_collection",
     "custom_collections_Ahtfnb",
     "featured_product_J4cpgP",
@@ -443,7 +444,6 @@
     "custom_reviews_4QMGN3",
     "custom_blog_7EtUbM",
     "custom_testimonials_GWUNxa",
-    "ours_story_section_dffKEt",
-    "custom_usp_kyjNkz"
+    "ours_story_section_dffKEt"
   ]
 }
