@@ -85,10 +85,10 @@
                       {% endif %}
                       <div class="product-card__prices">
                         {% if block.settings.dot_product.compare_at_price !=blank %}
-                          <span class="product-card__price-amount">{{block.settings.dot_product.compare_at_price | money }}</span>
+                          <s class="product-card__price-amount">{{block.settings.dot_product.compare_at_price | money }}</s>
                         {% endif %} 
                         {% if block.settings.dot_product.price != blank %}
-                          <s class="product-card__compareprice">{{ block.settings.dot_product.price | money }}</s>                    
+                          <span class="product-card__price-amount">{{ block.settings.dot_product.price | money }}</span>                    
                         {% endif %}
                     </div> 
                       <form action="/cart/add" method="post">

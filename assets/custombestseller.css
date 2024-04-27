@@ -1,4 +1,4 @@
-/* Customize Splide slider container */
+Customize Splide slider container
 .custombest-seller-slide .splide {
   margin-top: 20px;
 
@@ -82,11 +82,11 @@
   bottom: -400px; /* Initially hide the button below the image */
   left: 50%; /* Adjust as needed */
 
-  transition: bottom 0.3s ease-in-out; /* Animation transition */
+  transition: bottom 0.3s ease-in-out; 
 }
 
 .slide-content:hover .quick-view-button {
-  bottom: 0; /* Display button on hover */
+  bottom: 0; 
 }
 
 .pricingproduct {
@@ -153,8 +153,8 @@
 .eye-icon {
   background-color: white;
   border-radius: 50%;
-  width: 34px; /* Increased width */
-  height: 34px; /* Increased height */
+  width: 34px; 
+  height: 34px; 
   padding: 6px;
   display: flex;
   justify-content: center;
