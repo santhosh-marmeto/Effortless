@@ -87,25 +87,7 @@
 </splide-sliders>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('.splide', {
-      pagination: true,
-      perPage: 1,
-      gap: '60px',
-      arrows: false,
-      breakpoints: {
-        425: {
-          perPage: 1,
-          gap: '20px',
-        },
-        768: {
-          perPage: 1,
-        },
-      },
-    }).mount();
-  });
-</script>
+
 
 {% schema %}
 {
@@ -133,7 +115,7 @@
       "type": "checkbox",
       "id": "show_arrows",
       "label": "Show Arrows",
-      "default": true
+      "default": false
     },
     {
       "type": "range",
