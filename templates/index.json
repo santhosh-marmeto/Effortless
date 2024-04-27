@@ -348,33 +348,55 @@
         "padding_bottom": 36
       }
     },
-    "customherosecion_QieLCf": {
-      "type": "customherosecion",
+    "week_7_xYgefF": {
+      "type": "week-7",
       "blocks": {
-        "slide_UdkwE7": {
-          "type": "slide",
+        "dots_69AgLa": {
+          "type": "Dots",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Frame1_17_1.webp",
-            "pre_heading": "Women's Apparel",
-            "heading_two": "<p>Heading Text<\/p>",
-            "button_label": "Explore More",
-            "button_link": "",
-            "text_position_selector": "center-center",
-            "desktop_content_allignment": "center"
+            "primary_left_position": 20,
+            "primary_top_position": 20,
+            "dot_product": "brown-bag"
+          }
+        },
+        "dots_RhgzVt": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 36,
+            "primary_top_position": 51,
+            "dot_product": "classic-jacket"
+          }
+        },
+        "dots_E8ULtm": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 58,
+            "primary_top_position": 20,
+            "dot_product": "classic-jacket"
           }
         }
       },
       "block_order": [
-        "slide_UdkwE7"
+        "dots_69AgLa",
+        "dots_RhgzVt",
+        "dots_E8ULtm"
       ],
       "settings": {
-        "autoplay": false,
-        "show_pagination": false,
-        "show_arrows": false,
+        "desktop_image": "shopify:\/\/shop_images\/image_3_392ff7f2-80cb-495b-ba35-6a30817ecd39.png",
+        "product_list": [
+          "bag-collection",
+          "brown-bag",
+          "classic-jacket"
+        ],
+        "auto_play": false,
+        "show_pagination": true,
+        "show_arrows": true,
         "auto_play_duration": 2000,
-        "animation": "fade",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "perpage": 2,
+        "gap": 5,
+        "Slide_animation": "slide",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
@@ -388,6 +410,6 @@
     "custombestseller_BE9gQY",
     "multirow_J4bqfj",
     "featured_blog_CDai3n",
-    "customherosecion_QieLCf"
+    "week_7_xYgefF"
   ]
 }
