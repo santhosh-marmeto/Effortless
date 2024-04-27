@@ -338,6 +338,37 @@
     },
     "week_7_NBKcjw": {
       "type": "week-7",
+      "blocks": {
+        "dots_7HMCJQ": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 20,
+            "primary_top_position": 20,
+            "dot_product": "brown-bag"
+          }
+        },
+        "dots_9MFfjK": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 65,
+            "primary_top_position": 20,
+            "dot_product": "bag-collection"
+          }
+        },
+        "dots_axVApB": {
+          "type": "Dots",
+          "settings": {
+            "primary_left_position": 68,
+            "primary_top_position": 73,
+            "dot_product": "classic-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "dots_7HMCJQ",
+        "dots_9MFfjK",
+        "dots_axVApB"
+      ],
       "settings": {
         "desktop_image": "shopify:\/\/shop_images\/image_3_392ff7f2-80cb-495b-ba35-6a30817ecd39.png",
         "product_list": [
@@ -349,7 +380,7 @@
         "show_pagination": false,
         "show_arrows": false,
         "auto_play_duration": 2000,
-        "perpage": 2,
+        "perpage": 1,
         "gap": 5,
         "Slide_animation": "slide",
         "padding_top": 30,
