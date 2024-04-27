@@ -169,6 +169,12 @@
             "collection": "men-innerwear"
           }
         },
+        "featured_collection_GrB9H9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
         "featured_collection_xKPUaY": {
           "type": "featured_collection",
           "settings": {
@@ -180,6 +186,7 @@
         "featured_collection_pKp4rT",
         "featured_collection_mHHDYM",
         "featured_collection_geNdRL",
+        "featured_collection_GrB9H9",
         "featured_collection_xKPUaY"
       ],
       "settings": {
@@ -264,25 +271,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custombestseller_BE9gQY": {
-      "type": "custombestseller",
-      "blocks": {
-        "slider_KkqJCy": {
-          "type": "slider",
-          "settings": {
-            "collection_handle": "best-collection-seller",
-            "Quicklink_view": "Quick View",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slider_KkqJCy"
-      ],
-      "settings": {
-        "topheading": "You may also like"
       }
     },
     "multirow_J4bqfj": {
@@ -376,7 +364,6 @@
     "rich_text_Gjnhpw",
     "collection_list_AJV7tP",
     "featured_product_J4cpgP",
-    "custombestseller_BE9gQY",
     "multirow_J4bqfj",
     "featured_blog_CDai3n",
     "week_7_NBKcjw"
