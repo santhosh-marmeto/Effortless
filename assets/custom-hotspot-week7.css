@@ -309,9 +309,9 @@ flex-direction: column;
     flex-direction: column;
     gap:2rem;
 }
- 
-
-/* ** */
+ .shoplookheadingfirst{
+text-align: center;
+ }
 
   .product-card__image{
     height:25rem;
