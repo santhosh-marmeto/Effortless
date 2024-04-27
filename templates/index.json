@@ -347,6 +347,26 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "week_7_NBKcjw": {
+      "type": "week-7",
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/image_3_392ff7f2-80cb-495b-ba35-6a30817ecd39.png",
+        "product_list": [
+          "bag-collection",
+          "brown-bag",
+          "classic-jacket"
+        ],
+        "auto_play": false,
+        "show_pagination": false,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "perpage": 2,
+        "gap": 5,
+        "Slide_animation": "slide",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
     }
   },
   "order": [
@@ -358,6 +378,7 @@
     "featured_product_J4cpgP",
     "custombestseller_BE9gQY",
     "multirow_J4bqfj",
-    "featured_blog_CDai3n"
+    "featured_blog_CDai3n",
+    "week_7_NBKcjw"
   ]
 }
