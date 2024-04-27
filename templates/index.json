@@ -358,8 +358,8 @@
         "dots_axVApB": {
           "type": "Dots",
           "settings": {
-            "primary_left_position": 68,
-            "primary_top_position": 73,
+            "primary_left_position": 47,
+            "primary_top_position": 74,
             "dot_product": "classic-jacket"
           }
         }
