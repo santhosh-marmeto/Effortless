@@ -1,27 +1,10 @@
 {{ "custom-hotspot-week7.css" | asset_url | stylesheet_tag }}
 <script src="{{ "compoent-slide.js"  | asset_url }}" defer></script>
-{% liquid
-    assign autoPlay=section.settings.auto_play
-    assign type = section.settings.Slide_animation
-    assign pagination = section.settings.show_pagination
-    assign perpage = section.settings.perpage
-    assign gap = section.settings.gap
-  %}
-  {%- capture splide_option -%}
-  {
-    "type": "{{ type }}",
-    "pagination": {{ pagination }},
-    "perPage":{{ perpage }},
-    "autoplay":{{ autoPlay }},
-    "gap":{{gap}}
-  }
-  {% endcapture %}
 {% style %}
     .padding-{{ section.id }} {
       padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
       padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
     }
-
     {% for block in section.blocks %}
     .shop-the-look-primary-{{ block.id }} {
       position:absolute;
@@ -42,167 +25,134 @@
       z-index:1;
     }
     {% endfor %}
-
     @media screen and (min-width: 750px) {
         .padding-{{ section.id }} {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
         }
     }
+    {% for product in section.settings.product_list %}
+  .rating-{{ product.id }}:before {
+    content: "\2605\2605\2605\2605\2605";
+    background: linear-gradient(90deg, #FFAA47 calc({{product.metafields.custom.ratings}}/5 * 100%), #E1E1E1 calc({{product.metafields.custom.ratings}}/5 * 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .rating-{{ product.id }} {
+        font-size: 2rem;
+        display:block !important;
+    }
+    {% endfor %}
 {% endstyle %}
-
-<div class="shop-the-look padding-{{ section.id }}">
+{% liquid
+  assign autoPlay=section.settings.auto_play
+  assign type = section.settings.Slide_animation
+  assign pagination = section.settings.show_pagination
+  assign perpage = section.settings.perpage
+  assign gap = section.settings.gap
+%}
+{%- capture splide_option -%}
+{
+  "type": "{{ type }}",
+  "pagination": {{ pagination }},
+  "perPage":{{ perpage }},
+  "autoplay":{{ autoPlay }},
+  "gap":{{gap}}
+}
+{% endcapture %}
+<div class=" customweekhotspot shop-the-look padding-{{ section.id }}">
     <div class="page-width">
-      <div class="shop-the-look__grid">
-        {% for block in section.blocks %}
-          <div class="">
-            <div class="shop-the-look__image">
-              <div class="shop-the-look__dots shop-the-look-primary-{{ block.id }}">
+      <div class="shop-the-look--box">
+            <div class="shop-the-look__poster">
+                {% for block in section.blocks %}
+              <div class="shop-the-look_dots  shop-the-look-primary-{{ block.id }}">
                   <svg class="shop-the-look__dot" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none" class="icon-circle">
-                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
+                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="white"></circle>
                   </svg>
-                  {% if block.settings.primary_product != blank %}
-                    <div class="shop-the-look__product tr1">
+                  {% if block.settings.dot_product != blank %}
+                    <div id="hotspot-product" class="shop-the-look__product tr1 hotspot-product">
                     <div class="shop-the-look__product-image">
-                      {% render 'responsive-picture', desktopImage:block.settings.primary_product.featured_image %}
+                      {% render 'responsive-picture', desktopImage:block.settings.dot_product.featured_image %}
                     </div>
                     <div class="shop-the-look-product-details">
-                      {% if block.settings.primary_product.title != blank and block.settings.primary_product.url != blank %}
+                      {% if block.settings.dot_product.title != blank and block.settings.dot_product.url != blank %}
                         <h2 class="h5">
-                          <a href="{{ block.settings.primary_product.url }}">
-                          {{ block.settings.primary_product.title }}
+                          <a href="{{ block.settings.dot_product.url }}">
+                          {{ block.settings.dot_product.title }}
                           </a>
                         </h2>
                       {% endif %}
-                    
-                      {% if block.settings.primary_product.price != blank %}
-                        <s>{{ block.settings.primary_product.price | money_without_trailing_zeros }}.00</s>                    
-                      {% endif %}
-
-                      <div>
-                        <a href="{{ block.settings.primary_product.url }}" class="view-product">
-                            View Product 
-                            <span><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L1 9" stroke="#8d5d48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></span>
-                          </a>
-                    </div>
+                      <div class="product-card__prices">
+                        {% if block.settings.dot_product.compare_at_price !=blank %}
+                          <span class="product-card__price-amount">{{block.settings.dot_product.compare_at_price | money }}</span>
+                        {% endif %} 
+                        {% if block.settings.dot_product.price != blank %}
+                          <s class="product-card__compareprice">{{ block.settings.dot_product.price | money }}</s>                    
+                        {% endif %}
+                    </div> 
+                      <form action="/cart/add" method="post">
+                        <input type="hidden" name="id" value="{{ block.settings.dot_product.variants.first.id }}">
+                        <button type="submit" class="btn btn--small">Add to bag</button>
+                    </form>
                     </div>
                     </div>
                   {% endif %}
               </div>
-
-              <div class="shop-the-look__dots shop-the-look-secondary-{{ block.id }}">
-                  <svg class="shop-the-look__dot" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none" class="icon-circle">
-                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
-                  </svg>
-                  {% if block.settings.secondary_product != blank %}
-                    <div class="shop-the-look__product tr2">
-                    <div class="shop-the-look__product-image">
-                      {% render 'responsive-picture', desktopImage:block.settings.secondary_product.featured_image %}
-                    </div>
-                    <div class="shop-the-look-product-details">
-                      {% if block.settings.secondary_product.title != blank and block.settings.secondary_product.url != blank %}
-                        <h2 class="h5">
-                          <a href="{{ block.settings.secondary_product.url }}">
-                          {{ block.settings.secondary_product.title }}
-                          </a>
-                        </h2>
-                      {% endif %}
-
-                      {% if block.settings.secondary_product.price != blank %}
-                        <s>{{ block.settings.secondary_product.price | money_without_trailing_zeros }}.00</s>                    
-                      {% endif %}
-
-                      <div>
-                        <a href="{{ block.settings.secondary_product.url }}" class="view-product">
-                            View Product 
-                            <span><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L1 9" stroke="#8d5d48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></span>
-                          </a>
-                    </div>
-                    </div>
-                    </div>
-                  {% endif %}
-              </div>
-
-              <div class="shop-the-look__dots shop-the-look-third-{{ block.id }}">
-                  <svg class="shop-the-look__dot" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none" class="icon-circle">
-                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
-                  </svg>
-                  {% if block.settings.third_product != blank %}
-                    <div class="shop-the-look__product tr3">
-                    <div class="shop-the-look__product-image">
-                      {% render 'responsive-picture', desktopImage:block.settings.third_product.featured_image %}
-                    </div>
-                    <div class="shop-the-look-product-details">
-                      {% if block.settings.third_product.title != blank and block.settings.third_product.url != blank %}
-                        <h2 class="h5">
-                          <a href="{{ block.settings.third_product.url }}">
-                          {{ block.settings.third_product.title }}
-                          </a>
-                        </h2>
-                      {% endif %}
-
-                      {% if block.settings.third_product.price != blank %}
-                        <s>{{ block.settings.third_product.price | money_without_trailing_zeros }}.00</s>                    
-                      {% endif %}
-
-                      <div>
-                        <a href="{{ block.settings.third_product.url }}" class="view-product">
-                            View Product 
-                            <span><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L1 9" stroke="#8d5d48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></span>
-                          </a>
-                    </div>
-                    </div>
-                    </div>
-                  {% endif %}
-              </div>
-
-              {% if block.settings.desktop_image != blank %}
-                <div class="media media--portrait">
-                  {% render 'responsive-picture', desktopImage:block.settings.desktop_image %}
+              {% endfor %}
+              {% if section.settings.desktop_image != blank %}
+                <div class="media">
+                  {% render 'responsive-picture', desktopImage:section.settings.desktop_image %}
                 </div>
               {% else %}
-                <div class="media media--portrait">
+                <div class="media">
                   {{ 'collection-1' | placeholder_svg_tag }}
                 </div>
               {% endif %}
             </div>
-            
-          </div>
-        {% endfor %}
       </div>
+
+
+      {% comment %} slider {% endcomment %}
+      <div class="product-card-container">
+        <splider-component >
+          <div  class="splide" data-slider-settings='{{ splide_option }}'>
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for product in section.settings.product_list %}
+                  <li class="splide__slide ">
+                    {% render
+                      "product-card", product:product
+                    %}
+
+                  </li>
+    
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </splider-component>
+      </div>
+
+
     </div>
   </div>
-  <div class="product-card-container">
-    <splider-component >
-      <div class="splide" data-slider-settings='{{ splide_option }}'>
-        <div class="splide__track">
-          <ul class="splide__list">
-            {% for product in section.settings.product_list %}
-              <li class="splide__slide ">
-                {% render
-                  "product-card", product:product
-                %}
-              </li>
-
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </splider-component>
-  </div>
-
+  
   {% schema %}
   {
     "name": "Hotspot section",
     "tag":"section",
     "class": "section",
     "settings": [
+      {
+        "type": "header",
+        "content": "Main image"
+      },
+      {
+        "type": "image_picker",
+        "id":"desktop_image",
+        "label": "Desktop Image"
+      },
       {
         "type": "header",
         "content": "Section padding"
@@ -301,109 +251,45 @@
     ],
     "blocks": [
       {
-        "name":"Hotspot block",
-        "type": "product",
-        "settings": [
-          {
-            "type": "header",
-            "content":"Product"
-          },
-          {
-            "type": "image_picker",
-            "id":"desktop_image",
-            "label": "Desktop Image",
-            "info": "Recommended size: 1440 x 600 px"
-          },
-          {
-            "type": "header",
-            "content":"First Dot"
-          },
-          {
-            "type": "range",
-            "id":"primary_left_position",
-            "label": "Distance from left",
-            "min":0,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-            "type": "range",
-            "id":"primary_top_position",
-            "label": "Distance from top",
-            "min":0,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-          "type": "product",
-          "id": "primary_product",
-          "label": "First Product"
-        },
-        {
-          "type": "header",
-          "content":"Second Dot"
-        },
-        {
-            "type": "range",
-            "id":"secondary_left_position",
-            "label": "Distance from left",
-            "min":10,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-            "type": "range",
-            "id":"secondary_top_position",
-            "label": "Distance from top",
-            "min":10,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-          "type": "product",
-          "id": "secondary_product",
-          "label": "Second Product"
-        },
-        {
-          "type": "header",
-          "content":"Third Dot"
-        },
-        {
-            "type": "range",
-            "id":"third_left_position",
-            "label": "Distance from left",
-            "min":10,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-            "type": "range",
-            "id":"third_top_position",
-            "label": "Distance from top",
-            "min":10,
-            "max":100,
-            "step": 1,
-            "default":20,
-            "info": "Distance is measured in percentage(%)"
-        },
-        {
-          "type": "product",
-          "id": "third_product",
-          "label": "Third Product"
-        }
-        ]
+          "name": "Block",
+          "type": "Dots",
+          "settings": [
+              {
+                  "type": "header",
+                  "content":"Dot position"
+              },
+              {
+                  "type": "range",
+                  "id":"primary_left_position",
+                  "label": "Distance from left",
+                  "min":0,
+                  "max":100,
+                  "step": 1,
+                  "default":20,
+                  "info": "Distance is measured in percentage(%)"
+              },
+              {
+                  "type": "range",
+                  "id":"primary_top_position",
+                  "label": "Distance from top",
+                  "min":0,
+                  "max":100,
+                  "step": 1,
+                  "default":20,
+                  "info": "Distance is measured in percentage(%)"
+              },
+              {
+                  "type": "header",
+                  "content":"Product"
+              },
+              {
+                "type": "product",
+                "id": "dot_product",
+                "label": "Product"
+              }
+          ]
       }
-    ],
+  ],
     "presets": [
       {
         "name": "Hotspot section"
