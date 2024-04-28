@@ -12,7 +12,7 @@
             "heading_two": "<p> Start Selling More Online <\/p>",
             "button_label": "Shop Now",
             "button_link": "",
-            "text_position_selector": "Center-left",
+            "text_position_selector": "top-center",
             "desktop_content_allignment": "center"
           }
         },
