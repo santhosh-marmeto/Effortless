@@ -1,4 +1,6 @@
 {{ 'customherobanner.css' | asset_url | stylesheet_tag }}
+
+
 {% style %}
   .custom-padding--{{ section.id }}{
       padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
@@ -61,14 +63,14 @@
             <div class="custom-herosection-splidecontent slide-content text-position-{{ block.settings.text_position_selector | default: 'center-center' }}">
               {% if block.settings.pre_heading != blank %}
                 {% if forloop.index == 9 %}
-                  <h1 class="moved-heading">{{ block.settings.pre_heading }}</h1>
+                  <h1 class="moved-heading" data-aos="fade-up" data-aos-duration="2000">{{ block.settings.pre_heading }}</h1>
                 {% else %}
                 <div class="custom-hero-description">
-                  <h1>{{ block.settings.pre_heading | strip_html }}</h1>
-                  <span> {{ block.settings.heading_two | strip_html }}</span>
+                  <h1 data-aos="fade-up"  >{{ block.settings.pre_heading | strip_html }}</h1>
+                  <span data-aos="fade-up" data-aos-duration="3000"> {{ block.settings.heading_two | strip_html }}</span>
                 
                   <div class="custom-herobutton">
-                    <button>{{ block.settings.button_label }}</button>
+                    <button data-aos="fade-up" data-aos-duration="3000">{{ block.settings.button_label }}</button>
                     </div>
                   </div>
                 {% endif %}
@@ -86,7 +88,6 @@
   </section>
 </splide-sliders>
 </div>
-
 
 
 {% schema %}
