@@ -62,6 +62,34 @@
     </a>
   
     <div class="product-card__info">
+      {% comment %} product title {% endcomment %}
+      <a href="{{ product.url }}" class="product-card__title">{{ product.title }}</a>     
+
+{% comment %} product price {% endcomment %}
+
+<div class="product-card__prices">
+  {% if product.price_varies %}
+    <span class="product-card__price-amount"> From {{ product.price_min | money_with_currency }}</span>
+  {% else %}
+    <span class="product-card__price-amount">  {{ product.price | money_with_currency }}</span>   
+  {% endif %}                
+
+  {% if current_variant.compare_at_price > current_variant.price %}
+  <s class="product-card__compareprice">{{ current_variant.compare_at_price | money_without_trailing_zeros }}</s>
+  {% endif %}
+
+<div class="custom--best-seller-slide--content">
+  {% if product.tags != blank %}
+    <p class="productviewtags">{{ product.tags }}</p>
+  {% endif %}
+
+  {% if product.tags contains 'Sale' %}
+    <p class="productviewtags1">{{ product.tags }}</p>
+  {% endif %}
+</div>
+</div>
+
+{% comment %} product color swatch {% endcomment %}
 
         <div class="product-card__form">
           {% form 'product', product %}
@@ -103,37 +131,27 @@
           
           {% endform %}
         </div>
+        {% if product.type != blank %}
+          <button class="productinfotags">
+            {% if product.type == 'Quick Dry' %}
+              <img src="https://effortless-theme-demo.myshopify.com/cdn/shop/files/sparkle_20x20.webp?v=1668642168" class="quickdryimages" alt="Quick Dry" width="" height="">
+              {% endif %}
+              {% if product.type == 'Cooling' %}
+                <img src="https://effortless-theme-demo.myshopify.com/cdn/shop/files/img_353738_20x20.png?v=1668642289" class="quickdryimages" alt="Quick Dry" width="" height="">
+                {% endif %}
+                {% if product.type == 'Natural' %}
+                  <img src="https://effortless-theme-demo.myshopify.com/cdn/shop/files/leaf_20x20.webp?v=1668642718" class="quickdryimages" alt="Quick Dry" width="" height="">
+                  {% endif %}
+         <div class="button-type-view">
+           {{ product.type }}
+        </div>
+          </button>
+        {% endif %}
 
 
         
-      
 
-   
-        <a href="{{ product.url }}" class="product-card__title">{{ product.title }}</a>     
-  
-        <div class="product-card__prices">
-          {% if product.price_varies %}
-            <span class="product-card__price-amount"> From {{ product.price_min | money_with_currency }}</span>
-          {% else %}
-            <span class="product-card__price-amount">  {{ product.price | money_with_currency }}</span>   
-          {% endif %}                
-
-          {% if current_variant.compare_at_price > current_variant.price %}
-          <s class="product-card__compareprice">{{ current_variant.compare_at_price | money_without_trailing_zeros }}</s>
-          {% endif %}
-
-        <div class="custom--best-seller-slide--content">
-          {% if product.tags != blank %}
-            <p class="productviewtags">{{ product.tags }}</p>
-          {% endif %}
-      
-          {% if product.tags contains 'Sale' %}
-            <p class="productviewtags1">{{ product.tags }}</p>
-          {% endif %}
-        </div>
-        </div>
-
-    </div>
+       </div>
   
     <script>  
       {{ product.variants | json }}

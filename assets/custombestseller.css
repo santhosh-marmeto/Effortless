@@ -3,10 +3,14 @@
   margin-top: 20px;
 
   margin-bottom: 30px;
+  border: 1px solid red;
 }
 .slide-content {
   margin-top: 40px;
   position: relative;
+}
+.custombest-seller-slide{
+  border: 1px solid red;
 }
 
 /* Customize Splide slide */
@@ -178,9 +182,7 @@
   line-height: 23.4px;
   color: black;
 }
-.product-card__title:hover {
-  color: #d03c3f;
-}
+
 .product-card__price-amount {
   font-size: 18px;
   font-weight: 700;
@@ -436,6 +438,7 @@
   object-fit: cover;
   object-position: center;
   transition: opacity 0.3s ease;
+  border: 1px solid red;
 }
 
 .product-card__image {
