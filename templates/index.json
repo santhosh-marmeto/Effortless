@@ -1,30 +1,74 @@
 {
   "sections": {
+    "customherobanner_xP7Mrt": {
+      "type": "customherobanner",
+      "blocks": {
+        "slide_aUWqXr": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_1.webp",
+            "pre_heading": "An Effortless Shopping Experience",
+            "heading_two": "<p> Start Selling More Online <\/p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "text_position_selector": "Center-left",
+            "desktop_content_allignment": "center"
+          }
+        },
+        "slide_PbC7TH": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "mobile_image": "shopify:\/\/shop_images\/hero_section_2160x_c4e2cb60-d0bd-4212-beb5-34a21236df86.webp",
+            "pre_heading": "An Effortless Shopping Experience",
+            "heading_two": "<p> Start Selling More Online <\/p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "text_position_selector": "Center-left",
+            "desktop_content_allignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_aUWqXr",
+        "slide_PbC7TH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_pagination": true,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "animation": "fade",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_usp_kyjNkz": {
       "type": "custom-usp",
       "blocks": {
         "column_rcdyki": {
           "type": "column",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_3_d4019d5f-fcde-4827-81f8-1709fe259d1b.svg",
-            "title": "Title",
-            "description": "Text about Photo"
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_12.svg",
+            "title": "Quality",
+            "description": "Exceptional quality from top  to bottom"
           }
         },
         "column_BJJjE4": {
           "type": "column",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_2_5e46b860-415c-45a4-8be3-0d3b265a77d1.svg",
-            "title": "Title",
-            "description": "Text about Photo"
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_13.svg",
+            "title": "Delivery",
+            "description": "Fast and free delivery  worldwide."
           }
         },
         "column_dfFKKU": {
           "type": "column",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_5_fd18b097-6586-4498-ba9c-b2b1a24354c6.svg",
-            "title": "Title",
-            "description": "Text about Photo"
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_14.svg",
+            "title": "Guarantee",
+            "description": "100% customer satisfaction  guaranteed."
           }
         }
       },
@@ -251,199 +295,16 @@
       "type": "customherosecion",
       "settings": {
       }
-    },
-    "custom_reviews_4QMGN3": {
-      "type": "custom-reviews",
-      "blocks": {
-        "ratings_NbLXqm": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer"
-          }
-        },
-        "ratings_6tTRYK": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer"
-          }
-        },
-        "ratings_rQpTtA": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer"
-          }
-        }
-      },
-      "block_order": [
-        "ratings_NbLXqm",
-        "ratings_6tTRYK",
-        "ratings_rQpTtA"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "heading_size": "h1",
-        "show_customer_name": true,
-        "show_pagination": true,
-        "show_arrows": false,
-        "auto_play_duration": 2000,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_blog_7EtUbM": {
-      "type": "custom-blog",
-      "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_testimonials_GWUNxa": {
-      "type": "custom-testimonials",
-      "blocks": {
-        "ratings_gYHe4n": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
-          }
-        },
-        "ratings_a9R6L3": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
-          }
-        },
-        "ratings_zLayg6": {
-          "type": "ratings",
-          "settings": {
-            "review": "Give your Review Here",
-            "customer_name": "Verified Customer",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
-          }
-        }
-      },
-      "block_order": [
-        "ratings_gYHe4n",
-        "ratings_a9R6L3",
-        "ratings_zLayg6"
-      ],
-      "settings": {
-        "heading": "Reviews",
-        "heading_size": "h1",
-        "show_customer_name": true,
-        "show_pagination": true,
-        "show_arrows": false,
-        "auto_play_duration": 2000,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "ours_story_section_dffKEt": {
-      "type": "ours-story-section",
-      "blocks": {
-        "image_picker_xBEa8K": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/images_3_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "nylon-holdall-bag",
-            "first_hotspot_top_position": 35,
-            "first_hotspot_left_position": 31,
-            "first_card_top_position": 29,
-            "first_card_left_position": 37,
-            "first_card_link": "shopify:\/\/products\/flower-printed-casual-shirt",
-            "second_checkbox": true,
-            "second_product": "nylon-holdall-bag",
-            "second_hotspot_top_position": 76,
-            "second_hotspot_left_position": 45,
-            "second_card_top_position": 72,
-            "second_card_left_position": 70,
-            "second_card_link": "shopify:\/\/products\/nylon-holdall-bag"
-          }
-        },
-        "image_picker_FyLNCy": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/our-story-group_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "mens-athletic-wear",
-            "first_hotspot_top_position": 35,
-            "first_hotspot_left_position": 33,
-            "first_card_top_position": 31,
-            "first_card_left_position": 39,
-            "first_card_link": "shopify:\/\/products\/mens-athletic-wear",
-            "second_checkbox": false,
-            "second_product": "",
-            "second_hotspot_top_position": 0,
-            "second_hotspot_left_position": 0,
-            "second_card_top_position": 0,
-            "second_card_left_position": 0,
-            "second_card_link": ""
-          }
-        },
-        "image_picker_fJ6bFg": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/our-story_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "blue-pattern-suit",
-            "first_hotspot_top_position": 30,
-            "first_hotspot_left_position": 34,
-            "first_card_top_position": 26,
-            "first_card_left_position": 39,
-            "first_card_link": "shopify:\/\/products\/blue-pattern-suit",
-            "second_checkbox": true,
-            "second_product": "shoes-classic-brown",
-            "second_hotspot_top_position": 85,
-            "second_hotspot_left_position": 52,
-            "second_card_top_position": 80,
-            "second_card_left_position": 30,
-            "second_card_link": "shopify:\/\/products\/shoes-classic-brown"
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_xBEa8K",
-        "image_picker_FyLNCy",
-        "image_picker_fJ6bFg"
-      ],
-      "settings": {
-        "heading": "Our Story",
-        "text": "Effortless was designed and developed by leading ecommerce professionals who are passionate about design and user experience, creating intuitive, user-friendly layouts that are optimized for success and sure to delight our customers.",
-        "button_label": "Shop Now",
-        "button_linkEl": "",
-        "backgrond_color": "#2d2d2d",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
+    "customherobanner_xP7Mrt",
     "custom_usp_kyjNkz",
     "featured_collection",
     "custom_collections_Ahtfnb",
     "featured_product_J4cpgP",
     "custombestsellers_GW9CwJ",
     "multirow_J4bqfj",
-    "customherosecion_U6aq4q",
-    "custom_reviews_4QMGN3",
-    "custom_blog_7EtUbM",
-    "custom_testimonials_GWUNxa",
-    "ours_story_section_dffKEt"
+    "customherosecion_U6aq4q"
   ]
 }
