@@ -1292,3 +1292,7 @@ class SplideSlider extends HTMLElement {
 }
 
 customElements.define("splide-sliders", SplideSlider);
+
+
+
+

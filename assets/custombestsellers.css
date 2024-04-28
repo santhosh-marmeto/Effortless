@@ -21,12 +21,12 @@
   
   .custombest-seller-slide .splide_arrows .splide_arrow {
     background: green;
-    color: #fff !important;
+    color: #fff ;
     font-size: 20px;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 20% !important;
+    top: 20% ;
     font-weight: 100;
   }
   
@@ -37,32 +37,32 @@
   .custombest-seller-slide .splide_arrows .splide_arrow--next {
     right: -60px;
   }
-  .splide__arrow {
-    border-radius: 1px !important;
-    background: none !important;
-    border: 1px solid black !important;
+  .custombest-seller-slide .splide__arrow {
+    border-radius: 1px;
+    background: none;
+    border: 1px solid black ;
   }
-  .splide__arrow:hover {
-    background-color: rgb(58, 131, 126, 1) !important;
-    fill: white !important;
+  .custombest-seller-slide .splide__arrow:hover {
+    background-color: rgb(58, 131, 126, 1) ;
+    fill: white ;
   }
-  .splide__arrow svg:hover {
-    fill: white !important;
+  .custombest-seller-slide .splide__arrow svg:hover {
+    fill: white ;
   }
-  .splide__arrows {
+  .custombest-seller-slide .splide__arrows {
     height: 40px;
     width: 140px;
     position: absolute;
     right: 10px;
     top: -54px;
   }
-  .splide__arrow--next {
+  .custombest-seller-slide .splide__arrow--next {
     top: 0%;
     left: 24%;
   }
-  .splide__arrow--prev {
+  .custombest-seller-slide .splide__arrow--prev {
     top: 0%;
-    left: 0% !important;
+    left: 0%;
   }
   
   .topheader {
