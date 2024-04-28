@@ -342,8 +342,8 @@
         "dots_7HMCJQ": {
           "type": "Dots",
           "settings": {
-            "primary_left_position": 33,
-            "primary_top_position": 18,
+            "primary_left_position": 42,
+            "primary_top_position": 10,
             "dot_product": "snow-board-googles"
           }
         },
