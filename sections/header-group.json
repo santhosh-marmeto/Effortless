@@ -117,6 +117,13 @@
             "title": "Gray",
             "color_code": "#808080"
           }
+        },
+        "color_settings_8YrkKY": {
+          "type": "colorSettings",
+          "settings": {
+            "title": "Yellow",
+            "color_code": "#ffff00"
+          }
         }
       },
       "block_order": [
@@ -128,7 +135,8 @@
         "color_settings_kY8qzY",
         "color_settings_B3xbcV",
         "color_settings_PFYGzF",
-        "color_settings_Ehi3yH"
+        "color_settings_Ehi3yH",
+        "color_settings_8YrkKY"
       ],
       "settings": {
       }
