@@ -1,7 +1,9 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'custombestsellers.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'Custom-tabs.js'  | asset_url }}" defer></script>
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -16,7 +18,9 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background-color:#f1f4f1
   }
+
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -26,7 +30,8 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}" id="product-grid-container">
+
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -34,9 +39,9 @@
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
-              <h2 class="facet-filters__label caption-large text-body">
+              {% comment %} <h2 class="facet-filters__label caption-large text-body">
                 <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-              </h2>
+              </h2> {% endcomment %}
               <div class="select">
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                 <select
@@ -68,7 +73,7 @@
 
           <div class="product-count-vertical light" role="status">
             <h2 class="product-count__text text-body">
-              <span id="ProductCountDesktop">
+              {% comment %} <span id="ProductCountDesktop">
                 {%- if collection.results_count -%}
                   {{
                     'templates.search.results_with_count'
@@ -82,7 +87,7 @@
                     | t: product_count: collection.products_count, count: collection.all_products_count
                   }}
                 {%- endif -%}
-              </span>
+              </span> {% endcomment %}
             </h2>
             {%- render 'loading-spinner' -%}
           </div>
@@ -117,6 +122,48 @@
           data-cascade
         {% endif %}
       >
+        {% comment %} <div class=" collectiontabs">
+        
+          {% for collection in collections %}
+             <p>{{ collection.title }}</p>
+            {% endfor %}
+          </div> {% endcomment %}
+
+
+          <custom-tabs class="collection-tabs-container ">
+            <div class="collectionpages">
+              <h1 class="collectionstitles">{{ collection.title }}</h1>
+            </div>
+            <div class="collectiontabs">
+            
+              {% for collection in collections %}
+        
+                  <span class="collection-tabs" data-path="{{ collection.url }}"  data-section-id="{{ section.id }}" >{{ collection.title }}</span>
+              {% endfor %}
+            </div>
+          </custom-tabs>
+
+
+
+          {% comment %} MetaField {% endcomment %}
+          {% comment %} {%- if collection.metafields.custom.sub_collection_link != blank -%}
+            <div class="collection--links-container">
+              {%- for item in collection.metafields.custom.sub_collection_link.value -%}
+                <div class="collection--links-wrapper">
+                  <a href="{{ item.url }}" class="collection--links-link">{{ item.title }}</a>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%} {% endcomment %}
+
+
+
+
+
+
+
+
+
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
@@ -154,17 +201,7 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-                  %}
+                  {% render 'product-card', product: product %}  
                 </li>
               {%- endfor -%}
             </ul>
@@ -181,6 +218,7 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
 
 {% schema %}
 {

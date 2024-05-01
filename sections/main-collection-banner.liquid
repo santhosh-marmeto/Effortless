@@ -10,21 +10,19 @@
 {%- endstyle -%}
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <div class="collection-hero__inner  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
+     
+   
 
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
-
+    
     {%- if section.settings.show_collection_image and collection.image -%}
       <div class="collection-hero__image-container media gradient">
-        <img
+        {% comment %} <img
           srcset="
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -39,17 +37,34 @@
           alt="{{ collection.image.alt | escape }}"
           width="{{ collection.image.width }}"
           height="{{ collection.image.height }}"
-        >
+          class="imagesets"
+        > {% endcomment %}
+        <img src="{{ collection.image | image_url}}" height="auto" width="auto">
       </div>
     {%- endif -%}
+  
   </div>
+  <div class="headerview">
+    <h1>{{ section.settings.Collectionsheaders }}</h1>
+    </div>
 </div>
+
+
 
 {% schema %}
 {
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+
+    {
+      "type": "text",
+      "id": "Collectionsheaders",
+      "label": "Collections",
+      "default":"Collections"
+      
+    },
+   
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"

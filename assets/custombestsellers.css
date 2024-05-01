@@ -302,7 +302,7 @@
     color: green;
   }
   .product-card__min-stock {
-    color: red;
+    color: black;
   }
   .product-card_badge-container {
     top: 0;
@@ -479,6 +479,8 @@
     border-radius: 10rem;
     z-index: -1;
   }
+  
+
   .product-card__quick-view-button:hover {
     color: #fff;
   }
@@ -511,3 +513,8 @@
       display: none;
     }
   }
+
+  .collection-tabs.active {
+    color: red;
+    border-bottom:2px solid black ;
+}
