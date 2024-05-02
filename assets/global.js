@@ -1302,7 +1302,7 @@ let copyfield = document.getElementById("copyfield")
 copyfield.addEventListener("click",function(){
   console.log("clicked")
   let copycoupon = document.getElementById("coupontitles").innerText
-  navigator.clipboard.writeText(couponCode).then(function() {
+  navigator.clipboard.writeText(copycoupon).then(function() {
     alert('Coupon code copied to clipboard!');
   }, function(err) {
     alert('Failed to copy: ', err);
