@@ -1137,8 +1137,8 @@ class VariantSelects extends HTMLElement {
      //    );
      //    offerDestination.innerHTML = offersouce.innerHTML
 
-        let varientDesignation = html.document.getElementById("coupontites")
-        let vareientsource = document.getElementById("coupontites");
+        let varientDesignation = html.getElementById("coupontites")
+     let vareientsource = document.getElementById("coupontites");
 
      varientDesignation.innerHTML = vareientsource.innerHTML;
         
