@@ -1300,7 +1300,8 @@ customElements.define("splide-sliders", SplideSlider);
 let copyfield = document.getElementById("copyfield")
 
 copyfield.addEventListener("click",function(){
-  let copycoupon = document.getElementById("coupontitles")
+  console.log("clicked")
+  let copycoupon = document.getElementById("coupontitles").innerText
   navigator.clipboard.writeText(couponCode).then(function() {
     alert('Coupon code copied to clipboard!');
   }, function(err) {
