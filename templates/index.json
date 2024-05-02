@@ -305,16 +305,16 @@
             "Image_id": "shopify:\/\/shop_images\/images_3_768x__1.webp",
             "first_checkbox": true,
             "first_product": "brown-bag",
-            "first_hotspot_top_position": 0,
-            "first_hotspot_left_position": 0,
-            "first_card_top_position": 0,
-            "first_card_left_position": 0,
+            "first_hotspot_top_position": 33,
+            "first_hotspot_left_position": 31,
+            "first_card_top_position": 28,
+            "first_card_left_position": 36,
             "second_checkbox": true,
             "second_product": "flower-printed-casual-shirt",
-            "second_hotspot_top_position": 0,
-            "second_hotspot_left_position": 0,
-            "second_card_top_position": 0,
-            "second_card_left_position": 0
+            "second_hotspot_top_position": 73,
+            "second_hotspot_left_position": 50,
+            "second_card_top_position": 74,
+            "second_card_left_position": 52
           }
         },
         "image_picker_JfjVMq": {
