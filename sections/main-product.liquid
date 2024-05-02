@@ -459,7 +459,7 @@
                 {%- when 'Variant-offer' -%}
                 <div class="coupon">
                   <div class="left">
-                    <div class="coupon_title">{{ block.settings.offer_tittle }}</div>
+                    <div class="coupon_title" id="coupontitles">{{ block.settings.offer_tittle }}</div>
                   </div>
                   <div class="center">
                     <div>
@@ -2351,7 +2351,7 @@ copyfield.addEventListener("click",function(){
   navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".coupon_title").innerText = clipText),
+    (clipText) => (document.querySelector("coupontitles").innerText = clipText),
   );
 })
    </script>
