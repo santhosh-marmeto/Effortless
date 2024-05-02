@@ -1102,6 +1102,8 @@ class VariantSelects extends HTMLElement {
     if (productForm) productForm.handleErrorMessage();
   }
 
+  
+
   renderProductInfo() {
     const requestedVariantId = this.currentVariant.id;
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
@@ -1125,6 +1127,16 @@ class VariantSelects extends HTMLElement {
           `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+        // changing coupon 
+
+       
+
+     const offerDestination = document.getElementById(`coupontitles--${this.dataset.section}`);
+        const offersouce = html.getElementById(
+          `coupontitles--${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+        );
+        offerDestination.innerHTML = offersouce.innerHTML
+        
         const inventorySource = html.getElementById(
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
