@@ -459,7 +459,7 @@
                 {%- when 'Variant-offer' -%}
                 <div class="coupon">
                   <div class="left">
-                    <div>{{ block.settings.offer_title }}</div>
+                    <div class="coupon_title">{{ block.settings.offer_title }}</div>
                   </div>
                   <div class="center">
                     <div>
@@ -467,7 +467,7 @@
                    
                       
                       <h3>Coupon</h3>
-                      <button>Copy</button>
+                      <button id="copyfield">Copy</button>
                     </div>
                   </div>
                   <div class="right">
@@ -2342,3 +2342,19 @@
   ]
 }
 {% endschema %}
+
+
+ <script>
+let copyfield = document.getElementById("copyfield")
+
+copyfield.addEventListener("click",function(){
+  navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".coupon_title").innerText = clipText),
+  );
+})
+   
+   
+   
+                           </script>
