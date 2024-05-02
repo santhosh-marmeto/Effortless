@@ -1131,11 +1131,16 @@ class VariantSelects extends HTMLElement {
 
        
 
-     const offerDestination = document.getElementById(`coupontitles--${this.dataset.section}`);
-        const offersouce = html.getElementById(
-          `coupontitles--${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        offerDestination.innerHTML = offersouce.innerHTML
+     // const offerDestination = document.getElementById(`coupontitles--${this.dataset.section}`);
+     //    const offersouce = html.getElementById(
+     //      `coupontitles--${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+     //    );
+     //    offerDestination.innerHTML = offersouce.innerHTML
+
+        let varientDesignation = html.document.getElementById("coupontites")
+     let vareientsource = document.getElementById("coupontites");
+
+     varientDesignation.innerHTML = vareientsource.innerHTML;
         
         const inventorySource = html.getElementById(
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
