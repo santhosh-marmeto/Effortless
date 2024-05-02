@@ -515,6 +515,7 @@
   }
 
   .collection-tabs.active {
-    color: red;
-    border-bottom:2px solid black ;
+    color: black;
+    border-bottom:2px solid green ;
+    font-weight: bold;
 }

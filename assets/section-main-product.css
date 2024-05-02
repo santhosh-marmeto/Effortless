@@ -251,9 +251,15 @@ a.product__text {
   margin-bottom: 1.5rem;
 }
 
-.product__title > * {
+.product__title > h1{
+font-size: 28px;
+font-weight: normal;
+}
+
+.product__title > *{
   margin: 0;
 }
+
 
 .product__title > a {
   display: none;

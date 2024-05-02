@@ -96,8 +96,11 @@
         class="disabled"
       {% endif %}
     >
+      
+     
+
     <label class="color-swatch--{{ value | handleize}}" for="{{ input_id }}">
-      {{ value -}}
+  {% comment %} {{ value }} {% endcomment %}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}

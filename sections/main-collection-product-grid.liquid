@@ -22,6 +22,8 @@
   }
 
 
+
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -130,17 +132,29 @@
           </div> {% endcomment %}
 
 
+          {% assign currentPath = request.path %}
+
           <custom-tabs class="collection-tabs-container ">
             <div class="collectionpages">
               <h1 class="collectionstitles">{{ collection.title }}</h1>
             </div>
-            <div class="collectiontabs">
-            
-              {% for collection in collections %}
-        
-                  <span class="collection-tabs" data-path="{{ collection.url }}"  data-section-id="{{ section.id }}" >{{ collection.title }}</span>
+
+            <div class="collectiontabs">    
+            {% for collection in collections %}
+              {% if collection.url == currentPath %}
+                  <div class="listsofvarient "> 
+                    <span class="collection-tabs active" data-path="{{ collection.url }}"  data-section-id="{{ section.id }}" >{{ collection.title }}</span>
+                  </div>
+                  {% else %}
+                  <div class="listsofvarient"> 
+                  <span class="collection-tabs " data-path="{{ collection.url }}"  data-section-id="{{ section.id }}" >{{ collection.title }}</span>
+                </div>
+                {% endif %} 
               {% endfor %}
             </div>
+         
+
+          
           </custom-tabs>
 
 

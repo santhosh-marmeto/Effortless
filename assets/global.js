@@ -1121,6 +1121,15 @@ class VariantSelects extends HTMLElement {
         const source = html.getElementById(
           `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
+
+
+        // change
+        let updated = html.getElementById("customchangecolor")
+        let previous = document.getElementById("customchangecolor");
+   
+        previous.innerHTML = updated.innerHTML;
+
+
         const skuSource = html.getElementById(
           `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );

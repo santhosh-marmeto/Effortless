@@ -21,6 +21,7 @@
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
+  
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
@@ -50,7 +51,8 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
+          
+          <legend class="form__label" id="customchangecolor">Farbe:{{ option.selected_value }}</legend>
           {% render 'product-variant-options',
             product: product,
             option: option,
