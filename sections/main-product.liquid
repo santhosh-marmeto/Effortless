@@ -459,11 +459,11 @@
                 {%- when 'Variant-offer' -%}
                 <div class="coupon">
                   <div class="left">
-                    <div class="coupon_title" id="coupontitles">{{ block.settings.offer_tittle }}</div>
+                    <div >{{ block.settings.offer_tittle }}</div>
                   </div>
                   <div class="center">
                     <div>
-                      <h2>{{product.metafields.custom.coupon_offer }}</h2>
+                      <h2 class="coupon_title" id="coupontitles">{{product.metafields.custom.coupon_offer }}</h2>
                    
                       
                       <h3>Coupon</h3>
