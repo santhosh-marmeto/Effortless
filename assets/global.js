@@ -1295,4 +1295,17 @@ customElements.define("splide-sliders", SplideSlider);
 
 
 
+// coupon offer
+ 
+let copyfield = document.getElementById("copyfield")
+
+copyfield.addEventListener("click",function(){
+  navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector("coupontitles").innerText = clipText),
+  );
+})
+  
+
 
