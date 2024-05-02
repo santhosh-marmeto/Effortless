@@ -454,6 +454,32 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+
+
+                {%- when 'Variant-offer' -%}
+                <div class="coupon">
+                  <div class="left">
+                    <div >{{ block.settings.offer_tittle }}</div>
+                  </div>
+                  <div class="center">
+                    <div>
+                      <!-- <h2 class="coupon_title" id="coupontitles">{{product.metafields.custom.coupon_offer }}</h2> -->
+                      <!-- <h2 class="coupon_title" id="coupontitles--{{ section.id }}">{{ product.selected_variant.metafields.custom.customcoupon }}</h2> -->
+                      <h2 class="coupon_title" id="coupontites">{{ product.selected_variant.metafields.custom.customcoupon }}</h2>
+                      
+                   
+                      
+                      <h3>Coupon</h3>
+                      <button id="copyfield">Copy</button>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div>87878521112</div>
+                  </div>
+                </div>
+
+                            
+                            
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -817,6 +843,18 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
+      "limit": 1
+    },
+       {
+      "type": "Variant-offer",
+      "name": "Variant offer",
+         "settings":[
+           {
+             "type":"text",
+             "id":"offer_tittle",
+             "label":"Offer title"
+           }
+         ],
       "limit": 1
     },
     {
@@ -2307,3 +2345,6 @@
   ]
 }
 {% endschema %}
+
+
+

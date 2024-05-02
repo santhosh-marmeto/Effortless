@@ -142,6 +142,30 @@
         "type": "color-swatch",
         "settings": {
         }
+      },
+      "swaches": {
+        "type": "swaches",
+        "settings": {
+          "heading": ""
+        }
+      },
+      "swatches": {
+        "type": "swatches",
+        "blocks": {
+          "solid_color_hxTLWj": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "Grey",
+              "solid_color": "#808080"
+            }
+          }
+        },
+        "block_order": [
+          "solid_color_hxTLWj"
+        ],
+        "settings": {
+          "heading": ""
+        }
       }
     },
     "content_for_index": [

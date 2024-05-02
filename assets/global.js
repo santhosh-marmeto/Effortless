@@ -1102,6 +1102,8 @@ class VariantSelects extends HTMLElement {
     if (productForm) productForm.handleErrorMessage();
   }
 
+  
+
   renderProductInfo() {
     const requestedVariantId = this.currentVariant.id;
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
@@ -1134,6 +1136,21 @@ class VariantSelects extends HTMLElement {
           `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+        // changing coupon 
+
+       
+
+     // const offerDestination = document.getElementById(`coupontitles--${this.dataset.section}`);
+     //    const offersouce = html.getElementById(
+     //      `coupontitles--${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+     //    );
+     //    offerDestination.innerHTML = offersouce.innerHTML
+
+        let updated = html.getElementById("coupontites")
+     let previous = document.getElementById("coupontites");
+
+     previous.innerHTML = updated.innerHTML;
+        
         const inventorySource = html.getElementById(
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
@@ -1303,5 +1320,20 @@ class SplideSlider extends HTMLElement {
 customElements.define("splide-sliders", SplideSlider);
 
 
+
+// coupon offer
+ 
+let copyfield = document.getElementById("copyfield")
+
+copyfield.addEventListener("click",function(){
+  console.log("clicked")
+  let copycoupon = document.getElementById("coupontitles").innerText
+  navigator.clipboard.writeText(copycoupon).then(function() {
+    alert('Coupon code copied to clipboard!');
+  }, function(err) {
+    alert('Failed to copy: ', err);
+  });
+})
+  
 
 
