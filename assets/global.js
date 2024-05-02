@@ -1137,10 +1137,10 @@ class VariantSelects extends HTMLElement {
      //    );
      //    offerDestination.innerHTML = offersouce.innerHTML
 
-        let varientDesignation = html.getElementById("coupontites")
-     let vareientsource = document.getElementById("coupontites");
+        let updated = html.getElementById("coupontites")
+     let previous = document.getElementById("coupontites");
 
-     vareientsource.innerHTML = varientDesignation.innerHTML;
+     previous.innerHTML = updated.innerHTML;
         
         const inventorySource = html.getElementById(
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
