@@ -1126,30 +1126,36 @@ class VariantSelects extends HTMLElement {
 
 
         // change
-        let updated = html.getElementById("customchangecolor")
-        let previous = document.getElementById("customchangecolor");
+        // let updated = html.getElementById("customchangecolor")
+        // let previous = document.getElementById("customchangecolor");
    
-        previous.innerHTML = updated.innerHTML;
+        // previous.innerHTML = updated.innerHTML;
 
 
         const skuSource = html.getElementById(
           `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-        // changing coupon 
-
-       
-
+        // && changing coupon 
      // const offerDestination = document.getElementById(`coupontitles--${this.dataset.section}`);
      //    const offersouce = html.getElementById(
      //      `coupontitles--${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
      //    );
      //    offerDestination.innerHTML = offersouce.innerHTML
 
+    
+
         let updated = html.getElementById("coupontites")
      let previous = document.getElementById("coupontites");
 
-     previous.innerHTML = updated.innerHTML;
+      if(updated && previous) previous.innerHTML = updated.innerHTML;
+
+
+      let updatedid = html.getElementById("changeview")
+      let previousid = document.getElementById("changeview");
+ 
+       if(updatedid && previousid) previousid.innerHTML = updatedid.innerHTML;
+      
         
         const inventorySource = html.getElementById(
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
@@ -1321,19 +1327,109 @@ customElements.define("splide-sliders", SplideSlider);
 
 
 
+
+
+// pincode checker
+let toastCounter= 1;
+ class PincodeChecker extends HTMLElement {
+        constructor() {
+          super()
+          this.pincodeInput = document.getElementById("pincodeInput");
+          this.pincodeButton = document.getElementById("pincodeButton");
+          this.resultDiv = document.getElementById("result");
+
+          this.pincodeButton.addEventListener("click", () => this.checkPincode());
+        }
+
+        checkPincode() {
+            var pincode = this.pincodeInput.value;
+
+            // Check if pincode is valid
+            if (pincode.length !== 6 || isNaN(pincode)) {
+                this.resultDiv.innerText = "Please enter a valid 6-digit pincode.";
+                this.displayToastNotification("cant deliver at your locations", "fa-xmark", "#C0392B", "slide-in-fade-out");
+                
+                return;
+            }
+
+            // Fetch data from API
+            fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data[0].Status === "Success") {
+                        // var result = data[0].PostOffice.map(post => post.Name).join(", ");
+                        this.resultDiv.innerText = `pincode correct`;
+                        this.displayToastNotification("We deliver at your locations", "fa-check", "#27AE60", "slide-in-fade-out");
+                    } else {
+                        this.resultDiv.innerText = "Pincode not found.";
+                    this.displayToastNotification("cant deliver at your locations", "fa-xmark", "#C0392B", "slide-in-fade-out");
+
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    this.resultDiv.innerText = "Error fetching data. Please try again later.";
+                });
+           
+        }
+        displayToastNotification(msg, icon, icon_color, animation) {
+          var class_name = 'toast-' + toastCounter;
+          var new_node = this.querySelector('.master-toast-notification').cloneNode(true);
+          new_node.classList.remove('hide-toast');
+          new_node.classList.remove('master-toast-notification');
+          new_node.classList.add(class_name, 'toast-notification', animation);
+          new_node.querySelector('.toast-msg').innerText = msg;
+          new_node.querySelector('.toast-icon i').className = 'fa-solid ' + icon;
+          new_node.querySelector('.toast-icon').style.backgroundColor = icon_color;
+          this.querySelector('.toasts').appendChild(new_node);
+          setTimeout(function() {
+              new_node.remove();
+          }, 3800);
+          toastCounter++;
+      }
+    }
+
+    customElements.define("pin-codecheck", PincodeChecker);
+
+
+
+
 // coupon offer
  
-let copyfield = document.getElementById("copyfield")
+// let copyfields = document.getElementById("copyfield")
 
-copyfield.addEventListener("click",function(){
-  console.log("clicked")
-  let copycoupon = document.getElementById("coupontitles").innerText
-  navigator.clipboard.writeText(copycoupon).then(function() {
-    alert('Coupon code copied to clipboard!');
-  }, function(err) {
-    alert('Failed to copy: ', err);
-  });
-})
+// copyfields.addEventListener("click",function(){
+//   console.log("clicked")
+//   let copycoupon = document.getElementById("coupontites").innerText
+//   navigator.clipboard.writeText(copycoupon).then(function() {
+//     alert('Coupon code copied to clipboard!');
+//   }, function(err) {
+//     alert('Failed to copy: ', err);
+//   });
+// })
   
+class variantOffer extends HTMLElement {
+  constructor() {
+    super();
+    this.couponCode = this.querySelector('[data-code]').dataset.code;
+    this.copyButton = this.querySelector('#copyfield');
+    this.copyButton.addEventListener('click', ()=>{
+      this.copyAction();
+    })
+  }
+  copyAction() {
+    // Use the Clipboard API to copy the text
+    console.log(this.couponCode);
+    navigator.clipboard.writeText(this.couponCode).then(function () {
+      alert('Coupon code copied to clipboard!');
+    }, function (err) {
+      alert('Failed to copy: ', err);
+    });
+  }
+}
+customElements.define("variant-offer", variantOffer);
+
+
+
 
 

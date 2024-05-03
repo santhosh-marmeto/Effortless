@@ -30,6 +30,13 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    #container {
+      
+        margin: 50px auto;
+    }
+ 
+  
+ 
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -456,16 +463,24 @@
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
 
-                {%- when 'Variant-offer' -%}
-                <div class="coupon">
+
+
+
+
+            
+  
+  {%- when 'Variant-offer' -%}
+    <div id="changeview">
+    {% if product.selected_or_first_available_variant.metafields.custom.customcoupon!=blank %}
+                <variant-offer class="coupon">
                   <div class="left">
                     <div >{{ block.settings.offer_tittle }}</div>
                   </div>
                   <div class="center">
                     <div>
-                      <!-- <h2 class="coupon_title" id="coupontitles">{{product.metafields.custom.coupon_offer }}</h2> -->
+                      <!-- <h2 class="coupon_title", id="coupontitles">{{product.metafields.custom.coupon_offer }}</h2> -->
                       <!-- <h2 class="coupon_title" id="coupontitles--{{ section.id }}">{{ product.selected_variant.metafields.custom.customcoupon }}</h2> -->
-                      <h2 class="coupon_title" id="coupontites">{{ product.selected_variant.metafields.custom.customcoupon }}</h2>
+                      <h2 class="coupon_title" id="coupontites" data-code="{{product.selected_or_first_available_variant.metafields.custom.customcoupon  }}">{{ product.selected_or_first_available_variant.metafields.custom.customcoupon }}</h2>
                       
                    
                       
@@ -476,8 +491,36 @@
                   <div class="right">
                     <div>87878521112</div>
                   </div>
-                </div>
+                </variant-offer>
 
+                {%endif %}
+              </div>
+
+
+                    {% comment %} pincode checker {% endcomment %}
+
+                    <pin-codecheck id="container">
+                      <input type="number" id="pincodeInput" placeholder="Enter 6-digit Pincode">
+                      <button id="pincodeButton">Check Pincode</button>
+                      <div id="result"></div>
+                      <div class="toasts"></div>
+                    <div class="master-toast-notification hide-toast">
+                      <div class="toast-content">
+                        <div class="toast-icon">
+                          <i class="fa-solid"></i>
+                        </div>
+                        <div class="toast-msg"></div>
+                      </div>
+                      <div class="toast-progress">
+                        <div class="toast-progress-bar"></div>
+                      </div>
+                    </div>
+                  </pin-codecheck>
+
+
+
+
+          
                             
                             
               {%- when 'buy_buttons' -%}
