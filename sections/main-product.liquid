@@ -91,22 +91,36 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
-              {%- when 'text' -%}
-                <p
+              {% comment %} {%- when 'text' -%} {% endcomment %}
+                {% comment %} <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
-                </p>
+                </p> {% endcomment %}
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <p>{{ product.title | escape }}</p>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
-                      {{ product.title | escape }}
+                      {{ product.title | strip_html }}
                     </h2>
                   </a>
                 </div>
+
+                <div id="custominventorystatus">
+                  {% if product.selected_or_first_available_variant.inventory_quantity == 0 %}
+                    <p>Preorder</p>
+                    {% elsif  product.selected_or_first_available_variant.inventory_quantity > 10 %}
+                    <p>Available</p>
+
+                     {%elsif  product.selected_or_first_available_variant.inventory_quantity < 10 %}
+                      <p>Only {{ product.selected_or_first_available_variant.inventory_quantity }} units in stock.</p>
+                    
+                    {%endif %}
+                </div>
+        
+              
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

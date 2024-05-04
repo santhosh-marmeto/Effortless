@@ -98,9 +98,9 @@
     >
       
      
-
-    <label class="color-swatch--{{ value | handleize}}" for="{{ input_id }}">
-  {% comment %} {{ value }} {% endcomment %}
+    
+    <label  {% if option.name=="Color"  %} class="color-swatch--{{ value | handleize}}" {% endif %} for="{{ input_id }}">
+   {% if option.name != "Color" %}{{ value }} {% endif %}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}

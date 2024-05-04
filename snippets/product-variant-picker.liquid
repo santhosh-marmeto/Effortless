@@ -52,7 +52,7 @@
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
           
-          <legend class="form__label" id="customchangecolor">{{ option.name }}:{{ option.selected_value }}</legend>
+          <legend class="form__label" id="customchangecolor"><span class="optionamespan">{{ option.name }}:</span>{{ option.selected_value }}</legend>
           {% render 'product-variant-options',
             product: product,
             option: option,
