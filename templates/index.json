@@ -296,83 +296,6 @@
       "settings": {
       }
     },
-    "ours_story_section_NDpcmd": {
-      "type": "ours-story-section",
-      "blocks": {
-        "image_picker_prCRaF": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/images_3_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "brown-bag",
-            "first_hotspot_top_position": 33,
-            "first_hotspot_left_position": 31,
-            "first_card_top_position": 28,
-            "first_card_left_position": 36,
-            "second_checkbox": true,
-            "second_product": "flower-printed-casual-shirt",
-            "second_hotspot_top_position": 73,
-            "second_hotspot_left_position": 50,
-            "second_card_top_position": 74,
-            "second_card_left_position": 52
-          }
-        },
-        "image_picker_JfjVMq": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/our-story-group_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "classic-shoe",
-            "first_hotspot_top_position": 25,
-            "first_hotspot_left_position": 28,
-            "first_card_top_position": 30,
-            "first_card_left_position": 30,
-            "second_checkbox": false,
-            "second_product": "shoes-classic-brown",
-            "second_hotspot_top_position": 0,
-            "second_hotspot_left_position": 0,
-            "second_card_top_position": 0,
-            "second_card_left_position": 0
-          }
-        },
-        "image_picker_jC8yhU": {
-          "type": "image_picker",
-          "settings": {
-            "Image_id": "shopify:\/\/shop_images\/our-story_768x__1.webp",
-            "first_checkbox": true,
-            "first_product": "nylon-holdall-bag",
-            "first_hotspot_top_position": 28,
-            "first_hotspot_left_position": 15,
-            "first_card_top_position": 30,
-            "first_card_left_position": 17,
-            "second_checkbox": true,
-            "second_product": "black-shirt",
-            "second_hotspot_top_position": 70,
-            "second_hotspot_left_position": 42,
-            "second_card_top_position": 72,
-            "second_card_left_position": 44
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_prCRaF",
-        "image_picker_JfjVMq",
-        "image_picker_jC8yhU"
-      ],
-      "settings": {
-        "backgrond_color": "#2d2d2d",
-        "heading": "Our Story",
-        "text": "Effortless was designed and developed by leading ecommerce professionals who are passionate about design and user experience, creating intuitive, user-friendly layouts that are optimized for success and sure to delight our customers.",
-        "button_label": "Shop Now",
-        "button_linkEl": "",
-        "auto_play": false,
-        "show_pagination": true,
-        "show_arrows": false,
-        "auto_play_duration": 4000,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "custom_reviews_crXUE7": {
       "type": "custom-reviews",
       "blocks": {
@@ -455,6 +378,83 @@
         "auto_play_duration": 2000
       }
     },
+    "ours_story_section_NDpcmd": {
+      "type": "ours-story-section",
+      "blocks": {
+        "image_picker_prCRaF": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/images_3_768x__1.webp",
+            "first_checkbox": true,
+            "first_product": "brown-bag",
+            "first_hotspot_top_position": 33,
+            "first_hotspot_left_position": 31,
+            "first_card_top_position": 28,
+            "first_card_left_position": 36,
+            "second_checkbox": true,
+            "second_product": "flower-printed-casual-shirt",
+            "second_hotspot_top_position": 73,
+            "second_hotspot_left_position": 50,
+            "second_card_top_position": 74,
+            "second_card_left_position": 52
+          }
+        },
+        "image_picker_JfjVMq": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/our-story-group_768x__1.webp",
+            "first_checkbox": true,
+            "first_product": "classic-shoe",
+            "first_hotspot_top_position": 25,
+            "first_hotspot_left_position": 28,
+            "first_card_top_position": 30,
+            "first_card_left_position": 30,
+            "second_checkbox": false,
+            "second_product": "shoes-classic-brown",
+            "second_hotspot_top_position": 0,
+            "second_hotspot_left_position": 0,
+            "second_card_top_position": 0,
+            "second_card_left_position": 0
+          }
+        },
+        "image_picker_jC8yhU": {
+          "type": "image_picker",
+          "settings": {
+            "Image_id": "shopify:\/\/shop_images\/our-story_768x__1.webp",
+            "first_checkbox": true,
+            "first_product": "nylon-holdall-bag",
+            "first_hotspot_top_position": 28,
+            "first_hotspot_left_position": 15,
+            "first_card_top_position": 30,
+            "first_card_left_position": 17,
+            "second_checkbox": true,
+            "second_product": "black-shirt",
+            "second_hotspot_top_position": 70,
+            "second_hotspot_left_position": 42,
+            "second_card_top_position": 72,
+            "second_card_left_position": 44
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_prCRaF",
+        "image_picker_JfjVMq",
+        "image_picker_jC8yhU"
+      ],
+      "settings": {
+        "backgrond_color": "#2d2d2d",
+        "heading": "Our Story",
+        "text": "Effortless was designed and developed by leading ecommerce professionals who are passionate about design and user experience, creating intuitive, user-friendly layouts that are optimized for success and sure to delight our customers.",
+        "button_label": "Shop Now",
+        "button_linkEl": "",
+        "auto_play": false,
+        "show_pagination": true,
+        "show_arrows": false,
+        "auto_play_duration": 4000,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "custom_testimonials_nqG8m6": {
       "type": "custom-testimonials",
       "blocks": {
@@ -513,9 +513,9 @@
     "custombestsellers_GW9CwJ",
     "multirow_J4bqfj",
     "customherosecion_U6aq4q",
-    "ours_story_section_NDpcmd",
     "custom_reviews_crXUE7",
     "custom_blog_zMHA6P",
+    "ours_story_section_NDpcmd",
     "custom_testimonials_nqG8m6"
   ]
 }
