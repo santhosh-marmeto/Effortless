@@ -1,0 +1,150 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-footer">
+
+  <div class="custom-footer--bottom page-width">
+  
+    <div class="custom-footer-bottom--navContainer">
+      {% for block in section.blocks %}
+
+        <div class="custom-footer-navContainer--block">
+          <p class="custom-footer-navContainer-block--heading">{{ block.settings.title }}</p>
+          <p class="custom--description">{{ block.settings.description | strip_html }}</p>
+          {%- if block.settings.list != blank -%}
+            <ul>
+              {%- for link in block.settings.list.links -%}
+                <li>
+                  <a
+                    href="{{ link.url }}"
+                  >
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+      
+    </div>
+    <div class="shopinfocontact">
+        <div class="custom-footer-top-bar--contact">
+            
+            {% render 'responsive-picture',
+              desktopImage:section.settings.contact-logo, 
+            %}
+            <span class="contactinfo">+1 (888)-555-SHOP<p class="contactinfomade">{{ section.settings.contact-no }}</p></span>
+            
+          </div> 
+
+          <div class="custom-footer-email">
+            {% render 'responsive-picture',
+              desktopImage:section.settings.emaillogo, 
+            %}
+            <span class="emailinfo">abcd@gmail.com<p class="contactinfomade">{{ section.settings.email_id}}</p></span> 
+          </div> 
+
+          <div class="custom-footer-livechat">
+            {% render 'responsive-picture',
+              desktopImage:section.settings.livechatlogo, 
+            %}
+            <span class="emailinfo">Live Chat<p class="contactinfomade">{{ section.settings.livechat_id}}</p></span> 
+          </div> 
+
+          <div class="custom-footer-helpcenter">
+            {% render 'responsive-picture',
+              desktopImage:section.settings.helpcenterlogo, 
+            %}
+            <span class="emailinfo">Help Center<p class="contactinfomade">{{ section.settings.helpcenter_id}}</p></span> 
+          </div> 
+    </div>
+    
+  </div>
+
+
+
+</div>
+
+{% schema %}
+{
+  "name": "custom Footer section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Store  information"
+    }, 
+    {
+      "type": "image_picker",
+        "id": "contact-logo",
+        "label": "Contact logo"
+      },
+      {
+        "type": "text",
+        "id": "contact-no",
+        "label": "Contact number"
+      },
+      {
+        "type": "image_picker",
+          "id": "emaillogo",
+          "label": "Email logo"
+        },
+        {
+          "type": "text",
+          "id": "email_id",
+          "label": "Email Info"
+        },
+        {
+            "type": "image_picker",
+              "id": "livechatlogo",
+              "label": "Live chat logo"
+            },
+            {
+              "type": "text",
+              "id": "livechat_id",
+              "label": "Live chat Info"
+            },
+            {
+                "type": "image_picker",
+                  "id": "helpcenterlogo",
+                  "label": "Helpcenter logo"
+                },
+                {
+                  "type": "text",
+                  "id": "helpcenter_id",
+                  "label": "Help Center Info"
+                }
+
+  ],
+  "blocks": [
+    {
+      "type": "footer-block",
+      "name": "Footer block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "placeholder": "Contact"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "learnmore"
+          },
+        {
+          "type": "link_list",
+          "id": "list",
+          "label": "options"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom Footer section"
+    }
+  ]
+}
+{% endschema %}

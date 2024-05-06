@@ -477,7 +477,7 @@
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
 
-
+              
 
 
 
@@ -513,7 +513,7 @@
 
                     {% comment %} pincode checker {% endcomment %}
 
-                    <pin-codecheck id="container">
+                    {% comment %} <pin-codecheck id="container">
                       <input type="number" id="pincodeInput" placeholder="Enter 6-digit Pincode">
                       <button id="pincodeButton">Check Pincode</button>
                       <div id="result"></div>
@@ -529,9 +529,58 @@
                         <div class="toast-progress-bar"></div>
                       </div>
                     </div>
-                  </pin-codecheck>
+                  </pin-codecheck> {% endcomment %}
 
 
+
+
+                  {% comment %} pincode checker using google api {% endcomment %}
+
+
+<pincode-checker>
+    <div class="pincode-checker">
+      <div class="field pincode-checker__field">
+        <input class="field__input" id="PincodeInput" type="text" name="pincode-input" placeholder="Eg. 560012">
+        <label class="field__label" for="PincodeInput">Enter Pincode</label>
+      </div>
+      <button type="button" class="button pincode-checker__button" name="pincode-submit">Check</button>
+    </div>
+    <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
+</pincode-checker>
+
+
+
+                  {% comment %} addto cart {% endcomment %}
+
+                  {% when 'bundles' %}
+                    <div class="product-bundle-wrapper">
+                      
+                          <div class="product-bundle">
+                              <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
+                              <div class="product-bundle-container">
+                                  <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
+                              {% for product in product.metafields.custom.bundles.value %}
+                                  <div class="product-bundle__grid-item product-bundles">
+                                  {% render 'product-card',
+                                  product: product,                    
+                                  section_id: section.id
+                                  %}
+                                  <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                                  value="{{  product.selected_or_first_available_variant.id }}"
+                                  type="checkbox" 
+                                  >
+                                  </div>
+                              {% endfor %}
+                              <div id="bundle__atc" 
+                              class="button custom-atc__hover-button" 
+                              data-product-id="{{ product.id }}"  
+                              data-variant-id="{{ product.selected_variant.id }}"
+                              data-section-id="{{ section.id }}"
+                              >Add to cart</div>
+                              </product-bundle>
+                          </div>
+                      </div>
+                  </div>
 
 
           
@@ -901,6 +950,19 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
+    },
+    {
+      "type": "bundles",
+      "name":"Product Bundles",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "bundle_heading",
+          "label": "Bundle Heading",
+          "default": "Frequently bought together"
+        }
+      ]
     },
        {
       "type": "Variant-offer",

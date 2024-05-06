@@ -111,11 +111,15 @@
 }
 
 .shopify-payment-button__button--unbranded {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
-  color: rgb(var(--color-button-text));
+  background-color: #5a31f4;
+  color: white;
   font-size: 1.4rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   letter-spacing: 0.07rem;
+  width: 100%;
+  height: 60px;
+
+
 }
 
 .shopify-payment-button__button--unbranded::selection {
@@ -263,9 +267,9 @@ a.product__text {
 }
 
 .product__title > p{
-font-size: 36px;
+font-size: 32px;
 font-weight: 600;
-height: 46px;
+height: 44px;
 }
 
 .product__title > *{
@@ -1526,7 +1530,7 @@ height: 46px;
 }
 
 /* section coupon code  */
-.coupon {
+/* .coupon {
   width: 400px;
   height: 200px;
   border-radius: 10px;
@@ -1631,7 +1635,7 @@ height: 46px;
     transform: rotate(0deg);
     
   }
-}
+} */
 
 
 

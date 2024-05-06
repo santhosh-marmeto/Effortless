@@ -1,0 +1,174 @@
+.custom-footer{
+ color:black;
+}
+.custom-footer li{
+    list-style: none;
+}
+.custom-footer .icon img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.custom-footer--bottom{
+    /* display: flex; */
+    padding: 3rem 0;
+}
+.custom-footer--email-inputContainer{
+    width: 30%;
+}
+.custom-footer--email-inputContainer p{
+    margin: 0;
+}
+
+.custom-footer--email-inputContainer .newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: 10rem;
+}
+.custom-footer--email-inputContainer .newsletter-form .week-6-email--input{
+    width: 25rem;
+    border-radius: 25px;
+    padding: 1.7rem ;
+
+}
+.custom-footer--email-inputContainer .newsletter-form .week-6-email--button{
+    background: linear-gradient(to right, white 50%, rgb(208, 60, 63) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.4s ease;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.custom-footer--email-inputContainer .newsletter-form .week-6-email--button:hover{
+    background-position: left bottom;
+    color: black;
+}
+.custom-footer--email-inputContainer .newsletter-form .week-6-email--button::after{
+    box-shadow: none;
+}
+.newsletter-form__message {
+    position: absolute;
+    bottom: 8px;
+}
+
+.custom-footer-bottom--navContainer{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 19rem; */
+    align-items: baseline;
+    /* padding-left: 15rem; */
+}
+.custom--description{
+width: 205px;
+
+}
+.shopinfocontact{
+    border-top: 1px solid rgba(0, 0, 0, 0.452);
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.contactinfomade{
+    width: 168px;
+}
+.custom-footer-navContainer--block{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.custom-footer-navContainer--block ul{
+    padding: 0;
+}
+.custom-footer-navContainer-block--heading{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+.custom-footer-navContainer--block ul li a{
+    margin-top: 10px;
+    font-size: 1.8rem;
+    line-height: 5rem;
+    text-decoration: none;
+    /* border: 1px solid red; */
+    color: black;
+
+}
+.store-info li {
+    display: flex;
+    align-items: center;
+}
+.custom-footer a{
+    text-decoration: none;
+}
+
+
+
+.footer__column {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-top: 0.5px solid gray;
+}
+
+
+.custom-footer-bottom-bar--copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid gray;
+}
+.custom-footer-bottom-bar--copyright .footer__copyright a{
+    font-size: 1.8rem;
+}
+.custom-footer-bottom-bar--copyright .copyright__content{
+    font-size: 1.8rem;
+}
+.footer__column--info  .list-payment{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__localization .disclosure__list-wrapper{
+    border-radius: 20px;
+    width: 17rem;
+}
+
+.footer__localization .disclosure__item{
+    width: 17rem;
+ }
+.custom-footer a{
+    transition: all 0.3s ease;
+}
+
+@media (max-width:750px) {
+    .custom--description{
+        width: 140px;
+        
+        }
+        .custom-footer-bottom--navContainer{
+            flex-direction: column;
+            align-items: start;
+            text-align: left;
+            padding-left: 41px;
+
+        }
+        .shopinfocontact{
+            flex-direction: column;
+            align-items: start;
+            text-align: left;
+            padding-left: 41px;
+        }
+        .custom-footer-navContainer-block--heading{
+            text-align: left;
+        }
+}
