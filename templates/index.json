@@ -351,16 +351,16 @@
           "type": "column",
           "settings": {
             "image_picker": "shopify:\/\/shop_images\/svgviewer-output_13.svg",
-            "title": "Title",
-            "description": "Text about Photo"
+            "title": "Delivery",
+            "description": "Fast and free delivery  worldwide."
           }
         },
         "column_NyJV3e": {
           "type": "column",
           "settings": {
             "image_picker": "shopify:\/\/shop_images\/svgviewer-output_14.svg",
-            "title": "Title",
-            "description": "Text about Photo"
+            "title": "Guarantee",
+            "description": "100% customer satisfaction  guaranteed."
           }
         }
       },
