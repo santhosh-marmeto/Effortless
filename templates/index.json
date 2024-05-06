@@ -373,49 +373,44 @@
         "padding_bottom": 60
       }
     },
-    "custom_testimonials_8zWbcx": {
-      "type": "custom-testimonials",
+    "custom_reviews_crXUE7": {
+      "type": "custom-reviews",
       "blocks": {
-        "ratings_GNWJji": {
+        "ratings_bhYGJd": {
           "type": "ratings",
           "settings": {
-            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
-            "customer_name": "- John Doe",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
           }
         },
-        "ratings_VTy7wA": {
+        "ratings_VHkDat": {
           "type": "ratings",
           "settings": {
-            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
-            "customer_name": "- John Doe",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
           }
         },
-        "ratings_gdjBEx": {
+        "ratings_HAahrt": {
           "type": "ratings",
           "settings": {
-            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
-            "customer_name": "- John Doe",
-            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
           }
         }
       },
       "block_order": [
-        "ratings_GNWJji",
-        "ratings_VTy7wA",
-        "ratings_gdjBEx"
+        "ratings_bhYGJd",
+        "ratings_VHkDat",
+        "ratings_HAahrt"
       ],
       "settings": {
         "heading": "Reviews",
         "heading_size": "h1",
         "show_customer_name": true,
+        "auto_play": true,
         "show_pagination": true,
-        "show_pagination_mobile": true,
-        "show_pagination_tablet": true,
+        "show_dots_mobile": true,
         "show_arrows": false,
-        "show_arrows_mobile": false,
-        "show_arrows_tablet": false,
         "auto_play_duration": 2000,
         "padding_top": 0,
         "padding_bottom": 0
@@ -432,6 +427,6 @@
     "multirow_J4bqfj",
     "customherosecion_U6aq4q",
     "ours_story_section_NDpcmd",
-    "custom_testimonials_8zWbcx"
+    "custom_reviews_crXUE7"
   ]
 }
