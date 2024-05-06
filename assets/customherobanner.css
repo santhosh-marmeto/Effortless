@@ -159,7 +159,7 @@ margin: 10px;
     margin: 0;
   } 
   .custom-hero-description  > h1 {
-    font-size: 16px;
+    font-size: 36px;
     width: 300px;
     margin-bottom: 40px;
 
@@ -185,7 +185,7 @@ margin: 10px;
 
 @media only screen and (max-width: 370px) {
   .custom-hero-description  > h1 {
-    font-size: 13px;
+    font-size: 23px;
     width: 200px;
  
   }
