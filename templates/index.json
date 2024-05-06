@@ -296,6 +296,88 @@
       "settings": {
       }
     },
+    "custom_reviews_crXUE7": {
+      "type": "custom-reviews",
+      "blocks": {
+        "ratings_bhYGJd": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        },
+        "ratings_VHkDat": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        },
+        "ratings_HAahrt": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        },
+        "ratings_qe7dNt": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        },
+        "ratings_XNbTKN": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        }
+      },
+      "block_order": [
+        "ratings_bhYGJd",
+        "ratings_VHkDat",
+        "ratings_HAahrt",
+        "ratings_qe7dNt",
+        "ratings_XNbTKN"
+      ],
+      "settings": {
+        "heading": "Reviews",
+        "heading_size": "h1",
+        "show_customer_name": true,
+        "auto_play": true,
+        "show_pagination": true,
+        "show_dots_mobile": true,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_blog_zMHA6P": {
+      "type": "custom-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "news",
+        "columns_desktop": 3,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "auto_play": true,
+        "show_pagination": true,
+        "show_pagination_mobile": true,
+        "show_pagination_tablet": true,
+        "show_arrows_mobile": false,
+        "show_arrows": false,
+        "show_arrows_tablet": false,
+        "auto_play_duration": 2000
+      }
+    },
     "ours_story_section_NDpcmd": {
       "type": "ours-story-section",
       "blocks": {
@@ -372,6 +454,54 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_testimonials_nqG8m6": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "ratings_Y8aYDP": {
+          "type": "ratings",
+          "settings": {
+            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
+            "customer_name": "John Doe",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        },
+        "ratings_Exq7kW": {
+          "type": "ratings",
+          "settings": {
+            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
+            "customer_name": "John Doe",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        },
+        "ratings_LVQGQY": {
+          "type": "ratings",
+          "settings": {
+            "review": "As an industry expert with deep knowledge and understanding of this space. I cannot say enough good things about this company and their products as they are modern, clean, with sophisticated designs, quality materials and top-level support.",
+            "customer_name": "John Doe",
+            "customer_image": "shopify:\/\/shop_images\/Rectangle_78.webp"
+          }
+        }
+      },
+      "block_order": [
+        "ratings_Y8aYDP",
+        "ratings_Exq7kW",
+        "ratings_LVQGQY"
+      ],
+      "settings": {
+        "heading": "Reviews",
+        "heading_size": "h1",
+        "show_customer_name": true,
+        "show_pagination": true,
+        "show_pagination_mobile": true,
+        "show_pagination_tablet": true,
+        "show_arrows": false,
+        "show_arrows_mobile": false,
+        "show_arrows_tablet": false,
+        "auto_play_duration": 2000,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -383,6 +513,9 @@
     "custombestsellers_GW9CwJ",
     "multirow_J4bqfj",
     "customherosecion_U6aq4q",
-    "ours_story_section_NDpcmd"
+    "custom_reviews_crXUE7",
+    "custom_blog_zMHA6P",
+    "ours_story_section_NDpcmd",
+    "custom_testimonials_nqG8m6"
   ]
 }
