@@ -396,12 +396,28 @@
             "review": "Give your Review Here",
             "customer_name": "Verified Customer"
           }
+        },
+        "ratings_qe7dNt": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
+        },
+        "ratings_XNbTKN": {
+          "type": "ratings",
+          "settings": {
+            "review": "Give your Review Here",
+            "customer_name": "Verified Customer"
+          }
         }
       },
       "block_order": [
         "ratings_bhYGJd",
         "ratings_VHkDat",
-        "ratings_HAahrt"
+        "ratings_HAahrt",
+        "ratings_qe7dNt",
+        "ratings_XNbTKN"
       ],
       "settings": {
         "heading": "Reviews",
