@@ -158,10 +158,66 @@
               "solid_color_name": "Grey",
               "solid_color": "#808080"
             }
+          },
+          "solid_color_megApm": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "white",
+              "solid_color": "#ffffff"
+            }
+          },
+          "solid_color_66VkmQ": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "burlywood",
+              "solid_color": "#deb887"
+            }
+          },
+          "solid_color_G6hfxJ": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "cornflowerblue",
+              "solid_color": "#6495ed"
+            }
+          },
+          "solid_color_MkYRYc": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "black",
+              "solid_color": "#121212"
+            }
+          },
+          "solid_color_xbAqbR": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "darkgoldenrod",
+              "solid_color": "#b8860b"
+            }
+          },
+          "solid_color_9A3mQ4": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "darkcyan",
+              "solid_color": "#008b8b"
+            }
+          },
+          "solid_color_zBVKcd": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color_name": "yellow",
+              "solid_color": "#ffff00"
+            }
           }
         },
         "block_order": [
-          "solid_color_hxTLWj"
+          "solid_color_hxTLWj",
+          "solid_color_megApm",
+          "solid_color_66VkmQ",
+          "solid_color_G6hfxJ",
+          "solid_color_MkYRYc",
+          "solid_color_xbAqbR",
+          "solid_color_9A3mQ4",
+          "solid_color_zBVKcd"
         ],
         "settings": {
           "heading": ""
