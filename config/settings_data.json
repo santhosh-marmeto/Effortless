@@ -113,9 +113,13 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
+    "product_view_list": [
+      "custom-pure-t-shirt",
+      "mens-leather-jacket"
+    ],
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "checkout_header_image": "shopify:\/\/shop_images\/blog-checkout_1400x_c6b99ec1-77e6-454c-9ceb-9a3918778423.webp",
