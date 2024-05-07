@@ -203,12 +203,19 @@ class QuantityInput extends HTMLElement {
 
   onButtonClick(event) {
     event.preventDefault();
+    let QuantityInput = document.getElementById("Quantityinput")
     const previousValue = this.input.value;
 
     event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
+    event.target.name === "plus" ? QuantityInput.stepUp() : QuantityInput.stepDown();
+
     if (previousValue !== this.input.value)
       this.input.dispatchEvent(this.changeEvent);
   }
+
+
+
+
 
   validateQtyRules() {
     const value = parseInt(this.input.value);
@@ -1364,6 +1371,15 @@ class VariantSelects extends HTMLElement {
         if (updatedinventory && previousinventory) previousinventory.innerHTML = updatedinventory.innerHTML;
         
        
+
+
+        // Customadd to cart value using rendering
+        let updatedaddtocart_view = html.getElementById("customaddto-cart-view")
+        let previousaddtocart_view = document.getElementById("customaddto-cart-view");
+
+        if (updatedaddtocart_view && previousaddtocart_view) previousaddtocart_view.innerHTML = updatedaddtocart_view.innerHTML;
+
+
 
 
 

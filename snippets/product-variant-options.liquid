@@ -61,10 +61,10 @@
   {%- endcapture -%}
 
   {%- capture label_unavailable %}
-    <span class="visually-hidden label-unavailable">
-      {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
-    </span>
-  {%- endcapture %}
+  <span class="{% if option.name=='Color'%} cross-on-swatch {% endif %} label-unavailable">
+    {% comment %} {{- 'products.product.variant_sold_out_or_unavailable' | t -}} {% endcomment %}
+  </span>
+{%- endcapture %}
 
   {%- if picker_type == 'swatch' -%}
     {% assign checked = false %}

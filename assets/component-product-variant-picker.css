@@ -76,7 +76,8 @@ margin-bottom: 20px;
   color: rgb(var(--color-foreground));
   /* display: inline-block; */
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1.5rem;
+  display: inline-block;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   line-height: 1;
@@ -166,3 +167,19 @@ margin-bottom: 20px;
   }
 }
 /* End custom styles for Swatch display type */
+
+.color-swatch--chocolate{
+  position: relative;
+}
+.cross-on-swatch{
+  z-index: 2;
+  height: 1px;
+  transform: rotate(140deg);
+  border: 1px solid black;
+  /* position: absolute; */
+  /* clip: rect(0 0 0 0);
+  word-wrap: normal !important; */
+  position: absolute;
+  width: 3rem;
+  right: 0;
+}
