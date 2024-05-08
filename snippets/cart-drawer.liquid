@@ -63,6 +63,11 @@
       {%- endif -%}
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }} ({{ cart.item_count }}) Items </h2>
+
+        {% comment %} process bar {% endcomment %}
+        
+
+
         <button
           class="drawer__close"
           type="button"

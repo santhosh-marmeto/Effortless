@@ -61,9 +61,61 @@
     
   </div>
 
+<div class="mainpayementcard">
+
+  <div class="custom-footer-bottom-bar--copyright">
+    <div class="footer__copyright caption">
+      <small class="copyright__content"
+        >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+      </small>
+      <small class="copyright__content">{{ powered_by_link }}</small>
+        <ul class="policies list-unstyled">
+          {%- for policy in shop.policies -%}
+            {%- if policy != blank -%}
+              <li>
+                <small class="copyright__content"
+                  ><a href="{{ policy.url }}">{{ policy.title }}</a></small
+                >
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+    </div>
 
 
+
+
+
+    
+    <div class="footer__column footer__column--info">
+      {%- if section.settings.payment_enable -%}
+        <div class="footer__payment">
+          <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+          <ul class="list list-payment" role="list">
+            {%- for type in shop.enabled_payment_types -%}
+              <li class="list-payment__item">
+                {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>  
+
+  <div class="product-payment-method">
+    <ul class="list list-payment" role="list">
+      {%- for type in shop.enabled_payment_types -%}
+        <li class="list-payment__item">
+          {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </div>
+</div>
+
+
 
 {% schema %}
 {
@@ -83,7 +135,7 @@
       {
         "type": "text",
         "id": "contact-no",
-        "label": "Contact number"
+        "label": "Contact info"
       },
       {
         "type": "image_picker",

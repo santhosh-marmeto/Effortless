@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
-    max-width: 47.8rem;
+    max-width: 62.8rem;
   }
 }
 
@@ -917,4 +917,7 @@ padding-bottom: 35px;
 
 .agreecheckoutfield{
   width: 80%;
+}
+.field{
+  content: none;
 }

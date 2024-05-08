@@ -70,10 +70,13 @@ width: 205px;
 .shopinfocontact{
     border-top: 1px solid rgba(0, 0, 0, 0.452);
     padding-top: 40px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+
 
 }
 
@@ -115,6 +118,7 @@ width: 205px;
 
 .footer__column {
     display: flex;
+    
     align-items: center;
     justify-content:space-between;
     border-top: 0.5px solid gray;
@@ -123,9 +127,9 @@ width: 205px;
 
 .custom-footer-bottom-bar--copyright{
     display: flex;
+
     align-items: center;
     justify-content: space-between;
-    border-top: 0.5px solid gray;
 }
 .custom-footer-bottom-bar--copyright .footer__copyright a{
     font-size: 1.8rem;
@@ -148,6 +152,17 @@ width: 205px;
  }
 .custom-footer a{
     transition: all 0.3s ease;
+}
+
+.product-payment-method > ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mainpayementcard{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 @media (max-width:750px) {
