@@ -2,6 +2,59 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_footer_fVznxz": {
+      "type": "custom-footer",
+      "blocks": {
+        "footer_block_j7kpbQ": {
+          "type": "footer-block",
+          "settings": {
+            "title": "SHOP",
+            "description": "",
+            "list": "footer"
+          }
+        },
+        "footer_block_awBh6M": {
+          "type": "footer-block",
+          "settings": {
+            "title": "ABOUT",
+            "description": "",
+            "list": "footer"
+          }
+        },
+        "footer_block_W3hP3i": {
+          "type": "footer-block",
+          "settings": {
+            "title": "ACCOUNT",
+            "description": "",
+            "list": "account"
+          }
+        },
+        "footer_block_GABANe": {
+          "type": "footer-block",
+          "settings": {
+            "title": "COMPANY",
+            "description": "<p>Effortless is a quick-launch value concept that is optimized for success. <a href=\"https:\/\/effortless-theme-demo.myshopify.com\/pages\/theme-features-page\" title=\"Documentation & Support\">Learn More<\/a><\/p>",
+            "list": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer_block_j7kpbQ",
+        "footer_block_awBh6M",
+        "footer_block_W3hP3i",
+        "footer_block_GABANe"
+      ],
+      "settings": {
+        "contact-logo": "shopify:\/\/shop_images\/Untitled-2_40x_1ee4be67-4840-4f6a-a057-cd22f5aef14a.png",
+        "contact-no": "Mon - Fri, 5am - 10pm  Sat - Sun, 6am - 9pm",
+        "emaillogo": "shopify:\/\/shop_images\/Untitled-3_40x_72408496-d81b-4e88-bb91-e4bacbd28e65.png",
+        "email_id": "We will respond as quickly as we can.",
+        "livechatlogo": "shopify:\/\/shop_images\/Untitled-4_40x_43c0bb18-edee-4f70-a7e0-0d07629d2b9a.png",
+        "livechat_id": "Mon - Fri, 5am - 10pm  Sat - Sun, 6am - 9pm",
+        "helpcenterlogo": "shopify:\/\/shop_images\/Untitled-5_40x_e1627e14-63be-4a26-b4bf-4d3314f34fa8.png",
+        "helpcenter_id": "Find answers online anytime."
+      }
+    },
     "newsletter_wJnyBK": {
       "type": "newsletter",
       "blocks": {
@@ -15,7 +68,7 @@
         "paragraph_PMRkn8": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Stay in touch</p>"
+            "text": "<p>Stay in touch<\/p>"
           }
         },
         "email_form_irrLDH": {
@@ -65,7 +118,7 @@
           "type": "text",
           "settings": {
             "heading": "COMPANY",
-            "subtext": "<p>Effortless is a quick-launch value concept that is optimized for success. <a href=\"https://effortless-theme-demo.myshopify.com/pages/theme-features-page\" title=\"Documentation & Support\">Learn More</a></p>"
+            "subtext": "<p>Effortless is a quick-launch value concept that is optimized for success. <a href=\"https:\/\/effortless-theme-demo.myshopify.com\/pages\/theme-features-page\" title=\"Documentation & Support\">Learn More<\/a><\/p>"
           }
         }
       },
@@ -75,6 +128,7 @@
         "link_list_kXKaCX",
         "text_qPkyh3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
@@ -92,6 +146,7 @@
     }
   },
   "order": [
+    "custom_footer_fVznxz",
     "newsletter_wJnyBK",
     "footer"
   ]
