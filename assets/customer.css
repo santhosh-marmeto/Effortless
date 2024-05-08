@@ -330,8 +330,8 @@
 
 /* Login */
 .login a {
-  display: block;
-  margin: 0 auto;
+  /* display: block; */
+  /* margin: 0 auto; */
   width: fit-content;
 }
 
@@ -416,7 +416,6 @@
 
 @media screen and (min-width: 990px) {
   :is(.account, .order) > div:nth-of-type(2) {
-    display: flex;
     margin-top: 5rem;
   }
 }
@@ -752,4 +751,170 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7),
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
+}
+
+
+
+.mainfieldflex{
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+} 
+
+
+.customer .newsletter-form .field{
+  height: 4.9rem;
+  border-radius: 0 25px 25px 0;
+  border: 1px solid black;
+  /* width: 40rem; */
+ 
+}
+.customer .newsletter-form .field:after{
+  content: none;
+}
+.customer .field #Subscribe{
+  margin: 0;
+  border-radius: 0 25px 25px 0;
+  background-color: #005BAA;
+  border: none;
+}
+
+.signupheading{
+  font-size: 20px;
+}
+
+
+/* tab switching */
+
+
+.customer .signup-mail-title{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: black;
+}
+.customer .newsletter-form{
+  margin-top: 10px;
+}
+.customer .newsletter-form .field{
+  height: 4.9rem;
+  border-radius: 0 25px 25px 0;
+  border: 1px solid black;
+}
+.customer .newsletter-form .field:after{
+  content: none;
+}
+.customer .field #Subscribe{
+  margin: 0;
+  border-radius: 0 25px 25px 0;
+  background: #005BAA;
+}
+.customer .field button:after{
+  box-shadow: none;
+}
+#email-label{
+  position: none;
+}
+/* acount page */
+.custom-account-page{
+  padding: 5rem ;
+}
+.custom-account-page table{
+   border-radius: 15px;
+   /* width: 80%; */
+
+}
+.custom-account-page table th{
+padding: 15px;
+}
+.custom-account-page table td{
+  width: 86%;
+}
+.custom-account-page .tab-content .tab {
+  display: none;
+}
+.custom-account-page .custom-account ,.tabs{
+  display: flex;
+  gap: 5rem;
+}
+.custom-account-page .tab-links{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 2rem;
+}
+.custom-account-page .tab-links li  {
+  height: 3rem;
+  background: #005BAA;
+  list-style: none;
+  cursor: pointer;
+  background-color: #F5F5F5;
+  color: black;
+  padding-top: 10px;
+padding-left: 17px;
+padding-right: 13px;
+padding-bottom: 35px;
+}
+.custom-account-page .tab-links li.active{
+  background:#005BAA;
+  color: white;
+}
+.custom-account-page .tab-content{
+  width: 70%;
+  padding:0 4rem;
+}
+.custom-account-page .profile-title{
+  margin-top: 0;
+}
+.tab-content .tab {
+  display: none;
+}
+.tab-content .tab.active {
+  display: block;
+}
+
+
+
+/* order page */
+.billingaddressfield{
+  display: flex;
+  /* gap: 40px; */
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.viewaddressorder{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 15px;
+  /* padding: 20px 100px 20px 21px; */
+  width: 43%;
+}
+
+
+.customer-order-viewpage table{
+  border-radius:10px ;
+
+}
+
+
+/* Address */
+
+.show{
+  display: none;
+}
+
+
+
+
+/* login page */
+.newsletter-form__field-wrapper {
+  max-width: 50rem !important;
+}
+.newsletter-form {
+  margin: 0 !important;
+  max-width: 50rem !important;
+}
+
+.agreecheckoutfield{
+  width: 80%;
 }

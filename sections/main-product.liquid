@@ -295,6 +295,31 @@
                         {% render 'icon-plus' %}
                       </button>
                     </quantity-input>
+
+                    
+                    {% comment %} Gift Card {% endcomment %}
+
+                    <div class="gift-wrap-wrapper">
+                      <input type="checkbox" id="giftCardCheckbox" class="gift-card-checkbox" name="giftCard">
+                      <label for="giftCardCheckbox">Add Gift Card to this product</label>
+                      <div class="gift-card-div" id="giftCardDiv" style="display: none;">
+                        {% assign desired_type = 'gift-wrap' %}
+                        {% for product in collections.all.products %}
+                          {% if product.type == desired_type %}
+                            <img
+                              src="{{ product.featured_image | image_url }}"
+                              alt="{{ product.title }}"
+                              width="100"
+                              height="100"
+                            >
+                          {% endif %}
+                        {% endfor %}
+                        <textarea id="giftMessage" placeholder="Enter Your Message Here"></textarea>
+                      </div>
+                    </div>
+
+
+
                     {%- liquid
                       assign volume_pricing_array = product.selected_or_first_available_variant.quantity_price_breaks | sort: 'quantity' | reverse
                       assign current_qty_for_volume_pricing = cart_qty | plus: product.selected_or_first_available_variant.quantity_rule.min
@@ -846,6 +871,21 @@
 
         document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
           hiddenInput.value = event.currentTarget.value;
+        });
+      });
+
+
+      {% comment %} giftcard {% endcomment %}
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var giftCardCheckbox = document.getElementById('giftCardCheckbox');
+        var giftCardDiv = document.getElementById('giftCardDiv');
+        giftCardCheckbox.addEventListener('change', function() {
+          if (giftCardCheckbox.checked) {
+            giftCardDiv.style.display = 'block';
+          } else {
+            giftCardDiv.style.display = 'none';
+          }
         });
       });
     </script>

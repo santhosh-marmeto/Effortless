@@ -297,9 +297,7 @@
         "price": "Precio",
         "total": "Total",
         "quantity": "Cantidad",
-        "image": "Imagen del producto",
-        
-
+        "image": "Imagen del producto"
       },
       "update": "Actualizar",
       "login": {

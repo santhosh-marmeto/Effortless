@@ -1641,6 +1641,83 @@ height: 44px;
 
 /* pincode checker */
 
+
+
+
+
+
+/* giftcard rapper */
+
+.gift-wrap-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+
+.gift-wrap-wrapper label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.gift-wrap-wrapper label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.gift-wrap-wrapper label:after {
+  content: "";
+  position: absolute;
+  left: 1.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+
+  background: #000;
+  display: none;
+
+}
+
+
+.gift-wrap-wrapper input[type="checkbox"]:checked+label:after {
+  display: block;
+}
+
+
+.gift-wrap-wrapper input[type="checkbox"]:checked+label {
+  padding-left: 35px;
+  height: 11px;
+  width: 11px;
+  left: 3px;
+}
+
+
+.gift-card-div {
+  gap: 19px;
+  border: 1px solid black;
+  padding: 10px;
+  width: fit-content;
+  margin-top: 12px;
+}
+
+#giftMessage {
+  height: 100px;
+}
+
+#giftMessage:focus {
+  border: none;
+}
+
+
+
 @import url('https://fonts.bunny.net/css?family=barlow:400,500&display=swap');
 .toasts {
   position: absolute;
