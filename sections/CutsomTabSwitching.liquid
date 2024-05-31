@@ -1,0 +1,184 @@
+{{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" | stylesheet_tag }}
+<script src={{ "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"}} defer></script>
+{{ 'CustomTab.css' | asset_url | stylesheet_tag }}
+
+
+<section page_width class="products-section custom-tab-collections" style="font-family: {{ section.settings.section_font }}">
+
+    <div class="custom-tab-collections_header-wrapper">
+      <div class="h1 custom-tab-collections__heading">{{ section.settings.heading }}</div>
+      <div class="custom-tab-collections_tabs custom-border-radius">
+         {% for block in section.blocks %}
+            <span class="custom-tab-collections_collection-name {% if forloop.first %}tab__active{% endif %}">{{ block.settings.collection_name }}</span>
+         {% endfor %}
+      </div>
+   </div>
+
+   {% for block in section.blocks %}
+    <div class="tab-slider {% unless forloop.first %}hidden{% endunless %}">
+      
+      <div id="slider" class="container">
+        <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+
+                {% for product in block.settings.collection.products %}
+                  <li class="splide__slide custom-border-radius">
+                    <div class="product-slide">
+                      <img src="{{ product.featured_image.src | img_url: 'medium' }}" height="" width="" alt="{{ product.title }}">
+                      <div class="first-section">
+                        <h3>Mapro <span style="color: black">•</span> Crush</h3>
+                        <p>{{ product.price | money }}</p>
+                      </div>
+                      <div class="second-section">
+                        <h3>{{ product.title }}</h3>
+                        <span>1000ml</span>
+                      </div>
+                    </div>
+                  </li>
+               {% else %}
+                  {% for i in (1..4) %}
+                     <li class="splide__slide custom-border-radius">
+                        {{ 'product-' | append: i | placeholder_svg_tag }}
+                     </li>
+                  {% endfor %}
+               {% endfor %}
+              </ul>
+            </div>
+    </div>
+    </div>
+
+    
+    </div>
+   {% endfor %}
+
+
+    
+  </section>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var splideInstances = [];
+  
+      // Initialize Splide instances for each tab slider
+      var sliders = document.querySelectorAll('.tab-slider');
+      sliders.forEach(function (slider) {
+        var splideInstance = new Splide(slider.querySelector('.splide'), {
+          type: 'slide',
+          perPage: 3,
+          perMove: 1,
+          autoplay: false,
+          interval: 3000,
+          gap: 20,
+          pagination: false,
+          breakpoints: {
+            768: {
+              perPage: 2
+            },
+            480: {
+              perPage: 1
+            }
+          }
+        }).mount();
+  
+        splideInstances.push(splideInstance);
+      });
+  
+{% comment %} 
+ function slideshow(index) {
+  sliders.forEach((slider, slideIndex) => {
+    if (slideIndex === index) {
+      slider.classList.remove("hidden");
+      splideInstances[slideIndex].refresh();
+    } else {
+      slider.classList.add("hidden");
+    }
+  });
+}
+
+let tabNames = document.querySelectorAll(".custom-tab-collections_collection-name");
+tabNames.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabNames.forEach((t) => {
+      t.classList.remove("tab__active"); 
+    });
+    tab.classList.add("tab__active"); 
+    slideshow(index);
+  });
+}); {% endcomment %}
+
+
+
+
+function slideshow(index){
+
+  sliders.forEach((splideview,splideindex)=>{
+    if(splideindex === index){
+      splideview.classList.remove("hidden")
+      splideInstances[splideindex].refresh();
+    }
+    else{
+      splideview.classList.add("hidden")
+    }
+  })
+}
+
+
+let tabNames = document.querySelectorAll(".custom-tab-collections_collection-name")
+tabNames.forEach((tab,index)=>{
+  tab.addEventListener("click",()=>{
+  tabNames.forEach((tab)=>{
+  tab.classList.remove("tab__active")
+  })
+  tab.classList.add("tab__active")
+  slideshow(index)
+  })
+})
+
+
+});
+
+
+  </script>
+
+{% schema %}
+{
+    "name": "Products Slider",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+       {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Fresh From The Source"
+       }
+    ],
+    "blocks": [
+      {
+          "name": "Tabs",
+          "type": "product_collection",
+          "settings": [
+              {
+                  "type": "text",
+                  "id": "collection_name",
+                  "label": "Collection Name",
+                  "default": "Collections Name"
+              },    
+              {
+                  "type": "collection",
+                  "id": "collection",
+                  "label": "Collection"
+              }
+                           
+          ]
+      }
+  ],
+    "presets": [
+      {
+        "name": "Custom Tab"
+      }
+    ]
+  }
+{% endschema %}

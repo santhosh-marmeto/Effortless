@@ -1,0 +1,31 @@
+To access the cart drawer items
+
+<h1>Your Cart</h1>
+{% if cart.empty? %}
+    <p>Your Cart is empty</p>
+{% form 'cart', cart %}
+  {% for item in cart.items %}
+    {% comment %} {{ item.product | json }} {% endcomment %}
+    <img src="{{ item.image | img_url:"medium" }}" height="" width="" alt="{{ item.title }}">
+    <p>{{ item.product.title }}</p>
+    <p>{{ item.variant.title }}</p>
+    <a href="{{ item.url_to_remove }}">Remove</a>
+    <p>{{ item.final_line_price | money }}</p>
+
+    <input type="text" value="{{ item.quantity }}">
+{% endfor %}
+
+<p>{{ cart.total_discounts | money }}</p>
+<p>{{ cart.total_price | money }}</p>
+
+  <button type="submit" name="checkout">Checkout</button>
+{% endform %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Demo Cart Drawer",
+  "class": "card_drawer",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,64 @@
+<div class="imagewithText section-{{ section.id }}">
+  <div>
+    <p>{{ section.settings['custom-section-field'] }}</p>
+    <img src="{{ section.settings.custom_images | img_url }}" width="" height="">
+    {% comment %} <p>{{ product.metafields.custom.specialproduct }}</p> {% endcomment %}
+
+    {% comment %} {% if product %}
+    {% assign getField = product.metafields.custom.demometaobject.value %}
+
+      {% if getField %}
+        <p>{{ getField.heading }}</p>
+        
+    <img src="{{ getField.images | img_url }}" width="" height="">
+
+    <button >{{ getField.button }}</button>
+     
+      {% endif %} 
+
+    
+    {% endif %} {% endcomment %}
+
+
+
+    {% assign items = product.metafields.custom.demometaobject %}
+
+    {% if items %}
+      
+   <p>{{ items.value.heading }}</p>
+
+   <img src="{{ items.value.images | img_url }}" width="" height=""/>
+<a href="{{ items.value.button_url }}">
+  <button>{{ items.value.button }}</button></a>
+      
+    {% endif %}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Section-field",
+  "tag": "section",
+  "class": "Custom-Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom-section-field",
+      "label": "Custom Heading",
+      "default": "Meta Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_images",
+      "label": "Image Picker view"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Section-field"
+    }
+  ]
+}
+{% endschema %}
